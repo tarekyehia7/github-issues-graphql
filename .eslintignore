@@ -1,0 +1,8 @@
+node-modules
+build
+src/graphql/generatedTypes
+src/setupTests.ts
+yarn.lock
+**/*.css
+**/*.html
+**/*.md
