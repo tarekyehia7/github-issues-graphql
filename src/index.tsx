@@ -1,12 +1,12 @@
-import React from "react";
-import ReactDOM from "react-dom/client";
-import { ApolloProvider } from "@apollo/client";
-import { BrowserRouter } from "react-router-dom";
-import { ThemeProvider, createGlobalStyle } from "styled-components";
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import { ApolloProvider } from '@apollo/client';
+import { BrowserRouter } from 'react-router-dom';
+import { ThemeProvider, createGlobalStyle } from 'styled-components';
 
-import App from "./App";
-import { theme } from "./themes";
-import { apolloClient } from "./graphql";
+import App from './App';
+import { theme } from './themes';
+import { apolloClient } from './graphql';
 
 const GlobalStyle = createGlobalStyle`
 	body {
@@ -14,7 +14,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 `;
 
-const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement);
 root.render(
 	<React.StrictMode>
 		<BrowserRouter>

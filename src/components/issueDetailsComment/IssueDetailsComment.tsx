@@ -1,7 +1,7 @@
-import React from "react";
-import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
+import React from 'react';
+import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 
-import { Box, AvatarImg, Body, Title } from "./IssueDetailsComment.styled";
+import { Box, AvatarImg, Body, Title } from './IssueDetailsComment.styled';
 
 type IssueCommentProps = {
 	authorUrl: string;

@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const Box = styled.div`
 	color: #24292f;
@@ -17,7 +17,7 @@ export const Box = styled.div`
 		width: 8px;
 		height: 16px;
 		pointer-events: none;
-		content: " ";
+		content: ' ';
 		clip-path: polygon(0 50%, 100% 0, 100% 100%);
 		background-color: #d0d7de;
 	}

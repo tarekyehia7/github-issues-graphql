@@ -1,12 +1,12 @@
-import React from "react";
+import React from 'react';
 
 import {
 	ButtonsContainer,
 	CorrectIconStyled,
 	OpenIssueIconStyled,
 	Button,
-} from "./StateToggler.styled";
-import { StatusEnum } from "../../pages/Issues/Issues";
+} from './StateToggler.styled';
+import { StatusEnum } from '../../types/issues';
 
 type StateTogglerProps = {
 	status: StatusEnum;

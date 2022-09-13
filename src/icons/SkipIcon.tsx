@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import React, { SVGAttributes } from 'react';
 
 export const SkipIcon = (props: SVGAttributes<SVGElement>): JSX.Element => (
 	<svg viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true" {...props}>

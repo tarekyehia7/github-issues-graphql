@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { StyledHeader, GithubIco } from "./Header.styled";
+import { StyledHeader, GithubIco } from './Header.styled';
 
 export const Header = () => {
 	return (

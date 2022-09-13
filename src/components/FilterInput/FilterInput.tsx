@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 
 import {
 	FilterContainer,
@@ -6,7 +6,7 @@ import {
 	CloseIconStyled,
 	Input,
 	SearchIconStyled,
-} from "./FilterInput.styled";
+} from './FilterInput.styled';
 
 type FilterInputProps = {
 	value: string;

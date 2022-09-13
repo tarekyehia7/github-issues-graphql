@@ -1,5 +1,5 @@
-import { Link } from "react-router-dom";
-import styled from "styled-components";
+import { Link } from 'react-router-dom';
+import styled from 'styled-components';
 
 export const LinkStyled = styled(Link)`
 	position: relative;
@@ -25,7 +25,7 @@ export const LinkStyled = styled(Link)`
 		bottom: calc(50% - 25px);
 		width: 4rem;
 		height: 2px;
-		content: "";
+		content: '';
 		background: #fd8c73;
 		border-radius: 6px;
 		transform: translate(50%, -50%);

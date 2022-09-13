@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const TitleContainer = styled.div`
 	font-weight: 400;
@@ -18,7 +18,7 @@ export const Status = styled.span<{ isOpenState: boolean }>`
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
-	width: ${({ isOpenState }) => (isOpenState ? "4rem" : "5rem")};
+	width: ${({ isOpenState }) => (isOpenState ? '4rem' : '5rem')};
 	border: 1px solid transparent;
 	color: #ffffff;
 	padding: 5px 12px;
@@ -28,7 +28,7 @@ export const Status = styled.span<{ isOpenState: boolean }>`
 	text-align: center;
 	white-space: nowrap;
 	border-radius: 2em;
-	background-color: ${({ isOpenState }) => (isOpenState ? "#fa4549" : "#6e7781")};
+	background-color: ${({ isOpenState }) => (isOpenState ? '#fa4549' : '#6e7781')};
 	svg {
 		fill: #ffffff;
 	}

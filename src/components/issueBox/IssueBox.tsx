@@ -1,6 +1,6 @@
-import formatDistanceToNowStrict from "date-fns/formatDistanceToNowStrict";
-import React from "react";
-import { useNavigate } from "react-router-dom";
+import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
+import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
 import {
 	Box,
@@ -12,8 +12,8 @@ import {
 	OpenIssueIconStyled,
 	SkipIconStyled,
 	Title,
-} from "./IssueBox.styled";
-import { IssueState } from "../../graphql/generatedTypes/graphql";
+} from './IssueBox.styled';
+import { IssueState } from '../../graphql/generatedTypes/graphql';
 
 type IssueBoxProps = {
 	state: IssueState;

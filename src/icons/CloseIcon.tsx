@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import React, { SVGAttributes } from 'react';
 
 export const CloseIcon = (props: SVGAttributes<SVGElement>): JSX.Element => (
 	<svg aria-hidden="true" viewBox="0 0 16 16" version="1.1" data-view-component="true" {...props}>

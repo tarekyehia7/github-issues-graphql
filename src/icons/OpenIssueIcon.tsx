@@ -1,4 +1,4 @@
-import React, { SVGAttributes } from "react";
+import React, { SVGAttributes } from 'react';
 
 export const OpenIssueIcon = (props: SVGAttributes<SVGElement>): JSX.Element => (
 	<svg

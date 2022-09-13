@@ -1,4 +1,4 @@
-import { StatusEnum } from "../pages/Issues/Issues";
+import { StatusEnum } from '../types/issues';
 
 interface Query {
 	repo: string;
@@ -10,8 +10,8 @@ interface Query {
 
 export const buildQuery = (query: Query) => {
 	return Object.entries(query)
-		.reduce((str, [p, val]) => `${str}${p}:${val} `, "")
-		.replace("status:", "")
-		.replace("input:", "")
+		.reduce((str, [p, val]) => `${str}${p}:${val} `, '')
+		.replace('status:', '')
+		.replace('input:', '')
 		.trim();
 };

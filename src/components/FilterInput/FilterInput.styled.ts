@@ -1,6 +1,6 @@
-import styled from "styled-components";
-import { CloseIcon } from "../../icons/CloseIcon";
-import { SearchIcon } from "../../icons/SearchIcon";
+import styled from 'styled-components';
+import { CloseIcon } from '../../icons/CloseIcon';
+import { SearchIcon } from '../../icons/SearchIcon';
 
 export const Input = styled.input`
 	padding: 5px 26px;

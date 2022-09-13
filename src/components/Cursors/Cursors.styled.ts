@@ -1,4 +1,4 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const CursorLink = styled.button`
 	color: #0969da;

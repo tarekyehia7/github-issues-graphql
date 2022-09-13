@@ -1,15 +1,15 @@
-import baseStyled, { ThemedStyledInterface } from "styled-components";
+import baseStyled, { ThemedStyledInterface } from 'styled-components';
 
 export const theme = {
 	color: {
-		orange: "#ff5f00",
-		lightBlack: "#191919",
-		lightGrey: "#e7e7e7",
-		white: "#ffffff",
-		black: "#000000",
+		orange: '#ff5f00',
+		lightBlack: '#191919',
+		lightGrey: '#e7e7e7',
+		white: '#ffffff',
+		black: '#000000',
 	},
 	screens: {
-		tablet: "(max-width: 1048px)",
+		tablet: '(max-width: 1048px)',
 	},
 };
 

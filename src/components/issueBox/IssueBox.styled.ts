@@ -1,8 +1,8 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-import { CommentsIcon } from "../../icons/CommentsIcon";
-import { OpenIssueIcon } from "../../icons/OpenIssueIcon";
-import { SkipIcon } from "../../icons/SkipIcon";
+import { CommentsIcon } from '../../icons/CommentsIcon';
+import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
+import { SkipIcon } from '../../icons/SkipIcon';
 
 export const Box = styled.div`
 	padding: 16px;

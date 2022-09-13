@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react';
 
-import { Container } from "./NoResults.styled";
-import { OpenIssueIcon } from "../../icons/OpenIssueIcon";
+import { Container } from './NoResults.styled';
+import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
 
 export const NoResults = () => {
 	return (
@@ -10,7 +10,7 @@ export const NoResults = () => {
 
 			<h3>No results matched your search.</h3>
 			<p>
-				You could search <a href="https://github.com/search">all of GitHub</a> or try an{" "}
+				You could search <a href="https://github.com/search">all of GitHub</a> or try an{' '}
 				<a href="https://github.com/search/advanced">advanced search</a>.
 			</p>
 		</Container>

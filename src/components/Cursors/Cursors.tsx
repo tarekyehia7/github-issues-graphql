@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 
-import { CursorLink, LinksContainer } from "./Cursors.styled";
+import { CursorLink, LinksContainer } from './Cursors.styled';
 
 type CursorsProps = {
 	previousButtonDisabled: boolean;

@@ -1,36 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from 'react';
 
-import { useGetIssuesLazyQuery } from "../../graphql/generatedTypes/graphql";
-import { buildQuery } from "../../helpers/queryBuilder";
-import { Skeleton } from "../../components/skeleton/Skeleton";
-import { NoResults } from "../../components/NoResults/NoResults";
-import { getPagesNumber } from "../../helpers/helpers";
-import Cursors from "../../components/Cursors/Cursors";
-import { FilterInput } from "../../components/FilterInput/FilterInput";
-import { StateToggler } from "../../components/stateToggler/StateToggler";
-import styled from "styled-components";
-import { IssueBox } from "../../components/issueBox/IssueBox";
-
-export enum StatusEnum {
-	all = "is:all",
-	open = "is:open",
-	closed = "is:closed",
-}
-
-export type QueryType = {
-	repo: string;
-	is: string;
-	status: StatusEnum;
-	in: string;
-	input: string;
-};
+import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
+import { buildQuery } from '../../helpers/queryBuilder';
+import { Skeleton } from '../../components/skeleton/Skeleton';
+import { NoResults } from '../../components/NoResults/NoResults';
+import { getPagesNumber } from '../../helpers/helpers';
+import Cursors from '../../components/Cursors/Cursors';
+import { FilterInput } from '../../components/FilterInput/FilterInput';
+import { StateToggler } from '../../components/stateToggler/StateToggler';
+import styled from 'styled-components';
+import { IssueBox } from '../../components/issueBox/IssueBox';
+import { QueryType, StatusEnum } from '../../types/issues';
 
 const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
-	repo: "facebook/react",
-	is: "issue",
+	repo: 'facebook/react',
+	is: 'issue',
 	status: StatusEnum.open,
-	in: "title,body",
-	input: "",
+	in: 'title,body',
+	input: '',
 };
 
 const Container = styled.div`
@@ -46,9 +33,9 @@ export const IssuesPage = () => {
 	const [githubQuery, setGithubQuery] = useState(DEFAULT_GITHUB_QUERY_BUILDER);
 	const [totalPages, setTotalPages] = useState(1);
 	const [pageNumber, setPageNumber] = useState(1);
-	const [inputText, setInputText] = useState("");
+	const [inputText, setInputText] = useState('');
 	const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery({
-		fetchPolicy: "network-only",
+		fetchPolicy: 'network-only',
 	});
 
 	const hasData = data?.search?.edges && data?.search?.edges.length > 0;
@@ -73,11 +60,11 @@ export const IssuesPage = () => {
 	}, [data]);
 
 	const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setInputText(e.target.value.replaceAll(":", ""));
+		setInputText(e.target.value.replaceAll(':', ''));
 	};
 
 	const inputOnKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		if (e.key === "Enter") {
+		if (e.key === 'Enter') {
 			setGithubQuery({ ...githubQuery, input: inputText });
 			setPageNumber(1);
 		}
@@ -117,8 +104,8 @@ export const IssuesPage = () => {
 	};
 
 	const clearSearchHistory = () => {
-		setInputText("");
-		setGithubQuery({ ...githubQuery, input: "" });
+		setInputText('');
+		setGithubQuery({ ...githubQuery, input: '' });
 	};
 
 	return (
@@ -142,7 +129,7 @@ export const IssuesPage = () => {
 				<Container>
 					{issues &&
 						issues.map((edges, idx) => {
-							if (edges?.node?.__typename === "Issue") {
+							if (edges?.node?.__typename === 'Issue') {
 								const node = edges?.node;
 
 								return (
@@ -153,7 +140,7 @@ export const IssuesPage = () => {
 										totalCount={node.comments.totalCount}
 										issueId={node.number}
 										createdAt={node.createdAt}
-										authorName={node.author?.login ?? ""}
+										authorName={node.author?.login ?? ''}
 										authorUrl={node.author?.url}
 									/>
 								);
