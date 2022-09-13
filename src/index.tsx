@@ -1,12 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 import { ApolloProvider } from "@apollo/client";
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider, createGlobalStyle } from 'styled-components';
+import { BrowserRouter } from "react-router-dom";
+import { ThemeProvider, createGlobalStyle } from "styled-components";
 
-import App from './App';
-import { theme } from './themes';
-import { apolloClient } from './graphql';
+import App from "./App";
+import { theme } from "./themes";
+import { apolloClient } from "./graphql";
 
 const GlobalStyle = createGlobalStyle`
 	body {
