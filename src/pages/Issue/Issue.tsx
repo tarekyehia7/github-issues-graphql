@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
-import { IssueComment } from '../../components/issueComment/IssueComment';
-import { IssueHeader } from '../../components/issueHeader/IssueHeader';
+import { IssueDetailsComment } from '../../components/issueDetailsComment/IssueDetailsComment';
+import { IssueDetailsHeader } from '../../components/issueDetailsHeader/IssueDetailsHeader';
 
 export const Issue = () => {
     const { issueId } = useParams();
@@ -24,14 +24,14 @@ export const Issue = () => {
         <>
             {issueData && issueData.author &&
                 <>
-                    <IssueHeader
+                    <IssueDetailsHeader
                         title={issueData.title}
                         state={issueData.state}
                         issueId={issueId ?? ''}
                         authorName={issueData.author.login}
                         createdAt={issueData.createdAt}
                     />
-                    <IssueComment
+                    <IssueDetailsComment
                         authorUrl={issueData.author.url}
                         avatarUrl={issueData.author.avatarUrl}
                         authorName={issueData.author.login}
@@ -45,7 +45,7 @@ export const Issue = () => {
                     const author = comment?.author;
                     if (!comment || !author) return null;
                     return (
-                        <IssueComment
+                        <IssueDetailsComment
                             key={`issue-comment-${idx}`}
                             authorUrl={author.url}
                             avatarUrl={author.avatarUrl}

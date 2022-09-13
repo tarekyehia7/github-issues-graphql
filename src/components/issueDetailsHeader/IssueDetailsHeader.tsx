@@ -48,7 +48,7 @@ type IssueHeaderProps = {
     createdAt: string;
 };
 
-export const IssueHeader = ({
+export const IssueDetailsHeader = ({
     title,
     issueId,
     state,
