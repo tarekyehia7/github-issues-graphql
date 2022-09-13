@@ -9,7 +9,7 @@ export const ButtonsContainer = styled.div`
 	padding: 1rem;
 `;
 
-export const Button = styled.button<{ currentTab: boolean }>`
+export const Button = styled.button<{ isSelected: boolean }>`
 	display: inline-flex;
 	padding: 0.5rem;
 	font-size: inherit;
@@ -23,16 +23,16 @@ export const Button = styled.button<{ currentTab: boolean }>`
 	border: 0;
 	-webkit-appearance: none;
 	appearance: none;
-	color: ${({ currentTab }) => (currentTab ? '#24292f' : '#57606a')};
-	${({ currentTab }) => currentTab && 'font-weight: bold;'}
+	color: ${({ isSelected }) => (isSelected ? '#24292f' : '#57606a')};
+	${({ isSelected }) => isSelected && 'font-weight: bold;'}
 `;
 
-export const OpenIssueIconStyled = styled(OpenIssueIcon)<{ currentTab: boolean }>`
-	fill: ${({ currentTab }) => (currentTab ? '#24292f' : '#57606a')};
+export const OpenIssueIconStyled = styled(OpenIssueIcon)<{ isSelected: boolean }>`
+	fill: ${({ isSelected }) => (isSelected ? '#24292f' : '#57606a')};
 	margin-right: 0.5rem;
 `;
 
-export const CorrectIconStyled = styled(CorrectIcon)<{ currentTab: boolean }>`
-	fill: ${({ currentTab }) => (currentTab ? '#24292f' : '#57606a')};
+export const CorrectIconStyled = styled(CorrectIcon)<{ isSelected: boolean }>`
+	fill: ${({ isSelected }) => (isSelected ? '#24292f' : '#57606a')};
 	margin-right: 0.5rem;
 `;

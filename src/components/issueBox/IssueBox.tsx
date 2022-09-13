@@ -34,6 +34,7 @@ export const IssueBox = ({
 	authorName,
 	authorUrl,
 }: IssueBoxProps) => {
+    console.log(state)
 	const navigate = useNavigate();
 
 	const navigateToIssue = () => {

@@ -11,12 +11,13 @@ import { StateToggler } from '../../components/stateToggler/StateToggler';
 import styled from 'styled-components';
 import { IssueBox } from '../../components/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
+import { constants } from '../../helpers/constants';
 
-const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
-	repo: 'facebook/react',
+export const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
+	repo: constants.repository,
 	is: 'issue',
 	status: StatusEnum.open,
-	in: 'title,body',
+	in: constants.searchTerm,
 	input: '',
 };
 
@@ -38,6 +39,7 @@ export const IssuesPage = () => {
 		fetchPolicy: 'network-only',
 	});
 
+    const { issuesPerPage } = constants;
 	const hasData = data?.search?.edges && data?.search?.edges.length > 0;
 	const issues = data?.search?.edges;
 
@@ -47,14 +49,14 @@ export const IssuesPage = () => {
 		getIssues({
 			variables: {
 				query,
-				first: 10,
+				first: issuesPerPage,
 			},
 		});
 	}, [githubQuery]);
 
 	useEffect(() => {
 		if (!loading) {
-			const number = data?.search ? getPagesNumber(data?.search?.issueCount, 10) : 1;
+			const number = data?.search ? getPagesNumber(data?.search?.issueCount, issuesPerPage) : 1;
 			setTotalPages(number);
 		}
 	}, [data]);
@@ -83,7 +85,7 @@ export const IssuesPage = () => {
 		getIssues({
 			variables: {
 				query,
-				last: 10,
+				last: issuesPerPage,
 				before: startCursor,
 			},
 		});
@@ -93,11 +95,12 @@ export const IssuesPage = () => {
 		const query = buildQuery(githubQuery);
 		const endCursor =
 			data?.search.edges && data?.search?.edges[data.search.edges.length - 1]?.cursor;
+
 		setPageNumber(pageNumber + 1);
 		getIssues({
 			variables: {
 				query,
-				first: 10,
+				first: issuesPerPage,
 				after: endCursor,
 			},
 		});
@@ -107,7 +110,7 @@ export const IssuesPage = () => {
 		setInputText('');
 		setGithubQuery({ ...githubQuery, input: '' });
 	};
-
+    
 	return (
 		<>
 			<FilterInput
@@ -120,7 +123,7 @@ export const IssuesPage = () => {
 			<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />
 			{loading && (
 				<Container>
-					{[...Array(10)].map(idx => (
+					{[...Array(issuesPerPage)].map(idx => (
 						<Skeleton key={idx} />
 					))}
 				</Container>

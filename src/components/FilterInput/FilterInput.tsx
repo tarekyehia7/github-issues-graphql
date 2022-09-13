@@ -26,7 +26,7 @@ export const FilterInput = ({
 	return (
 		<>
 			<FilterContainer>
-				<Input value={value} onKeyUp={onKeyUp} onChange={onChange} />
+				<Input value={value} placeholder="type here..." onKeyUp={onKeyUp} onChange={onChange} />
 				<SearchIconStyled />
 			</FilterContainer>
 			{showClearHistoryText && (

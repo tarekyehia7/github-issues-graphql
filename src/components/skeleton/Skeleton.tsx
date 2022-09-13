@@ -4,7 +4,7 @@ import { SkeletonContainer, SkeletonLoader } from './Skeleton.styled';
 
 export const Skeleton = () => {
 	return (
-		<SkeletonContainer>
+		<SkeletonContainer data-testid="skeleton">
 			<SkeletonLoader style={{ marginBottom: '1rem' }} />
 			<SkeletonLoader />
 		</SkeletonContainer>

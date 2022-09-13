@@ -17,17 +17,17 @@ export const StateToggler = ({ status, onStateClick }: StateTogglerProps) => {
 	return (
 		<ButtonsContainer>
 			<Button
-				currentTab={status === StatusEnum.open}
+				isSelected={status === StatusEnum.open}
 				onClick={() => onStateClick(StatusEnum.open)}
 			>
-				<OpenIssueIconStyled currentTab={status === StatusEnum.open} />
+				<OpenIssueIconStyled isSelected={status === StatusEnum.open} />
 				Open
 			</Button>
 			<Button
-				currentTab={status === StatusEnum.closed}
+				isSelected={status === StatusEnum.closed}
 				onClick={() => onStateClick(StatusEnum.closed)}
 			>
-				<CorrectIconStyled currentTab={status === StatusEnum.closed} />
+				<CorrectIconStyled isSelected={status === StatusEnum.closed} />
 				Closed
 			</Button>
 		</ButtonsContainer>

@@ -1,5 +1,4 @@
 export enum StatusEnum {
-	all = 'is:all',
 	open = 'is:open',
 	closed = 'is:closed',
 }
