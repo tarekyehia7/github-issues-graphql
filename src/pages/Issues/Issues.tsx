@@ -1,15 +1,15 @@
 import React, { useEffect, useState } from 'react';
 
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
-import { Issues } from '../../components/header/Issues';
 import { buildQuery } from '../../helpers/queryBuilder';
-import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
-import { Container } from '../../components/header/Issues';
-import { NoResults } from '../../components/atoms/NoResults/NoResults';
+import { Skeleton } from '../../components/skeleton/Skeleton';
+import { NoResults } from '../../components/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
 import Cursors from '../../components/Cursors/Cursors';
 import { FilterInput } from '../../components/FilterInput/FilterInput';
 import { StateToggler } from '../../components/stateToggler/StateToggler';
+import styled from 'styled-components';
+import { IssueBox } from '../../components/issueBox/IssueBox';
 
 export enum StatusEnum {
     all = 'is:all',
@@ -33,6 +33,16 @@ const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
     input: ''
 }
 
+const Container = styled.div`
+    display: flex;
+    flex-direction: column;
+    margin-right: 0;
+    margin-left: 0;
+    border: 1px solid #d0d7de;
+    border-radius: 6px;
+`;
+
+
 export const IssuesPage = () => {
     const [githubQuery, setGithubQuery] = useState(DEFAULT_GITHUB_QUERY_BUILDER);
     const [totalPages, setTotalPages] = useState(1);
@@ -43,6 +53,7 @@ export const IssuesPage = () => {
     });
 
     const hasData = data?.search?.edges && data?.search?.edges.length > 0;
+    const issues = data?.search?.edges;
 
     useEffect(() => {
         const query = buildQuery(githubQuery);
@@ -110,16 +121,6 @@ export const IssuesPage = () => {
         setGithubQuery({...githubQuery, input: ''});
     };
 
-    if (loading) {
-        return (
-            <Container>
-                {[...Array(10)].map((idx) => (
-                    <Skeleton key={idx} />
-                ))}
-            </Container>
-        );
-    }
-
     return (
         <>
             <FilterInput
@@ -133,8 +134,35 @@ export const IssuesPage = () => {
                 status={githubQuery.status}
                 onStateClick={updateQueryStatus}
             />
+            {loading && 
+                <Container>
+                    {[...Array(10)].map((idx) => (
+                        <Skeleton key={idx} />
+                    ))}
+                </Container>
+            }
             {hasData &&
-                <Issues data={data} />
+                <Container>
+                    {issues && issues.map((edges, idx) => {
+                        if (edges?.node?.__typename === "Issue") {
+                            const node = edges?.node;
+        
+                            return (
+                                <IssueBox
+                                    key={`issue-box-${idx}`}
+                                    state={node.state}
+                                    title={node.title}
+                                    totalCount={node.comments.totalCount}
+                                    issueId={node.number}
+                                    createdAt={node.createdAt}
+                                    authorName={node.author?.login ?? ''}
+                                    authorUrl={node.author?.url}
+                                />
+                            );
+                        }
+                        return null;
+                    })}
+                </Container>
             }
             {(!hasData || error) && !loading && 
                 <Container>

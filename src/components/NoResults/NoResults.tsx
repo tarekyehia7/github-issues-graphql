@@ -1,15 +1,8 @@
 import React from 'react';
-import styled from 'styled-components';
 
-import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
+import { Container } from './NoResults.styled';
+import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
 
-const Container = styled.div`
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem;
-`;
 
 export const NoResults = () => {
     return (

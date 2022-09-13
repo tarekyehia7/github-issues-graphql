@@ -1,8 +1,6 @@
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
-import React from 'react';
 import styled from 'styled-components';
 
-const Box = styled.div`
+export const Box = styled.div`
     color: #24292f;
     background-color: #ffffff;
     border: 1px solid #d0d7de;
@@ -25,7 +23,7 @@ const Box = styled.div`
     }
 `;
 
-const Title = styled.div`
+export const Title = styled.div`
     display: flex;
     align-items: center;
     padding: 1rem;
@@ -35,13 +33,13 @@ const Title = styled.div`
     border-top-right-radius: 6px;
 `;
 
-const Body = styled.div`
+export const Body = styled.div`
     padding: 16px;
     font-size: 14px;
     color: black;
 `;
 
-const AvatarImg = styled.img`
+export const AvatarImg = styled.img`
     position: absolute;
     left: -53px;
     display: inline-block;
@@ -56,35 +54,3 @@ const AvatarImg = styled.img`
     width: 2.5rem;
     height: 2.5rem;
 `;
-
-type IssueCommentProps = {
-    authorUrl: string;
-    avatarUrl: string;
-    authorName: string;
-    bodyHTML: string;
-    createdAt: string;
-};
-
-export const IssueComment = ({
-    authorUrl,
-    avatarUrl,
-    authorName,
-    createdAt,
-    bodyHTML
-}: IssueCommentProps) => {
-    return (
-        <Box>
-            <a href={authorUrl}>
-                <AvatarImg src={avatarUrl}/>
-            </a>
-            <Title>
-                {authorName} commented {formatDistanceToNowStrict(new Date(createdAt))} ago
-            </Title>
-            <Body
-                dangerouslySetInnerHTML={{
-                    __html: bodyHTML
-                }}
-            />
-        </Box>
-    );
-};
