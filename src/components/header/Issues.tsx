@@ -1,6 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
+import { formatDistanceToNowStrict } from 'date-fns';
 
 import { GetIssuesQuery, IssueState } from '../../graphql/generatedTypes/graphql';
 import { CommentsIcon } from '../../icons/CommentsIcon';
@@ -68,11 +69,15 @@ const Description = styled.div`
 `;
 
 const OpenIssueIconStyled = styled(OpenIssueIcon)`
-    margin-right: 0.5rem;
+    min-height: 1rem;
+    min-width: 2rem;
+    margin-top: 0.07rem;
 `;
 
 const SkipIconStyled = styled(SkipIcon)`
-    margin-right: 0.5rem;
+    min-height: 1rem;
+    min-width: 2rem;
+    margin-top: 0.07rem;
 `;
 
 const Ahref = styled.a`
@@ -113,7 +118,7 @@ export const Issues = ({ data }: IssuesProps) => {
                                 <Comments onClick={() => navigateToIssue(id)}><CommentsIconStyled />{edges?.node?.comments?.totalCount}</Comments>
                             }
                         </Header>
-                        <Description>#{edges.node.number} Opened {edges.node.createdAt} by <Ahref href={edges.node.author?.url}>{edges.node.author?.login}</Ahref></Description>
+                        <Description>#{edges.node.number} Opened {formatDistanceToNowStrict(new Date(edges.node.createdAt))} ago by <Ahref href={edges.node.author?.url}>{edges.node.author?.login}</Ahref></Description>
                     </Box>
                 }
                 return null;

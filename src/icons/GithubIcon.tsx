@@ -2,11 +2,11 @@ import React, { SVGAttributes } from 'react';
 
 export const GithubIcon = (props: SVGAttributes<SVGElement>): JSX.Element => (
 <svg version="1.0" role="img" xmlns="http://www.w3.org/2000/svg"
- width="120.000000pt" height="120.000000pt" viewBox="0 0 120.000000 120.000000"
- preserveAspectRatio="xMidYMid meet" {...props}>
+    viewBox="0 0 120.000000 120.000000"
+    preserveAspectRatio="xMidYMid meet" {...props}
+>
 
-    <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)"
-    fill="#000000" stroke="none">
+    <g transform="translate(0.000000,120.000000) scale(0.100000,-0.100000)">
         <path d="M452 1170 c-109 -29 -187 -74 -272 -160 -87 -86 -131 -163 -160 -276
         -36 -141 -18 -294 52 -427 48 -92 164 -205 259 -251 103 -51 113 -48 117 35
         l3 66 -59 0 c-75 0 -116 23 -147 84 -13 26 -38 58 -55 73 -36 29 -31 51 9 41

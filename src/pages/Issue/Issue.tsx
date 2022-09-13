@@ -1,6 +1,7 @@
 import React from 'react';
 import { useParams, Link } from 'react-router-dom';
 import styled from 'styled-components';
+import { formatDistanceToNowStrict } from 'date-fns'
 
 import { IssueState, useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
 import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
@@ -142,6 +143,8 @@ export const Issue = () => {
 
     console.log(data);
 
+    if (loading ) return null;
+
     return (
         <>
             <LinkContainer>
@@ -158,7 +161,7 @@ export const Issue = () => {
                         }
                         {data?.repository?.issue?.state} 
                     </Status>
-                    {data?.repository?.issue?.author?.login} opened this issue {data?.repository?.issue?.createdAt}
+                    {data?.repository?.issue?.author?.login} opened this issue {formatDistanceToNowStrict(new Date(data?.repository?.issue?.createdAt))} ago
                 </Description>
             </TitleContainer>
             <Box>
@@ -166,7 +169,7 @@ export const Issue = () => {
                     <AvatarImg src={data?.repository?.issue?.author?.avatarUrl}/>
                 </a>
                 <Title>
-                    {data?.repository?.issue?.author?.login} commented on {data?.repository?.issue?.createdAt}
+                    {data?.repository?.issue?.author?.login} commented {formatDistanceToNowStrict(new Date(data?.repository?.issue?.createdAt))} ago
                 </Title>
                 <Body
                     dangerouslySetInnerHTML={{
@@ -181,7 +184,7 @@ export const Issue = () => {
                                 <AvatarImg src={comment?.node?.author?.avatarUrl}/>
                             </a>
                             <Title>
-                                {comment?.node?.author?.login} commented on {comment?.node?.issue?.createdAt}
+                                {comment?.node?.author?.login} commented {formatDistanceToNowStrict(new Date(comment?.node?.issue?.createdAt))} ago
                             </Title>
                             <Body
                                 dangerouslySetInnerHTML={{
