@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Retrieve Issues from github ( facebook repository )
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+This project is aimed to retrieve data from github and render issues accordingly using github graphql apis
 
 ## Available Scripts
 
