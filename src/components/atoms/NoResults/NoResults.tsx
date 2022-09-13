@@ -17,7 +17,7 @@ export const NoResults = () => {
             <OpenIssueIcon />
         
             <h3>No results matched your search.</h3>
-            <p>You could search <a href="/search">all of GitHub</a> or try an <a href="/search/advanced">advanced search</a>.</p>
+            <p>You could search <a href="https://github.com/search">all of GitHub</a> or try an <a href="https://github.com/search/advanced">advanced search</a>.</p>
         </Container>
     );
 };
