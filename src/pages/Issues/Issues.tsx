@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
@@ -11,6 +11,8 @@ import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
 import { Container } from '../../components/header/Issues';
 import { NoResults } from '../../components/atoms/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
+import Cursors from '../../components/Cursors/Cursors';
+import { CloseIcon } from '../../icons/CloseIcon';
 
 export enum StatusEnum {
     all = 'is:all',
@@ -95,46 +97,37 @@ const CorrectIconStyled = styled(CorrectIcon)<{ currentTab: boolean }>`
     margin-right: 0.5rem;
 `;
 
-const CursorLink = styled.button`
-    color: #0969da;
-    min-width: 32px;
-    padding: 5px 10px;
-    font-style: normal;
-    line-height: 20px;
+const CloseIconStyled = styled(CloseIcon)`
+    width: 18px;
+    height: 18px;
+    padding: 1px;
+    margin-right: 4px;
+    fill: #ffffff;
     text-align: center;
-    white-space: nowrap;
-    vertical-align: middle;
-    cursor: pointer;
-    -webkit-user-select: none;
-    user-select: none;
-    border: 1px solid transparent;
+    background-color: #6e7781;
     border-radius: 6px;
-    transition: border-color .2s cubic-bezier(0.3, 0, 0.5, 1);
-    background-color: transparent;
-    &:disabled {
-        color: #8c959f;
-        cursor: default;
-        border-color: transparent;
-        &: hover {
-            border-color: transparent;
-        }
-    }
-    &:hover {
-        text-decoration: none;
-        border-color: #d0d7de;
-        transition-duration: .1s;
-    }
 `;
 
-const LinksContainer = styled.div`
+const ClearSearchContainer = styled.div`
     display: flex;
-    padding: 1rem;
-    justify-content: space-evenly;
+    flex-direction: row;
     align-items: center;
+    cursor: pointer;
+    font-weight: 600;
+    color: #57606a;
+    padding-top: 1rem;
+    &:hover {
+        color: #0969da;
+        text-decoration: none;
+        ${CloseIconStyled} {
+            background: #0969da;
+        }
+    }
 `;
 
 export const IssuesPage = () => {
     const [githubQuery, setGithubQuery] = useState(DEFAULT_GITHUB_QUERY_BUILDER);
+    const [totalPages, setTotalPages] = useState(1);
     const [pageNumber, setPageNumber] = useState(1);
     const [inputText, setInputText] = useState('');
     const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery({
@@ -184,9 +177,12 @@ export const IssuesPage = () => {
         })
     };
 
-    const getTotalPage = useCallback(() => {
-        return data?.search ? getPagesNumber(data?.search?.issueCount, 10) : 0;
-    }, []);
+    useEffect(() => {
+        if (!loading) {
+            const number = data?.search ? getPagesNumber(data?.search?.issueCount, 10) : 1;
+            setTotalPages(number);
+        }
+    }, [data]);
 
     const loadNextData = () => {
         const query = buildQuery(githubQuery);
@@ -199,6 +195,11 @@ export const IssuesPage = () => {
                 after: endCursor
             }
         })
+    };
+
+    const clearSearchHistory = () => {
+        setInputText('');
+        setGithubQuery({...githubQuery, input: ''});
     };
 
     if (error) {
@@ -215,6 +216,11 @@ export const IssuesPage = () => {
                 />
                 <SearchIconStyled />
             </FilterContainer>
+            {githubQuery.input && 
+                <ClearSearchContainer onClick={clearSearchHistory}>
+                    <CloseIconStyled /> Clear current search query, filters, and sorts
+                </ClearSearchContainer>
+            }
             <ButtonsContainer>
                 <Button
                     currentTab={githubQuery.status === StatusEnum.open}
@@ -232,7 +238,9 @@ export const IssuesPage = () => {
                 </Button>
             </ButtonsContainer>
             {hasData &&
-                <Issues data={data} />
+                <>
+                    <Issues data={data} />
+                </>
             }
             {!hasData && !loading && 
                 <Container>
@@ -246,23 +254,14 @@ export const IssuesPage = () => {
                     ))}
                 </Container>
             }
-            <LinksContainer>
-                <CursorLink
-                    onClick={loadPreviousData}
-                    disabled={!data?.search.pageInfo.hasPreviousPage}
-                >
-                    {`< Previous`}
-                </CursorLink>
-                <div>
-                    Page {pageNumber} of {getTotalPage()}
-                </div>
-                <CursorLink
-                    onClick={loadNextData}
-                    disabled={!data?.search.pageInfo.hasNextPage}
-                >
-                    {`Next >`}
-                </CursorLink>
-            </LinksContainer>
+            <Cursors
+                loadPreviousData={loadPreviousData}
+                loadNextData={loadNextData}
+                previousButtonDisabled={!data?.search.pageInfo.hasPreviousPage}
+                nextButtonDisabled={!data?.search.pageInfo.hasNextPage}
+                pageNumber={pageNumber}
+                totalPages={totalPages}
+            />
         </>
     );
 };
