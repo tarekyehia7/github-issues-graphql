@@ -126,21 +126,21 @@ export const IssuesPage = () => {
 			<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />
 			{loading && (
 				<Container>
-					{[...Array(issuesPerPage)].map(idx => (
-						<Skeleton key={idx} />
+					{[...Array(issuesPerPage)].map((_, idx) => (
+						<Skeleton key={`skeleton-${idx}`} />
 					))}
 				</Container>
 			)}
 			{hasData && (
 				<Container>
 					{issues &&
-						issues.map((edges, idx) => {
+						issues.map(edges => {
 							if (edges?.node?.__typename === 'Issue') {
 								const node = edges?.node;
 
 								return (
 									<IssueBox
-										key={`issue-box-${idx}`}
+										key={`issue-box-${node.number}`}
 										state={node.state}
 										title={node.title}
 										totalCount={node.comments.totalCount}
