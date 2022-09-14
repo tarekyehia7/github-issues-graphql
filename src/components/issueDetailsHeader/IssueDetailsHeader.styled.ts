@@ -29,6 +29,7 @@ export const Status = styled.span<{ isOpenState: boolean }>`
 	white-space: nowrap;
 	border-radius: 2em;
 	background-color: ${({ isOpenState }) => (isOpenState ? '#fa4549' : '#6e7781')};
+    margin-right: 0.7rem;
 	svg {
 		fill: #ffffff;
 	}
