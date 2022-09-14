@@ -8,7 +8,7 @@ import { MockedProvider } from '@apollo/client/testing';
 import { IssuesPage } from './Issues';
 import { theme } from '../../themes';
 import { issuesGraphQlMock } from '../../graphql/queries/mocks/issues.mock';
-import { constants } from '../../helpers/constants';
+import { constants } from '../../constants';
 import { BrowserRouter } from 'react-router-dom';
 
 const mock = issuesGraphQlMock;

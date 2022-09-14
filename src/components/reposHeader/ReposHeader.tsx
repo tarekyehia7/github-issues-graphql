@@ -1,5 +1,5 @@
 import React from 'react';
-import { constants } from '../../helpers/constants';
+import { constants } from '../../constants';
 
 import {
     HeaderLinks,

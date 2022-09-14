@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
 import { IssueDetailsComment } from '../../components/issueDetailsComment/IssueDetailsComment';
 import { IssueDetailsHeader } from '../../components/issueDetailsHeader/IssueDetailsHeader';
-import { constants } from '../../helpers/constants';
+import { constants } from '../../constants';
 
 export const Issue = () => {
 	const { issueId } = useParams();

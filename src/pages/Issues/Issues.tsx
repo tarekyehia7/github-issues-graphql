@@ -11,7 +11,7 @@ import { StateToggler } from '../../components/stateToggler/StateToggler';
 import styled from 'styled-components';
 import { IssueBox } from '../../components/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
-import { constants } from '../../helpers/constants';
+import { constants } from '../../constants';
 
 export const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
 	repo: `${constants.repository}/${constants.projectName}`,
@@ -28,6 +28,9 @@ const Container = styled.div`
 	margin-left: 0;
 	border: 1px solid #d0d7de;
 	border-radius: 6px;
+    div:first-of-type {
+        border-top: none;
+    }
 `;
 
 export const IssuesPage = () => {

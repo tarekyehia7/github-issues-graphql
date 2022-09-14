@@ -1,4 +1,4 @@
-import { constants } from '../../../helpers/constants';
+import { constants } from '../../../constants';
 import { buildQuery } from '../../../helpers/queryBuilder';
 import { DEFAULT_GITHUB_QUERY_BUILDER } from '../../../pages/Issues/Issues';
 import { GET_ISSUES } from '../issues.graphql';

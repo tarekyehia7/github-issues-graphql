@@ -6,10 +6,11 @@ export const theme = {
 		lightBlack: '#191919',
 		lightGrey: '#e7e7e7',
 		white: '#ffffff',
-		black: '#000000',
+		black: '#000000'
 	},
 	screens: {
-		tablet: '(max-width: 1048px)',
+		mobile: '(max-width: 480px)',
+		tablet: '(max-width: 768px)'
 	},
 };
 

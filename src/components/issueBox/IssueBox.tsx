@@ -14,7 +14,7 @@ import {
 	Title,
 } from './IssueBox.styled';
 import { IssueState } from '../../graphql/generatedTypes/graphql';
-import { constants } from '../../helpers/constants';
+import { constants } from '../../constants';
 
 type IssueBoxProps = {
 	state: IssueState;
