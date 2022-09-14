@@ -14,7 +14,7 @@ import { QueryType, StatusEnum } from '../../types/issues';
 import { constants } from '../../helpers/constants';
 
 export const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
-	repo: constants.repository,
+	repo: `${constants.repository}/${constants.projectName}`,
 	is: 'issue',
 	status: StatusEnum.open,
 	in: constants.searchTerm,

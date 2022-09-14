@@ -33,8 +33,9 @@ export const LinkStyled = styled(Link)`
 `;
 
 export const LinkContainer = styled.div`
-	display: flex;
-	height: 6rem;
-	justify-content: center;
-	background-color: #f6f8fa;
+    display: flex;
+    height: 3rem;
+    justify-content: flex-start;
+    padding: 1rem;
+    background-color: #f6f8fa;
 `;

@@ -19,7 +19,7 @@ function App() {
 			<AppContainer>
 				<Routes>
 					<Route path="/" element={<IssuesPage />} />
-					<Route path="issue/:issueId" element={<Issue />} />
+					<Route path=":repo/:name/issue/:issueId" element={<Issue />} />
 				</Routes>
 			</AppContainer>
 		</>

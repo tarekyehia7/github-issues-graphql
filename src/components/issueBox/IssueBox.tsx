@@ -14,6 +14,7 @@ import {
 	Title,
 } from './IssueBox.styled';
 import { IssueState } from '../../graphql/generatedTypes/graphql';
+import { constants } from '../../helpers/constants';
 
 type IssueBoxProps = {
 	state: IssueState;
@@ -34,11 +35,10 @@ export const IssueBox = ({
 	authorName,
 	authorUrl,
 }: IssueBoxProps) => {
-    console.log(state)
 	const navigate = useNavigate();
 
 	const navigateToIssue = () => {
-		navigate(`issue/${issueId}`);
+		navigate(`/${constants.repository}/${constants.projectName}/issue/${issueId}`);
 	};
 
 	return (
