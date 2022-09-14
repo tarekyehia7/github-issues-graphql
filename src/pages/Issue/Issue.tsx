@@ -20,7 +20,7 @@ export const IssuePage = () => {
 
 	const issueData = data?.repository?.issue;
 	const issueEdges = data?.repository?.issue?.comments?.edges;
-	
+
 	if (error) navigate('/');
 	if (loading) return null;
 

@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { CommentsIcon } from '../../icons/CommentsIcon';
@@ -20,13 +21,17 @@ export const Header = styled.div`
 	justify-content: space-between;
 `;
 
-export const Title = styled.h4`
+export const TitleLink = styled(Link)`
 	display: flex;
 	font-size: 16px;
 	font-weight: 600;
 	color: #24292f;
 	margin-top: 0;
 	cursor: pointer;
+    background: transparent;
+    margin: 1rem;
+    margin-top: 0;
+    text-decoration: none;
 	&:hover {
 		color: #0969da;
 	}
@@ -37,10 +42,12 @@ export const CommentsIconStyled = styled(CommentsIcon)`
 	margin-top: 0.1rem;
 `;
 
-export const Comments = styled.span`
+export const CommentsLink = styled(Link)`
 	display: flex;
 	align-items: flex-start;
 	cursor: pointer;
+    color: #000000;
+    text-decoration: none;
 	&:hover {
 		color: #0969da;
 		${CommentsIconStyled} {

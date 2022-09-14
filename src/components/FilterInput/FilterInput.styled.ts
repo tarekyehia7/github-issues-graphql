@@ -2,22 +2,6 @@ import styled from 'styled-components';
 import { CloseIcon } from '../../icons/CloseIcon';
 import { SearchIcon } from '../../icons/SearchIcon';
 
-export const Input = styled.input`
-	padding: 5px 26px;
-	font-size: 14px;
-	line-height: 20px;
-	vertical-align: middle;
-	background-repeat: no-repeat;
-	background-position: right 8px center;
-	border: 1px solid #d0d7de;
-	border-radius: 6px;
-	outline: none;
-	width: 100%;
-	background-color: #f6f8fa;
-	color: #57606a;
-	box-shadow: inset 0 1px 0 rgba(208, 215, 222, 0.2);
-`;
-
 export const FilterContainer = styled.div`
 	position: relative;
 	display: flex;
@@ -48,7 +32,7 @@ export const CloseIconStyled = styled(CloseIcon)`
 	border-radius: 6px;
 `;
 
-export const ClearSearchContainer = styled.div`
+export const ClearSearchContainer = styled.button`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
@@ -56,6 +40,8 @@ export const ClearSearchContainer = styled.div`
 	font-weight: 600;
 	color: #57606a;
 	padding-top: 1rem;
+	background: transparent;
+	border: none;
 	&:hover {
 		color: #0969da;
 		text-decoration: none;

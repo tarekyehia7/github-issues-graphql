@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { CursorLink, LinksContainer } from './Cursors.styled';
+import { Button, ButtonType } from '../atoms/button/Button';
+import { LinksContainer } from './Cursors.styled';
 
 type CursorsProps = {
 	previousButtonDisabled: boolean;
@@ -21,15 +22,21 @@ const Cursors = ({
 }: CursorsProps) => {
 	return (
 		<LinksContainer>
-			<CursorLink onClick={loadPreviousData} disabled={previousButtonDisabled}>
-				{`< Previous`}
-			</CursorLink>
+			<Button
+				value={`< Previous`}
+				onClick={loadPreviousData}
+				disabled={previousButtonDisabled}
+				type={ButtonType.Cursor}
+			/>
 			<div>
 				Page {pageNumber} of {totalPages}
 			</div>
-			<CursorLink onClick={loadNextData} disabled={nextButtonDisabled}>
-				{`Next >`}
-			</CursorLink>
+			<Button
+				value={`Next >`}
+				onClick={loadNextData}
+				disabled={nextButtonDisabled}
+				type={ButtonType.Cursor}
+			/>
 		</LinksContainer>
 	);
 };

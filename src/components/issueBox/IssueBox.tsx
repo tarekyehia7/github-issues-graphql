@@ -1,17 +1,16 @@
 import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
 
 import {
 	Box,
 	Ahref,
-	Comments,
+	CommentsLink,
 	CommentsIconStyled,
 	Description,
 	Header,
 	OpenIssueIconStyled,
 	SkipIconStyled,
-	Title,
+	TitleLink,
 } from './IssueBox.styled';
 import { IssueState } from '../../graphql/generatedTypes/graphql';
 import { constants } from '../../constants';
@@ -35,25 +34,20 @@ export const IssueBox = ({
 	authorName,
 	authorUrl,
 }: IssueBoxProps) => {
-	const navigate = useNavigate();
-
-	const navigateToIssue = () => {
-		navigate(`/${constants.repository}/${constants.projectName}/issue/${issueId}`);
-	};
 
 	return (
 		<Box>
 			<Header>
-				<Title onClick={navigateToIssue}>
+				<TitleLink to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
 					{state === IssueState.Open && <OpenIssueIconStyled />}
 					{state === IssueState.Closed && <SkipIconStyled />}
 					{title}
-				</Title>
+				</TitleLink>
 				{totalCount > 0 && (
-					<Comments onClick={navigateToIssue}>
+					<CommentsLink to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
 						<CommentsIconStyled />
 						{totalCount}
-					</Comments>
+					</CommentsLink>
 				)}
 			</Header>
 			<Description>

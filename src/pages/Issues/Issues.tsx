@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
 import { buildQuery } from '../../helpers/queryBuilder';
-import { Skeleton } from '../../components/skeleton/Skeleton';
+import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
 import { NoResults } from '../../components/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
 import Cursors from '../../components/Cursors/Cursors';
@@ -78,10 +78,10 @@ export const IssuesPage = () => {
 	};
 
 	const updateQueryStatus = (status: StatusEnum) => {
-        if (githubQuery.status !== status) {
-            setPageNumber(1);
-            setGithubQuery({ ...githubQuery, status });
-        }
+		if (githubQuery.status !== status) {
+			setPageNumber(1);
+			setGithubQuery({ ...githubQuery, status });
+		}
 	};
 
 	const loadPreviousData = () => {

@@ -4,9 +4,9 @@ import {
 	FilterContainer,
 	ClearSearchContainer,
 	CloseIconStyled,
-	Input,
 	SearchIconStyled,
 } from './FilterInput.styled';
+import { Input } from '../atoms/Input/Input';
 
 type FilterInputProps = {
 	value: string;
