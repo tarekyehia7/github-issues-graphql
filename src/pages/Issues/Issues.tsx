@@ -78,8 +78,10 @@ export const IssuesPage = () => {
 	};
 
 	const updateQueryStatus = (status: StatusEnum) => {
-		setPageNumber(1);
-		setGithubQuery({ ...githubQuery, status });
+        if (githubQuery.status !== status) {
+            setPageNumber(1);
+            setGithubQuery({ ...githubQuery, status });
+        }
 	};
 
 	const loadPreviousData = () => {
