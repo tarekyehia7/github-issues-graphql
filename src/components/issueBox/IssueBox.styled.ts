@@ -59,7 +59,7 @@ export const OpenIssueIconStyled = styled(OpenIssueIcon)`
 	min-height: 1rem;
 	min-width: 2rem;
 	margin-top: 0.07rem;
-    fill: #cf222e;
+	fill: #cf222e;
 `;
 
 export const SkipIconStyled = styled(SkipIcon)`

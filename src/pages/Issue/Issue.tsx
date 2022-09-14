@@ -6,21 +6,21 @@ import { IssueDetailsComment } from '../../components/issueDetailsComment/IssueD
 import { IssueDetailsHeader } from '../../components/issueDetailsHeader/IssueDetailsHeader';
 import { constants } from '../../constants';
 
-export const Issue = () => {
+export const IssuePage = () => {
 	const { issueId } = useParams();
 	const navigate = useNavigate();
 	const { data, error, loading } = useGetIssueQuery({
 		variables: {
 			issueId: issueId ? parseInt(issueId) : 0,
-            owner: constants.repository,
-            projectName: constants.projectName
+			owner: constants.repository,
+			projectName: constants.projectName,
 		},
-        fetchPolicy: 'cache-and-network'
+		fetchPolicy: 'cache-and-network',
 	});
 
 	const issueData = data?.repository?.issue;
 	const issueEdges = data?.repository?.issue?.comments?.edges;
-
+	
 	if (error) navigate('/');
 	if (loading) return null;
 

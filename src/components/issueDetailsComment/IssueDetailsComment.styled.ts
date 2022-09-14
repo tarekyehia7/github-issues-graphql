@@ -8,29 +8,29 @@ export const Box = styled.div`
 	margin-bottom: 1rem;
 	position: relative;
 	margin: 4rem;
-    margin-right: 0;
-    @media (max-width: 480px) {
-        & > a {
-            display: none;
-        }
-        margin: 0rem;
-        margin-top: 1rem;
-    }
-    @media (min-width: 480px) {
-        &:before {
-            position: absolute;
-            top: 11px;
-            right: 100%;
-            left: -8px;
-            display: block;
-            width: 8px;
-            height: 16px;
-            pointer-events: none;
-            content: ' ';
-            clip-path: polygon(0 50%, 100% 0, 100% 100%);
-            background-color: #d0d7de;
-        }
-    }
+	margin-right: 0;
+	@media (max-width: 480px) {
+		& > a {
+			display: none;
+		}
+		margin: 0rem;
+		margin-top: 1rem;
+	}
+	@media (min-width: 480px) {
+		&:before {
+			position: absolute;
+			top: 11px;
+			right: 100%;
+			left: -8px;
+			display: block;
+			width: 8px;
+			height: 16px;
+			pointer-events: none;
+			content: ' ';
+			clip-path: polygon(0 50%, 100% 0, 100% 100%);
+			background-color: #d0d7de;
+		}
+	}
 `;
 
 export const Title = styled.div`
@@ -47,9 +47,9 @@ export const Body = styled.div`
 	padding: 16px;
 	font-size: 14px;
 	color: black;
-    @media (max-width: 480px) {
-        overflow: auto;
-    }
+	@media (max-width: 480px) {
+		overflow: auto;
+	}
 `;
 
 export const AvatarImg = styled.img`

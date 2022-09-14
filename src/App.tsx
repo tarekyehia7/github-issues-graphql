@@ -4,7 +4,7 @@ import styled from 'styled-components';
 
 import { Header } from './components/header/Header';
 import { ReposHeader } from './components/reposHeader/ReposHeader';
-import { Issue } from './pages/Issue/Issue';
+import { IssuePage } from './pages/Issue/Issue';
 import { IssuesPage } from './pages/Issues/Issues';
 
 const AppContainer = styled.div`
@@ -19,7 +19,7 @@ function App() {
 			<AppContainer>
 				<Routes>
 					<Route path="/" element={<IssuesPage />} />
-					<Route path=":repo/:name/issue/:issueId" element={<Issue />} />
+					<Route path=":repo/:name/issue/:issueId" element={<IssuePage />} />
 				</Routes>
 			</AppContainer>
 		</>

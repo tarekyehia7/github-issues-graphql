@@ -46,4 +46,3 @@ Run this command to format all files according to prettier configurations
 Run this command to generate types for your graphql queries
 
 **Note: This command must run each time the queries change!**
-

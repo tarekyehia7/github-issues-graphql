@@ -23,7 +23,7 @@ export const IssueDetailsHeader = ({
 }: IssueHeaderProps) => (
 	<TitleContainer>
 		<BigTitle>
-			{title} #{issueId}
+			<span>{title}</span> #{issueId}
 		</BigTitle>
 		<Description>
 			<Status isOpenState={state === IssueState.Open}>

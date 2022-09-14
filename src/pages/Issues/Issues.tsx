@@ -28,9 +28,9 @@ const Container = styled.div`
 	margin-left: 0;
 	border: 1px solid #d0d7de;
 	border-radius: 6px;
-    div:first-of-type {
-        border-top: none;
-    }
+	div:first-of-type {
+		border-top: none;
+	}
 `;
 
 export const IssuesPage = () => {
@@ -39,10 +39,10 @@ export const IssuesPage = () => {
 	const [pageNumber, setPageNumber] = useState(1);
 	const [inputText, setInputText] = useState('');
 	const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery({
-		fetchPolicy: 'network-only',
+		fetchPolicy: 'cache-and-network',
 	});
 
-    const { issuesPerPage } = constants;
+	const { issuesPerPage } = constants;
 	const hasData = data?.search?.edges && data?.search?.edges.length > 0;
 	const issues = data?.search?.edges;
 
@@ -59,7 +59,9 @@ export const IssuesPage = () => {
 
 	useEffect(() => {
 		if (!loading) {
-			const number = data?.search ? getPagesNumber(data?.search?.issueCount, issuesPerPage) : 1;
+			const number = data?.search
+				? getPagesNumber(data?.search?.issueCount, issuesPerPage)
+				: 1;
 			setTotalPages(number);
 		}
 	}, [data]);
@@ -113,7 +115,7 @@ export const IssuesPage = () => {
 		setInputText('');
 		setGithubQuery({ ...githubQuery, input: '' });
 	};
-    
+
 	return (
 		<>
 			<FilterInput

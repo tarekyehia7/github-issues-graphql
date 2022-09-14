@@ -57,9 +57,9 @@ export const IssueBox = ({
 				)}
 			</Header>
 			<Description>
-				#{issueId} Opened
+				<span>#{issueId} Opened </span>
 				{formatDistanceToNowStrict(new Date(createdAt))}
-				ago by
+				<span> ago by </span>
 				<Ahref href={authorUrl}>{authorName}</Ahref>
 			</Description>
 		</Box>

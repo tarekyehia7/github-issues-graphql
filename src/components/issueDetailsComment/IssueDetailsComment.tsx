@@ -21,7 +21,7 @@ export const IssueDetailsComment = ({
 	return (
 		<Box>
 			<a href={authorUrl}>
-				<AvatarImg src={avatarUrl} />
+				<AvatarImg alt="avatar url" src={avatarUrl} />
 			</a>
 			<Title>
 				{authorName} commented {formatDistanceToNowStrict(new Date(createdAt))} ago
