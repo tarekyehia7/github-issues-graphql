@@ -4,6 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
 import { IssueDetailsComment } from '../../components/issueDetailsComment/IssueDetailsComment';
 import { IssueDetailsHeader } from '../../components/issueDetailsHeader/IssueDetailsHeader';
+import { constants } from '../../helpers/constants';
 
 export const Issue = () => {
 	const { issueId } = useParams();
@@ -11,7 +12,10 @@ export const Issue = () => {
 	const { data, error, loading } = useGetIssueQuery({
 		variables: {
 			issueId: issueId ? parseInt(issueId) : 0,
+            owner: constants.repository,
+            projectName: constants.projectName
 		},
+        fetchPolicy: 'cache-and-network'
 	});
 
 	const issueData = data?.repository?.issue;

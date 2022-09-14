@@ -1,8 +1,8 @@
 import { gql } from '@apollo/client';
 
 export const GET_ISSUE = gql`
-	query GetIssue($issueId: Int!) {
-		repository(name: "react", owner: "facebook") {
+	query GetIssue($issueId: Int!, $owner: String!, $projectName: String!) {
+		repository(name: $projectName, owner: $owner) {
 			issue(number: $issueId) {
 				id
 				bodyHTML
