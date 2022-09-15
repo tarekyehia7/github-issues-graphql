@@ -7,7 +7,7 @@ export const Box = styled.div<{ withAvatar: boolean }>`
 	border-radius: 6px;
 	position: relative;
 	${({ withAvatar }) => withAvatar && 'margin: 4rem;'}
-    ${({ withAvatar }) => !withAvatar && 'margin-top: 1rem;'}
+	${({ withAvatar }) => !withAvatar && 'margin-top: 1rem;'}
 	margin-bottom: 1rem;
 	margin-right: 0;
 	@media (max-width: 480px) {
@@ -17,7 +17,9 @@ export const Box = styled.div<{ withAvatar: boolean }>`
 		margin: 0rem;
 		margin-top: 1rem;
 	}
-    ${({ withAvatar }) => withAvatar && `
+	${({ withAvatar }) =>
+		withAvatar &&
+		`
         @media (min-width: 480px) {
             &:before {
                 position: absolute;

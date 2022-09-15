@@ -14,17 +14,20 @@ type IssueCommentProps = {
 };
 
 type TitleProps = {
-    authorName: string;
-    authorUrl: string;
-    createdAt: string;
+	authorName: string;
+	authorUrl: string;
+	createdAt: string;
 };
 
 const CardTitle = ({ authorName, authorUrl, createdAt }: TitleProps) => {
-    return (
-        <>
-        <Link type={LinkType.Normal} to={authorUrl}>{authorName}</Link><span>&nbsp;commented {formatDistanceToNowStrict(new Date(createdAt))} ago</span>
-        </>
-    );
+	return (
+		<>
+			<Link type={LinkType.Normal} to={authorUrl}>
+				{authorName}
+			</Link>
+			<span>&nbsp;commented {formatDistanceToNowStrict(new Date(createdAt))} ago</span>
+		</>
+	);
 };
 
 export const IssueDetailsComment = ({
@@ -35,16 +38,19 @@ export const IssueDetailsComment = ({
 	bodyHTML,
 }: IssueCommentProps) => {
 	return (
-        <Card
-            type={CardType.withAvatar}
-            title={<CardTitle authorName={authorName} authorUrl={authorUrl} createdAt={createdAt} />}
-            authorUrl={authorUrl}
-            avatarUrl={avatarUrl}
-        >
-            <BodyHTMLDiv
-            dangerouslySetInnerHTML={{
-                __html: bodyHTML,
-            }} />
-        </Card>
+		<Card
+			type={CardType.withAvatar}
+			title={
+				<CardTitle authorName={authorName} authorUrl={authorUrl} createdAt={createdAt} />
+			}
+			authorUrl={authorUrl}
+			avatarUrl={avatarUrl}
+		>
+			<BodyHTMLDiv
+				dangerouslySetInnerHTML={{
+					__html: bodyHTML,
+				}}
+			/>
+		</Card>
 	);
 };

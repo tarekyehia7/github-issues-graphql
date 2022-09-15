@@ -8,7 +8,6 @@ import { getPagesNumber } from '../../helpers/helpers';
 import Cursors from '../../components/molecules/Cursors/Cursors';
 import { FilterInput } from '../../components/molecules/FilterInput/FilterInput';
 import { StateToggler } from '../../components/molecules/stateToggler/StateToggler';
-import styled from 'styled-components';
 import { IssueBox } from '../../components/organisms/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
 import { constants } from '../../constants';
@@ -116,40 +115,37 @@ export const IssuesPage = () => {
 				onClearSearchHistoryClick={clearSearchHistory}
 				showClearHistoryText={githubQuery.input.length > 0}
 			/>
-            <Card
-                type={CardType.Normal}
-                title={<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />}
-            >
-                {loading && 
-                    [...Array(issuesPerPage)].map((_, idx) => (
-                        <Skeleton key={`skeleton-${idx}`} />
-                    )
-                )}
-                {hasData && issues &&
-                            issues.map(edges => {
-                                if (edges?.node?.__typename === 'Issue') {
-                                    const node = edges?.node;
+			<Card
+				type={CardType.Normal}
+				title={
+					<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />
+				}
+			>
+				{loading &&
+					[...Array(issuesPerPage)].map((_, idx) => <Skeleton key={`skeleton-${idx}`} />)}
+				{hasData &&
+					issues &&
+					issues.map(edges => {
+						if (edges?.node?.__typename === 'Issue') {
+							const node = edges?.node;
 
-                                    return (
-                                        <IssueBox
-                                            key={`issue-box-${node.number}`}
-                                            state={node.state}
-                                            title={node.title}
-                                            totalCount={node.comments.totalCount}
-                                            issueId={node.number}
-                                            createdAt={node.createdAt}
-                                            authorName={node.author?.login ?? ''}
-                                            authorUrl={node.author?.url}
-                                        />
-                                    );
-                                }
-                                return null;
-                            }
-                )}
-                {(!hasData || error) && !loading && (
-                    <NoResults />
-                )}
-            </Card>
+							return (
+								<IssueBox
+									key={`issue-box-${node.number}`}
+									state={node.state}
+									title={node.title}
+									totalCount={node.comments.totalCount}
+									issueId={node.number}
+									createdAt={node.createdAt}
+									authorName={node.author?.login ?? ''}
+									authorUrl={node.author?.url}
+								/>
+							);
+						}
+						return null;
+					})}
+				{(!hasData || error) && !loading && <NoResults />}
+			</Card>
 			<Cursors
 				loadPreviousData={loadPreviousData}
 				loadNextData={loadNextData}

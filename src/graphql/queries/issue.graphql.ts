@@ -23,7 +23,7 @@ export const GET_ISSUE = gql`
 								url
 							}
 							bodyHTML
-        					createdAt
+							createdAt
 						}
 					}
 				}

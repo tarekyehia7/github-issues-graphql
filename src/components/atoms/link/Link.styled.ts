@@ -8,25 +8,24 @@ export const TitleLink = styled(Link)`
 	color: #24292f;
 	margin-top: 0;
 	cursor: pointer;
-    background: transparent;
-    margin: 1rem;
-    margin-top: 0;
-    text-decoration: none;
+	background: transparent;
+	margin: 1rem;
+	margin-top: 0;
+	text-decoration: none;
 	&:hover {
 		color: #0969da;
 	}
 `;
 
 export const LinkStyled = styled.a<{ invertColor: boolean }>`
-	color: ${({ invertColor }) => invertColor ? '#0969da' : '#57606a'};
+	color: ${({ invertColor }) => (invertColor ? '#0969da' : '#57606a')};
 	cursor: pointer;
 	text-decoration: none;
 	&:hover {
 		${({ invertColor }) => invertColor && 'text-decoration: underline;'}
-        color: #0969da;
+		color: #0969da;
 	}
 `;
-
 
 export const HeaderLinkStyled = styled(Link)`
 	position: relative;

@@ -8,7 +8,7 @@ import {
 	Header,
 	OpenIssueIconStyled,
 	SkipIconStyled,
-    CommentsSection,
+	CommentsSection,
 } from './IssueBox.styled';
 import { Link, LinkType } from '../../atoms/link/Link';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
@@ -33,29 +33,36 @@ export const IssueBox = ({
 	authorName,
 	authorUrl,
 }: IssueBoxProps) => {
-
 	return (
 		<Box>
 			<Header>
-				<Link type={LinkType.Title} to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
+				<Link
+					type={LinkType.Title}
+					to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}
+				>
 					{state === IssueState.Open && <OpenIssueIconStyled />}
 					{state === IssueState.Closed && <SkipIconStyled />}
 					{title}
 				</Link>
 				{totalCount > 0 && (
-                    <CommentsSection>
-                        <CommentsIconStyled />
-                        <Link type={LinkType.Normal} to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
-                            {totalCount}
-                        </Link>
-                    </CommentsSection>
+					<CommentsSection>
+						<Link
+							type={LinkType.Normal}
+							to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}
+						>
+							<CommentsIconStyled />
+							<span>{totalCount}</span>
+						</Link>
+					</CommentsSection>
 				)}
 			</Header>
 			<Description>
 				<span>#{issueId} Opened </span>
 				{formatDistanceToNowStrict(new Date(createdAt))}
 				<span> ago by </span>
-				<Link type={LinkType.Normal} to={authorUrl}>{authorName}</Link>
+				<Link type={LinkType.Normal} to={authorUrl}>
+					{authorName}
+				</Link>
 			</Description>
 		</Box>
 	);

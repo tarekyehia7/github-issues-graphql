@@ -17,22 +17,30 @@ export const ReposHeader = () => {
 			<HeaderLinks>
 				<BookIconStyled />
 				<strong>
-                    &nbsp;
-					<Link type={LinkType.NormalBlue} to={`${githubUrl}/${repository}`}> {repository} </Link>
-                    &nbsp;
+					&nbsp;
+					<Link type={LinkType.NormalBlue} to={`${githubUrl}/${repository}`}>
+						{' '}
+						{repository}{' '}
+					</Link>
+					&nbsp;
 				</strong>
 				/
 				<strong>
-                    &nbsp;
-					<Link type={LinkType.NormalBlue} to={`${githubUrl}/${repository}/${projectName}`}>
+					&nbsp;
+					<Link
+						type={LinkType.NormalBlue}
+						to={`${githubUrl}/${repository}/${projectName}`}
+					>
 						{projectName}
 					</Link>
-                    &nbsp;
+					&nbsp;
 				</strong>
 				<RepoStateLabel>Public</RepoStateLabel>
 			</HeaderLinks>
 			<PagesLinks>
-				<Link type={LinkType.HeaderLink} to={'/'}>Issues</Link>
+				<Link type={LinkType.HeaderLink} to={'/'}>
+					Issues
+				</Link>
 			</PagesLinks>
 		</LinkContainer>
 	);

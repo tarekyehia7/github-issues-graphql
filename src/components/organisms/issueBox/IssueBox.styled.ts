@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { CommentsIcon } from '../../../icons/CommentsIcon';
@@ -23,21 +22,24 @@ export const Header = styled.div`
 
 export const CommentsIconStyled = styled(CommentsIcon)`
 	margin-right: 0.2rem;
-	margin-top: 0.1rem;
+	height: 1rem;
+    width: 1rem;
+    position: absolute;
+    right: 1.5rem;
 `;
 
 export const CommentsSection = styled.div`
-    display: flex;
+	display: flex;
 	align-items: flex-start;
 	cursor: pointer;
-    &:hover {
-        > a {
-            color: #0969da;
-        }
-        ${CommentsIconStyled} {
+	&:hover {
+		> a {
+			color: #0969da;
+		}
+		${CommentsIconStyled} {
 			fill: #0969da;
 		}
-    }
+	}
 `;
 
 export const Description = styled.div`

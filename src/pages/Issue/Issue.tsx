@@ -49,7 +49,7 @@ export const IssuePage = () => {
 					const comment = edge?.node;
 					const author = comment?.author;
 					if (!comment || !author) return null;
-					
+
 					return (
 						<IssueDetailsComment
 							key={`issue-comment-${idx}`}
