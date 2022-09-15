@@ -3,8 +3,8 @@ import styled from 'styled-components';
 import { GithubIcon } from '../../../icons/GithubIcon';
 
 export const GithubIco = styled(GithubIcon)`
-	height: 2.5rem;
-	width: 2.5rem;
-	fill: #ffffff;
-	margin: 1rem;
+	height: ${({ theme }) => theme.margins.margin10};
+	width: ${({ theme }) => theme.margins.margin10};
+	fill: ${({ theme }) => theme.colors.white};
+	margin: ${({ theme }) => theme.margins.margin4};
 `;

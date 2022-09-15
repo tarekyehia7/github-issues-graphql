@@ -3,7 +3,7 @@ import styled from 'styled-components';
 export const TitleContainer = styled.div`
 	font-weight: 400;
 	padding-bottom: 3rem;
-	border-bottom: 1px solid #d0d7de;
+	border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 `;
 
 export const BigTitle = styled.h1``;
@@ -20,7 +20,7 @@ export const Status = styled.span<{ isOpenState: boolean }>`
 	justify-content: space-between;
 	width: ${({ isOpenState }) => (isOpenState ? '4rem' : '5rem')};
 	border: 1px solid transparent;
-	color: #ffffff;
+	color: ${({ theme }) => theme.colors.white};
 	padding: 5px 12px;
 	font-size: 14px;
 	font-weight: 500;
@@ -31,6 +31,6 @@ export const Status = styled.span<{ isOpenState: boolean }>`
 	background-color: ${({ isOpenState }) => (isOpenState ? '#fa4549' : '#6e7781')};
 	margin-right: 0.7rem;
 	svg {
-		fill: #ffffff;
+		fill: ${({ theme }) => theme.colors.white};
 	}
 `;

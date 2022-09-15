@@ -1,23 +1,23 @@
 import styled from 'styled-components';
 
 export const Box = styled.div<{ withAvatar: boolean }>`
-	color: #24292f;
-	background-color: #ffffff;
-	border: 1px solid #d0d7de;
+	color: ${({ theme }) => theme.colors.lightBlack};
+	background-color: ${({ theme }) => theme.colors.white};
+	border: 1px solid ${({ theme }) => theme.colors.lightGray};
 	border-radius: 6px;
 	position: relative;
 	${({ withAvatar }) => withAvatar && 'margin: 4rem;'}
 	${({ withAvatar }) => !withAvatar && 'margin-top: 1rem;'}
-	margin-bottom: 1rem;
+	margin-bottom: ${({ theme }) => theme.margins.margin4};
 	margin-right: 0;
 	@media (max-width: 480px) {
 		& > a {
 			display: none;
 		}
 		margin: 0rem;
-		margin-top: 1rem;
+		margin-top: ${({ theme }) => theme.margins.margin4};
 	}
-	${({ withAvatar }) =>
+	${({ withAvatar, theme }) =>
 		withAvatar &&
 		`
         @media (min-width: 480px) {
@@ -32,7 +32,7 @@ export const Box = styled.div<{ withAvatar: boolean }>`
                 pointer-events: none;
                 content: ' ';
                 clip-path: polygon(0 50%, 100% 0, 100% 100%);
-                background-color: #d0d7de;
+                background-color: ${theme.colors.lightGray};
             }
         }
     `}
@@ -40,7 +40,7 @@ export const Box = styled.div<{ withAvatar: boolean }>`
 
 export const Body = styled.div`
 	font-size: 14px;
-	color: black;
+	color: ${({ theme }) => theme.colors.black};
 	@media (max-width: 480px) {
 		overflow: auto;
 	}
@@ -53,7 +53,7 @@ export const AvatarImg = styled.img`
 	overflow: hidden;
 	line-height: 1;
 	vertical-align: middle;
-	background-color: #ffffff;
+	background-color: ${({ theme }) => theme.colors.white};
 	border-radius: 6px;
 	flex-shrink: 0;
 	box-shadow: 0 0 0 1px #1b1f2426;

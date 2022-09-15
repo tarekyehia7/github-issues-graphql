@@ -5,5 +5,5 @@ export const HeaderStyled = styled.header`
 	justify-content: space-between;
 	align-items: flex-start;
 	flex-direction: column;
-	background-color: #24292f;
+	background-color: ${({ theme }) => theme.colors.lightBlack};
 `;

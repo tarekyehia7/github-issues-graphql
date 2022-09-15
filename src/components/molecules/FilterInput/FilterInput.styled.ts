@@ -12,12 +12,12 @@ export const FilterContainer = styled.div`
 export const SearchIconStyled = styled(SearchIcon)`
 	position: absolute;
 	display: block;
-	color: #57606a;
+	color: ${({ theme }) => theme.colors.darkGray};
 	text-align: center;
 	pointer-events: none;
-	fill: #ffffff;
+	fill: ${({ theme }) => theme.colors.white};
 	stroke-width: 0.1rem;
-	stroke: #57606a;
+	stroke: ${({ theme }) => theme.colors.darkGray};
 	margin-left: 0.3rem;
 `;
 
@@ -26,7 +26,7 @@ export const CloseIconStyled = styled(CloseIcon)`
 	height: 18px;
 	padding: 1px;
 	margin-right: 4px;
-	fill: #ffffff;
+	fill: ${({ theme }) => theme.colors.white};
 	text-align: center;
 	background-color: #6e7781;
 	border-radius: 6px;
@@ -38,15 +38,15 @@ export const ClearSearchContainer = styled.button`
 	align-items: center;
 	cursor: pointer;
 	font-weight: 600;
-	color: #57606a;
+	color: ${({ theme }) => theme.colors.darkGray};
 	padding-top: 1rem;
 	background: transparent;
 	border: none;
 	&:hover {
-		color: #0969da;
+		color: ${({ theme }) => theme.colors.blue};
 		text-decoration: none;
 		${CloseIconStyled} {
-			background: #0969da;
+			background: ${({ theme }) => theme.colors.blue};
 		}
 	}
 `;

@@ -1,8 +1,8 @@
 import styled from 'styled-components';
 
 export const ButtonStyled = styled.button`
-	color: #0969da;
-	min-width: 32px;
+	color: ${({ theme }) => theme.colors.blue};
+	min-width: ${({ theme }) => theme.margins.margin8};
 	padding: 5px 10px;
 	font-style: normal;
 	line-height: 20px;
@@ -17,7 +17,7 @@ export const ButtonStyled = styled.button`
 	transition: border-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
 	background-color: transparent;
 	&:disabled {
-		color: #8c959f;
+		color: ${({ theme }) => theme.colors.gray};
 		cursor: default;
 		border-color: transparent;
 		&: hover {
@@ -26,7 +26,7 @@ export const ButtonStyled = styled.button`
 	}
 	&:hover {
 		text-decoration: none;
-		border-color: #d0d7de;
+		border-color: ${({ theme }) => theme.colors.lightGray};
 		transition-duration: 0.1s;
 	}
 `;

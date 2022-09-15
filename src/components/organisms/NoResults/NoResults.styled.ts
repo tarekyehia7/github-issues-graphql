@@ -5,5 +5,5 @@ export const Container = styled.div`
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	padding: 4rem;
+	padding: ${({ theme }) => theme.margins.margin16};
 `;

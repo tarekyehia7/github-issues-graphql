@@ -8,7 +8,7 @@ const shine = keyframes`
 
 export const SkeletonLoader = styled.span`
 	width: 100%;
-	height: 15px;
+	height: 11px;
 	display: block;
 	background: linear-gradient(
 			to right,
@@ -26,6 +26,6 @@ export const SkeletonLoader = styled.span`
 export const SkeletonContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	border-bottom: 1px solid #d8dee4;
+	border-bottom: 1px solid ${({ theme }) => theme.colors.darkWhite};
 	padding: 22px 10px;
 `;

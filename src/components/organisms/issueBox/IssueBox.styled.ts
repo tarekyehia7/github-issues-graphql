@@ -11,7 +11,7 @@ export const Box = styled.div`
 	border-top-style: solid;
 	border-top-width: 1px;
 	&:hover {
-		background-color: #f6f8fa;
+		background-color: ${({ theme }) => theme.colors.lightBlue};
 	}
 `;
 
@@ -22,10 +22,10 @@ export const Header = styled.div`
 
 export const CommentsIconStyled = styled(CommentsIcon)`
 	margin-right: 0.2rem;
-	height: 1rem;
-    width: 1rem;
+	height: ${({ theme }) => theme.margins.margin4};
+    width: ${({ theme }) => theme.margins.margin4};
     position: absolute;
-    right: 1.5rem;
+    right: ${({ theme }) => theme.margins.margin6};
 `;
 
 export const CommentsSection = styled.div`
@@ -34,29 +34,29 @@ export const CommentsSection = styled.div`
 	cursor: pointer;
 	&:hover {
 		> a {
-			color: #0969da;
+			color: ${({ theme }) => theme.colors.blue};
 		}
 		${CommentsIconStyled} {
-			fill: #0969da;
+			fill: ${({ theme }) => theme.colors.blue};
 		}
 	}
 `;
 
 export const Description = styled.div`
-	color: #57606a;
+	color: ${({ theme }) => theme.colors.darkGray};
 	margin-left: 1.7rem;
 	font-size: 13px;
 `;
 
 export const OpenIssueIconStyled = styled(OpenIssueIcon)`
-	min-height: 1rem;
-	min-width: 2rem;
+	min-height: ${({ theme }) => theme.margins.margin4};
+	min-width: ${({ theme }) => theme.margins.margin8};
 	margin-top: 0.07rem;
 	fill: #cf222e;
 `;
 
 export const SkipIconStyled = styled(SkipIcon)`
-	min-height: 1rem;
-	min-width: 2rem;
+	min-height: ${({ theme }) => theme.margins.margin4};
+	min-width: ${({ theme }) => theme.margins.margin8};
 	margin-top: 0.07rem;
 `;

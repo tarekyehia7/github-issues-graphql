@@ -6,8 +6,8 @@ export const LinkContainer = styled.div`
 	flex-direction: column;
 	height: 3rem;
 	justify-content: flex-start;
-	padding: 1rem;
-	background-color: #f6f8fa;
+	padding: ${({ theme }) => theme.margins.margin4};
+	background-color: ${({ theme }) => theme.colors.lightBlue};
 `;
 
 export const HeaderLinks = styled.div`
@@ -17,8 +17,8 @@ export const HeaderLinks = styled.div`
 `;
 
 export const BookIconStyled = styled(BookIcon)`
-	height: 1rem;
-	width: 1rem;
+	height: ${({ theme }) => theme.margins.margin4};
+	width: ${({ theme }) => theme.margins.margin4};
 	margin-top: 0.1rem;
 `;
 
@@ -36,6 +36,6 @@ export const RepoStateLabel = styled.label`
 	white-space: nowrap;
 	border: 1px solid transparent;
 	border-radius: 2em;
-	color: #57606a;
-	border-color: #d0d7de;
+	color: ${({ theme }) => theme.colors.darkGray};
+	border-color: ${({ theme }) => theme.colors.lightGray};
 `;
