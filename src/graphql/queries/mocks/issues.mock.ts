@@ -17,13 +17,13 @@ export const issuesGraphQlMock = {
 				edges: [
 					{
 						node: {
-							createdAt: '2022-09-13T13:30:14Z',
-							number: 25250,
-							title: 'Error',
+							createdAt: '2022-09-15T14:28:38Z',
+							number: 25276,
+							title: 'Bug: ',
 							state: 'OPEN',
 							author: {
-								login: 'wansingcheng',
-								url: 'https://github.com/wansingcheng',
+								login: 'bogdanoliinyk',
+								url: 'https://github.com/bogdanoliinyk',
 								__typename: 'User',
 							},
 							comments: {
@@ -33,6 +33,126 @@ export const issuesGraphQlMock = {
 							__typename: 'Issue',
 						},
 						cursor: 'Y3Vyc29yOjE=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-15T14:11:12Z',
+							number: 25274,
+							title: 'Idea: Add a console.log hint why components get remounted in StrictMode',
+							state: 'OPEN',
+							author: {
+								login: 'nikgraf',
+								url: 'https://github.com/nikgraf',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 0,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjI=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-15T12:54:43Z',
+							number: 25273,
+							title: 'Bug: inconsistent auto batching',
+							state: 'OPEN',
+							author: {
+								login: 'amirqasemi74',
+								url: 'https://github.com/amirqasemi74',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 0,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjM=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-15T00:14:43Z',
+							number: 25269,
+							title: 'Bug: ',
+							state: 'OPEN',
+							author: {
+								login: 'Shashamura',
+								url: 'https://github.com/Shashamura',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 1,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjQ=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-14T10:27:41Z',
+							number: 25264,
+							title: 'Add "Support Armenia" banner on reactjs.org',
+							state: 'OPEN',
+							author: {
+								login: 'edgarkhanzadyan',
+								url: 'https://github.com/edgarkhanzadyan',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 0,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjU=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-14T07:38:20Z',
+							number: 25262,
+							title: '[DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)',
+							state: 'OPEN',
+							author: {
+								login: 'sparkbuzz',
+								url: 'https://github.com/sparkbuzz',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 2,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjY=',
+						__typename: 'SearchResultItemEdge',
+					},
+					{
+						node: {
+							createdAt: '2022-09-13T21:03:54Z',
+							number: 25256,
+							title: 'Feature Request: className as object or array (vue-alike)',
+							state: 'OPEN',
+							author: {
+								login: 'rentalhost',
+								url: 'https://github.com/rentalhost',
+								__typename: 'User',
+							},
+							comments: {
+								totalCount: 1,
+								__typename: 'IssueCommentConnection',
+							},
+							__typename: 'Issue',
+						},
+						cursor: 'Y3Vyc29yOjc=',
 						__typename: 'SearchResultItemEdge',
 					},
 					{
@@ -52,27 +172,7 @@ export const issuesGraphQlMock = {
 							},
 							__typename: 'Issue',
 						},
-						cursor: 'Y3Vyc29yOjI=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-09T22:42:43Z',
-							number: 25228,
-							title: "[DevTools Bug]: React extension tab in Edge DevTools doesn't have emoji prefix in title.",
-							state: 'OPEN',
-							author: {
-								login: 'yanlingwang23',
-								url: 'https://github.com/yanlingwang23',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 1,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
-						cursor: 'Y3Vyc29yOjM=',
+						cursor: 'Y3Vyc29yOjg=',
 						__typename: 'SearchResultItemEdge',
 					},
 					{
@@ -92,7 +192,7 @@ export const issuesGraphQlMock = {
 							},
 							__typename: 'Issue',
 						},
-						cursor: 'Y3Vyc29yOjQ=',
+						cursor: 'Y3Vyc29yOjk=',
 						__typename: 'SearchResultItemEdge',
 					},
 					{
@@ -112,106 +212,6 @@ export const issuesGraphQlMock = {
 							},
 							__typename: 'Issue',
 						},
-						cursor: 'Y3Vyc29yOjU=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-07T19:50:49Z',
-							number: 25205,
-							title: 'Bug: exhaustive-deps false positives?',
-							state: 'OPEN',
-							author: {
-								login: 'jaymzh',
-								url: 'https://github.com/jaymzh',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 0,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
-						cursor: 'Y3Vyc29yOjY=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-07T15:33:59Z',
-							number: 25201,
-							title: 'Bug: Latest Chrome extension is not working with React Developer Tools',
-							state: 'OPEN',
-							author: {
-								login: 'alyshahudson',
-								url: 'https://github.com/alyshahudson',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 0,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
-						cursor: 'Y3Vyc29yOjc=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-06T23:59:02Z',
-							number: 25196,
-							title: 'Bug: iframe `src` attribute set incorrectly in jsx',
-							state: 'OPEN',
-							author: {
-								login: 'zachsiegel-capsida',
-								url: 'https://github.com/zachsiegel-capsida',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 3,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
-						cursor: 'Y3Vyc29yOjg=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-06T14:03:24Z',
-							number: 25194,
-							title: 'Bug: `onBlur` is not called when a focused element is unmounted',
-							state: 'OPEN',
-							author: {
-								login: 'ling1726',
-								url: 'https://github.com/ling1726',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 0,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
-						cursor: 'Y3Vyc29yOjk=',
-						__typename: 'SearchResultItemEdge',
-					},
-					{
-						node: {
-							createdAt: '2022-09-06T09:18:14Z',
-							number: 25192,
-							title: "Bug: ErrorBoundary won't caught error in useEffect callback while ErrorBoundary unmount with it's children",
-							state: 'OPEN',
-							author: {
-								login: 'Chen-jj',
-								url: 'https://github.com/Chen-jj',
-								__typename: 'User',
-							},
-							comments: {
-								totalCount: 5,
-								__typename: 'IssueCommentConnection',
-							},
-							__typename: 'Issue',
-						},
 						cursor: 'Y3Vyc29yOjEw',
 						__typename: 'SearchResultItemEdge',
 					},
@@ -223,7 +223,7 @@ export const issuesGraphQlMock = {
 					hasPreviousPage: false,
 					__typename: 'PageInfo',
 				},
-				issueCount: 781,
+				issueCount: 787,
 				__typename: 'SearchResultItemConnection',
 			},
 		},

@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 import { CorrectIcon } from '../../../icons/CorrectIcon';
 import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
-import { theme } from '../../../themes';
 
 export const ButtonsContainer = styled.div`
 	display: flex;
@@ -24,16 +23,17 @@ export const Button = styled.button<{ isSelected: boolean }>`
 	border: 0;
 	-webkit-appearance: none;
 	appearance: none;
-	color: ${({ isSelected, theme }) => (isSelected ? theme.colors.lightBlack : theme.colors.darkGray)};
+	color: ${({ isSelected, theme }) =>
+		isSelected ? theme.colors.lightBlack : theme.colors.darkGray};
 	${({ isSelected }) => isSelected && 'font-weight: bold;'}
 `;
 
-export const OpenIssueIconStyled = styled(OpenIssueIcon)<{ isSelected: boolean }>`
-	fill: ${({ isSelected, theme }) => (isSelected ? theme.colors.lightBlack : theme.colors.darkGray)};
+export const OpenIssueIconStyled = styled(OpenIssueIcon)<{ selected: boolean }>`
+	fill: ${({ selected, theme }) => (selected ? theme.colors.lightBlack : theme.colors.darkGray)};
 	margin-right: ${({ theme }) => theme.margins.margin2};
 `;
 
-export const CorrectIconStyled = styled(CorrectIcon)<{ isSelected: boolean }>`
-	fill: ${({ isSelected, theme }) => (isSelected ? theme.colors.lightBlack : theme.colors.darkGray)};
+export const CorrectIconStyled = styled(CorrectIcon)<{ selected: boolean }>`
+	fill: ${({ selected, theme }) => (selected ? theme.colors.lightBlack : theme.colors.darkGray)};
 	margin-right: ${({ theme }) => theme.margins.margin2};
 `;

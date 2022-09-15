@@ -10,7 +10,7 @@ export const theme = {
 		darkGray: '#57606a',
 		orange: '#fd8c73',
 		darkWhite: '#d8dee4',
-		
+
 		white: '#ffffff',
 		black: '#000000',
 	},
@@ -31,10 +31,6 @@ export const theme = {
 		margin14: '3.50rem',
 		margin15: '3.75rem',
 		margin16: '4rem',
-	},
-	screens: {
-		mobile: '(max-width: 480px)',
-		tablet: '(max-width: 768px)',
 	},
 };
 

@@ -13,17 +13,16 @@ export const issueGraphQlMock = {
 		data: {
 			repository: {
 				issue: {
-					id: 'I_kwDOAJy2Ks5RztXW',
+					id: 'I_kwDOAJy2Ks5Rh2Fa',
 					bodyHTML:
-						'<h3 dir="auto">Website or app</h3>\n<p dir="auto"><a href="https://codesandbox.io/s/hopeful-fog-nxqwgw" rel="nofollow">https://codesandbox.io/s/hopeful-fog-nxqwgw</a></p>\n<h3 dir="auto">Repro steps</h3>\n<p dir="auto">When using React DevTools on <strong>Firefox 104.0.1 (64-bit)</strong> on <strong>Linux (Fedora 36 with Gnome Desktop 42)</strong> the key labels on the right hand pane are cut off. See screenshot. I\'m guessing this is likely because of fonts being used on Linux are different from Windows and macOS. I haven\'t noticed this problem in Chrome at all, and I don\'t think it happens on Windows and macOS.</p>\n<p dir="auto">This only happens to editable orange/keys in the props panel, when the keys are black/read only, they render just fine.</p>\n<p dir="auto">I also noticed that React devtools doesn\'t honor the Firefox advanced font settings like the rest of devtools does. Having the ability to select a different browser monospace font will allow for a workaround to this issue.</p>\n<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png"><img src="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png" alt="Screenshot from 2022-09-14 09-33-08" style="max-width: 100%;"></a></p>\n<h3 dir="auto">How often does this bug happen?</h3>\n<p dir="auto">Every time</p>\n<h3 dir="auto">DevTools package (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">DevTools version (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error message (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error call stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error component stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">GitHub query string (automated)</h3>\n<p dir="auto"><em>No response</em></p>',
-					title: '[DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)',
-					createdAt: '2022-09-14T07:38:20Z',
+						'\n<p dir="auto">React version: 18.2.0</p>\n<h2 dir="auto">Steps To Reproduce</h2>\n<ol dir="auto">\n<li>Insert a tag  <code class="notranslate">&lt;img/&gt;</code> with src</li>\n<li>Go to <strong>Firefox</strong> inspect tool to the tab network</li>\n<li>Reload the page and watch image request in network</li>\n</ol>\n\n<p dir="auto">Link to code example: <a href="https://codesandbox.io/s/unruffled-jerry-9hli44?file=/src/App.js" rel="nofollow">https://codesandbox.io/s/unruffled-jerry-9hli44?file=/src/App.js</a></p>\n\n<h2 dir="auto">The current behavior</h2>\n<p dir="auto">There are two request for image in firefox, image renders twice<br>\n<a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/41840872/189360604-c1f1451a-be7f-497d-b9db-9d18f98af607.png"><img width="1792" alt="image" src="https://user-images.githubusercontent.com/41840872/189360604-c1f1451a-be7f-497d-b9db-9d18f98af607.png" style="max-width: 100%;"></a></p>\n<h2 dir="auto">The expected behavior</h2>\n<p dir="auto">There is one request and one render in firefox</p>',
+					title: 'Bug: <img/> renders twice in firefox with react 18',
+					createdAt: '2022-09-09T13:25:28Z',
 					state: 'OPEN',
 					author: {
-						login: 'sparkbuzz',
-						avatarUrl:
-							'https://avatars.githubusercontent.com/u/612695?u=c84ba90b7c3a3cf4518d010ff1b7f5368d6a7ea1&v=4',
-						url: 'https://github.com/sparkbuzz',
+						login: 'kapibaara',
+						avatarUrl: 'https://avatars.githubusercontent.com/u/41840872?v=4',
+						url: 'https://github.com/kapibaara',
 						__typename: 'User',
 					},
 					comments: {
@@ -31,20 +30,15 @@ export const issueGraphQlMock = {
 							{
 								node: {
 									author: {
-										login: 'github-actions',
+										login: 'MiguelMachado-dev',
 										avatarUrl:
-											'https://avatars.githubusercontent.com/in/15368?v=4',
-										url: 'https://github.com/apps/github-actions',
-										__typename: 'Bot',
+											'https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4',
+										url: 'https://github.com/MiguelMachado-dev',
+										__typename: 'User',
 									},
-									issue: {
-										bodyHTML:
-											'<h3 dir="auto">Website or app</h3>\n<p dir="auto"><a href="https://codesandbox.io/s/hopeful-fog-nxqwgw" rel="nofollow">https://codesandbox.io/s/hopeful-fog-nxqwgw</a></p>\n<h3 dir="auto">Repro steps</h3>\n<p dir="auto">When using React DevTools on <strong>Firefox 104.0.1 (64-bit)</strong> on <strong>Linux (Fedora 36 with Gnome Desktop 42)</strong> the key labels on the right hand pane are cut off. See screenshot. I\'m guessing this is likely because of fonts being used on Linux are different from Windows and macOS. I haven\'t noticed this problem in Chrome at all, and I don\'t think it happens on Windows and macOS.</p>\n<p dir="auto">This only happens to editable orange/keys in the props panel, when the keys are black/read only, they render just fine.</p>\n<p dir="auto">I also noticed that React devtools doesn\'t honor the Firefox advanced font settings like the rest of devtools does. Having the ability to select a different browser monospace font will allow for a workaround to this issue.</p>\n<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png"><img src="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png" alt="Screenshot from 2022-09-14 09-33-08" style="max-width: 100%;"></a></p>\n<h3 dir="auto">How often does this bug happen?</h3>\n<p dir="auto">Every time</p>\n<h3 dir="auto">DevTools package (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">DevTools version (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error message (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error call stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error component stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">GitHub query string (automated)</h3>\n<p dir="auto"><em>No response</em></p>',
-										createdAt: '2022-09-14T07:38:20Z',
-										state: 'OPEN',
-										title: '[DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)',
-										__typename: 'Issue',
-									},
+									bodyHTML:
+										'<p dir="auto">It really happens, even on Chrome/Edge. But I think this is due to StrictMode. Could please try deleting StrictMode on <code class="notranslate">index.js</code>?</p>\n<p dir="auto">It will look like this.</p>\n<div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="root.render(&lt;App /&gt;);"><pre><span class="pl-s1">root</span><span class="pl-kos">.</span><span class="pl-en">render</span><span class="pl-kos">(</span><span class="pl-c1">&lt;</span><span class="pl-ent">App</span> <span class="pl-c1">/</span><span class="pl-c1">&gt;</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>\n<p dir="auto">On StrictMode react render twice. <a href="https://reactjs.org/docs/strict-mode.html" rel="nofollow">https://reactjs.org/docs/strict-mode.html</a></p>\n<blockquote>\n<p dir="auto">StrictMode renders components twice (on dev but not production) in order to detect any problems with your code and warn you about them</p>\n</blockquote>',
+									createdAt: '2022-09-10T03:36:07Z',
 									__typename: 'IssueComment',
 								},
 								__typename: 'IssueCommentEdge',
@@ -52,20 +46,207 @@ export const issueGraphQlMock = {
 							{
 								node: {
 									author: {
-										login: 'github-actions',
+										login: 'kapibaara',
 										avatarUrl:
-											'https://avatars.githubusercontent.com/in/15368?v=4',
-										url: 'https://github.com/apps/github-actions',
-										__typename: 'Bot',
+											'https://avatars.githubusercontent.com/u/41840872?v=4',
+										url: 'https://github.com/kapibaara',
+										__typename: 'User',
 									},
-									issue: {
-										bodyHTML:
-											'<h3 dir="auto">Website or app</h3>\n<p dir="auto"><a href="https://codesandbox.io/s/hopeful-fog-nxqwgw" rel="nofollow">https://codesandbox.io/s/hopeful-fog-nxqwgw</a></p>\n<h3 dir="auto">Repro steps</h3>\n<p dir="auto">When using React DevTools on <strong>Firefox 104.0.1 (64-bit)</strong> on <strong>Linux (Fedora 36 with Gnome Desktop 42)</strong> the key labels on the right hand pane are cut off. See screenshot. I\'m guessing this is likely because of fonts being used on Linux are different from Windows and macOS. I haven\'t noticed this problem in Chrome at all, and I don\'t think it happens on Windows and macOS.</p>\n<p dir="auto">This only happens to editable orange/keys in the props panel, when the keys are black/read only, they render just fine.</p>\n<p dir="auto">I also noticed that React devtools doesn\'t honor the Firefox advanced font settings like the rest of devtools does. Having the ability to select a different browser monospace font will allow for a workaround to this issue.</p>\n<p dir="auto"><a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png"><img src="https://user-images.githubusercontent.com/612695/190090608-602bd0d8-3557-492e-a2d9-59b16372f522.png" alt="Screenshot from 2022-09-14 09-33-08" style="max-width: 100%;"></a></p>\n<h3 dir="auto">How often does this bug happen?</h3>\n<p dir="auto">Every time</p>\n<h3 dir="auto">DevTools package (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">DevTools version (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error message (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error call stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">Error component stack (automated)</h3>\n<p dir="auto"><em>No response</em></p>\n<h3 dir="auto">GitHub query string (automated)</h3>\n<p dir="auto"><em>No response</em></p>',
-										createdAt: '2022-09-14T07:38:20Z',
-										state: 'OPEN',
-										title: '[DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)',
-										__typename: 'Issue',
+									bodyHTML:
+										'<blockquote>\n<p dir="auto">It really happens, even on Chrome/Edge. But I think this is due to StrictMode. Could please try deleting StrictMode on <code class="notranslate">index.js</code>?</p>\n<p dir="auto">It will look like this.</p>\n<div class="highlight highlight-source-js notranslate position-relative overflow-auto" dir="auto" data-snippet-clipboard-copy-content="root.render(&lt;App /&gt;);"><pre><span class="pl-s1">root</span><span class="pl-kos">.</span><span class="pl-en">render</span><span class="pl-kos">(</span><span class="pl-c1">&lt;</span><span class="pl-ent">App</span> <span class="pl-c1">/</span><span class="pl-c1">&gt;</span><span class="pl-kos">)</span><span class="pl-kos">;</span></pre></div>\n<p dir="auto">On StrictMode react render twice. <a href="https://reactjs.org/docs/strict-mode.html" rel="nofollow">https://reactjs.org/docs/strict-mode.html</a></p>\n<blockquote>\n<p dir="auto">StrictMode renders components twice (on dev but not production) in order to detect any problems with your code and warn you about them</p>\n</blockquote>\n</blockquote>\n<p dir="auto">it doesn\'t help, in my example in codesandbox I tried to remove StrictMode, but the behavior is the same, there are two requests in network tab<br>\nАnd on Chrome, if you open this <a href="https://c1i5n8.csb.app/" rel="nofollow">https://c1i5n8.csb.app/</a> there are no two requests in network tab</p>',
+									createdAt: '2022-09-12T08:16:42Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'MiguelMachado-dev',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4',
+										url: 'https://github.com/MiguelMachado-dev',
+										__typename: 'User',
 									},
+									bodyHTML:
+										'<p dir="auto">There is, check <a href="https://codesandbox.io/s/unruffled-jerry-9hli44?file=/src/index.js" rel="nofollow">https://codesandbox.io/s/unruffled-jerry-9hli44?file=/src/index.js</a><br>\nOn Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.</p>',
+									createdAt: '2022-09-12T11:30:28Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sigorilla',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/1208639?u=c531dee3f3f7cdb9657a78c54bbea4081f327158&v=4',
+										url: 'https://github.com/sigorilla',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto"><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/MiguelMachado-dev/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/MiguelMachado-dev">@MiguelMachado-dev</a>, Just check this example (without <code class="notranslate">StrictMode</code>): <a href="https://codesandbox.io/s/goofy-stonebraker-pf0wg7?file=/src/index.js" rel="nofollow">https://codesandbox.io/s/goofy-stonebraker-pf0wg7?file=/src/index.js</a> (<a href="https://pf0wg7.csb.app/" rel="nofollow">https://pf0wg7.csb.app/</a>)</p>\n<p dir="auto">And there is screenshot with two requests:</p>\n<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/1208639/189645667-bd18813b-8f6d-4987-b3af-621298bd1aff.png"><img width="1730" alt="image" src="https://user-images.githubusercontent.com/1208639/189645667-bd18813b-8f6d-4987-b3af-621298bd1aff.png" style="max-width: 100%;"></a></p>\n<p dir="auto">What i\'m doing wrong?</p>',
+									createdAt: '2022-09-12T11:49:57Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'MiguelMachado-dev',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4',
+										url: 'https://github.com/MiguelMachado-dev',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto">Not sure, it does not happen to me. We should then wait for more people to see this. It only happen to me when using StrictMode.</p>\n<p dir="auto">Edge:<br>\n<a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/29252011/189654466-3c90adf7-6b5f-4ff7-9655-61be91455a63.png"><img width="959" alt="image" src="https://user-images.githubusercontent.com/29252011/189654466-3c90adf7-6b5f-4ff7-9655-61be91455a63.png" style="max-width: 100%;"></a></p>\n<p dir="auto">Firefox:<br>\n<a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/29252011/189654925-a59a5c23-685f-4aca-a9c7-7d278a569de6.png"><img width="1920" alt="image" src="https://user-images.githubusercontent.com/29252011/189654925-a59a5c23-685f-4aca-a9c7-7d278a569de6.png" style="max-width: 100%;"></a></p>\n<p dir="auto">Both browsers up to date.</p>',
+									createdAt: '2022-09-12T12:35:40Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'arpitj007',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/60127884?v=4',
+										url: 'https://github.com/arpitj007',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto">It really is an issue. Where can we find the root cause of this problem?</p>',
+									createdAt: '2022-09-12T16:58:48Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'arpitj007',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/60127884?v=4',
+										url: 'https://github.com/arpitj007',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto"><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/MiguelMachado-dev/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/MiguelMachado-dev">@MiguelMachado-dev</a> How can I contribute to fixing this bug?</p>',
+									createdAt: '2022-09-12T17:33:20Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'MiguelMachado-dev',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4',
+										url: 'https://github.com/MiguelMachado-dev',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<blockquote>\n<p dir="auto"><a class="user-mention notranslate" data-hovercard-type="user" data-hovercard-url="/users/MiguelMachado-dev/hovercard" data-octo-click="hovercard-link-click" data-octo-dimensions="link_type:self" href="https://github.com/MiguelMachado-dev">@MiguelMachado-dev</a> How can I contribute to fixing this bug?</p>\n</blockquote>\n<p dir="auto">Do you know how to fix it?</p>\n<p dir="auto">If you know, you can fork the project and open a PR. Or a solution, you can comment here how he can fix it properly.</p>',
+									createdAt: '2022-09-12T18:34:31Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sult4novars',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4',
+										url: 'https://github.com/sult4novars',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto">Hi! I repeated this case in <a href="https://codesandbox.io/" rel="nofollow">https://codesandbox.io/</a> with clean HTML and get same result, then I try same code with corgi in <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a>  and get one request)</p>',
+									createdAt: '2022-09-13T10:24:17Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sigorilla',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/1208639?u=c531dee3f3f7cdb9657a78c54bbea4081f327158&v=4',
+										url: 'https://github.com/sigorilla',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto">Maybe it depends on OS? I have MacOS 12 (M1), Firefox 104.0.2</p>\n<p dir="auto">And I reproduced it on codepen: <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a></p>',
+									createdAt: '2022-09-13T10:47:38Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sult4novars',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4',
+										url: 'https://github.com/sult4novars',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<blockquote>\n<p dir="auto">Maybe it depends on OS? I have MacOS 12 (M1), Firefox 104.0.2</p>\n<p dir="auto">And I reproduced it on codepen: <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a></p>\n</blockquote>\n<p dir="auto">i have same params  MacOS 12.6 (M1, 8gb ), Firefox 104.0.2</p>\n<p dir="auto"><a target="_blank" rel="noopener noreferrer" href="https://user-images.githubusercontent.com/98759712/189886105-eabc296d-ccb0-43a6-b95d-e452babd031f.png"><img width="1425" alt="image" src="https://user-images.githubusercontent.com/98759712/189886105-eabc296d-ccb0-43a6-b95d-e452babd031f.png" style="max-width: 100%;"></a></p>',
+									createdAt: '2022-09-13T11:08:25Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sult4novars',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4',
+										url: 'https://github.com/sult4novars',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<blockquote>\n<p dir="auto">Maybe it depends on OS? I have MacOS 12 (M1), Firefox 104.0.2</p>\n<p dir="auto">And I reproduced it on codepen: <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a></p>\n</blockquote>\n<p dir="auto">ooo I reproduced to but when I reload page this case not reproduced<br>\nbut i check status and see NS_BINDING_ABORTED and search this status, and what I found <a href="https://stackoverflow.com/questions/704561/ns-binding-aborted-shown-in-firefox-with-httpfox" rel="nofollow">https://stackoverflow.com/questions/704561/ns-binding-aborted-shown-in-firefox-with-httpfox</a></p>',
+									createdAt: '2022-09-13T11:26:42Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'sult4novars',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4',
+										url: 'https://github.com/sult4novars',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<blockquote>\n<p dir="auto">Maybe it depends on OS? I have MacOS 12 (M1), Firefox 104.0.2</p>\n<p dir="auto">And I reproduced it on codepen: <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a></p>\n</blockquote>\n<p dir="auto">try with new image <a href="https://codepen.io/sult4novars/pen/NWMRzRX" rel="nofollow">https://codepen.io/sult4novars/pen/NWMRzRX</a></p>\n<p dir="auto">when I first reload:<br>\n<a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/98759712/189889657-dfe86d67-76db-44a7-bf2e-8bf21944fa20.png"><img width="1203" alt="image" src="https://user-images.githubusercontent.com/98759712/189889657-dfe86d67-76db-44a7-bf2e-8bf21944fa20.png" style="max-width: 100%;"></a></p>\n<p dir="auto">when i try to reload many times<br>\n<a target="_blank" rel="noopener noreferrer nofollow" href="https://user-images.githubusercontent.com/98759712/189889806-3ab35744-7cc0-461a-8abd-46b03093b8b2.png"><img width="1313" alt="image" src="https://user-images.githubusercontent.com/98759712/189889806-3ab35744-7cc0-461a-8abd-46b03093b8b2.png" style="max-width: 100%;"></a></p>',
+									createdAt: '2022-09-13T11:29:41Z',
+									__typename: 'IssueComment',
+								},
+								__typename: 'IssueCommentEdge',
+							},
+							{
+								node: {
+									author: {
+										login: 'kapibaara',
+										avatarUrl:
+											'https://avatars.githubusercontent.com/u/41840872?v=4',
+										url: 'https://github.com/kapibaara',
+										__typename: 'User',
+									},
+									bodyHTML:
+										'<p dir="auto">when i try my example with react 17, there are not two requests in firefox<br>\n<a href="https://codesandbox.io/s/wizardly-lena-yobcgz?file=/src/index.js" rel="nofollow">https://codesandbox.io/s/wizardly-lena-yobcgz?file=/src/index.js</a></p>',
+									createdAt: '2022-09-13T13:01:02Z',
 									__typename: 'IssueComment',
 								},
 								__typename: 'IssueCommentEdge',

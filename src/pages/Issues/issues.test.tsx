@@ -25,7 +25,7 @@ const renderPage = () => {
 beforeEach(() => renderPage());
 
 it('should render Issues Page', async () => {
-	expect(screen.getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage);
+	expect(screen.getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage - 1);
 	expect(screen.getAllByTestId('skeleton')[0]).toBeInTheDocument();
 
 	expect(await screen.findByText('< Previous')).toBeInTheDocument();
@@ -37,11 +37,11 @@ it('should list all issues', async () => {
 	const lastNode = issuesGraphQlMock.result.data.search.edges[9].node;
 
 	await waitFor(() => {
-		expect(screen.getByText(firstNode.title)).toBeInTheDocument();
-		expect(screen.getByText(firstNode.author.login)).toBeInTheDocument();
+		expect(screen.getAllByText(firstNode.title.trim())[0]).toBeInTheDocument();
+		expect(screen.getAllByText(firstNode.author.login)[0]).toBeInTheDocument();
 
-		expect(screen.getByText(lastNode.title)).toBeInTheDocument();
-		expect(screen.getByText(lastNode.author.login)).toBeInTheDocument();
+		expect(screen.getAllByText(lastNode.title)[0]).toBeInTheDocument();
+		expect(screen.getAllByText(lastNode.author.login)[0]).toBeInTheDocument();
 	});
 });
 

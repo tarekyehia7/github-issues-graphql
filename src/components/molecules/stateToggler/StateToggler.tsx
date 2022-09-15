@@ -20,14 +20,14 @@ export const StateToggler = ({ status, onStateClick }: StateTogglerProps) => {
 				isSelected={status === StatusEnum.open}
 				onClick={() => onStateClick(StatusEnum.open)}
 			>
-				<OpenIssueIconStyled isSelected={status === StatusEnum.open} />
+				<OpenIssueIconStyled selected={status === StatusEnum.open} />
 				Open
 			</Button>
 			<Button
 				isSelected={status === StatusEnum.closed}
 				onClick={() => onStateClick(StatusEnum.closed)}
 			>
-				<CorrectIconStyled isSelected={status === StatusEnum.closed} />
+				<CorrectIconStyled selected={status === StatusEnum.closed} />
 				Closed
 			</Button>
 		</ButtonsContainer>

@@ -122,7 +122,9 @@ export const IssuesPage = () => {
 				}
 			>
 				{loading &&
-					[...Array(issuesPerPage - 1)].map((_, idx) => <Skeleton key={`skeleton-${idx}`} />)}
+					[...Array(issuesPerPage - 1)].map((_, idx) => (
+						<Skeleton key={`skeleton-${idx}`} />
+					))}
 				{hasData &&
 					issues &&
 					issues.map(edges => {

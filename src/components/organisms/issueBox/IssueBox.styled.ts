@@ -24,7 +24,7 @@ export const Header = styled.div`
 export const CommentsIconStyled = styled(CommentsIcon)`
 	margin-right: 0.2rem;
 	height: ${({ theme }) => theme.margins.margin4};
-    width: ${({ theme }) => theme.margins.margin4};
+	width: ${({ theme }) => theme.margins.margin4};
 `;
 
 export const CommentsSection = styled.div`
@@ -62,5 +62,5 @@ export const SkipIconStyled = styled(SkipIcon)`
 
 export const LinkStyled = styled(Link)`
 	display: flex;
-    align-items: center;
+	align-items: center;
 `;
