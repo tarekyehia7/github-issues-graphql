@@ -3,13 +3,13 @@ import React, { useEffect, useState } from 'react';
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
 import { buildQuery } from '../../helpers/queryBuilder';
 import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
-import { NoResults } from '../../components/NoResults/NoResults';
+import { NoResults } from '../../components/organisms/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
-import Cursors from '../../components/Cursors/Cursors';
-import { FilterInput } from '../../components/FilterInput/FilterInput';
-import { StateToggler } from '../../components/stateToggler/StateToggler';
+import Cursors from '../../components/molecules/Cursors/Cursors';
+import { FilterInput } from '../../components/molecules/FilterInput/FilterInput';
+import { StateToggler } from '../../components/molecules/stateToggler/StateToggler';
 import styled from 'styled-components';
-import { IssueBox } from '../../components/issueBox/IssueBox';
+import { IssueBox } from '../../components/organisms/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
 import { constants } from '../../constants';
 

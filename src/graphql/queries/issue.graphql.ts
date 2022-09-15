@@ -14,7 +14,7 @@ export const GET_ISSUE = gql`
 					avatarUrl
 					url
 				}
-				comments(first: 10) {
+				comments(first: 100) {
 					edges {
 						node {
 							author {
@@ -22,12 +22,8 @@ export const GET_ISSUE = gql`
 								avatarUrl
 								url
 							}
-							issue {
-								bodyHTML
-								createdAt
-								state
-								title
-							}
+							bodyHTML
+        					createdAt
 						}
 					}
 				}

@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Button, ButtonType } from '../atoms/button/Button';
+import { Button, ButtonType } from '../../atoms/button/Button';
 import { LinksContainer } from './Cursors.styled';
 
 type CursorsProps = {

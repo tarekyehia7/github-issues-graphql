@@ -1,11 +1,10 @@
 import React from 'react';
-import { constants } from '../../constants';
+import { constants } from '../../../constants';
+import { Link, LinkType } from '../../atoms/link/Link';
 
 import {
 	HeaderLinks,
 	LinkContainer,
-	LinkStyled,
-	RepoLink,
 	BookIconStyled,
 	PagesLinks,
 	RepoStateLabel,
@@ -18,18 +17,22 @@ export const ReposHeader = () => {
 			<HeaderLinks>
 				<BookIconStyled />
 				<strong>
-					<RepoLink href={`${githubUrl}/${repository}`}>{repository}</RepoLink>
+                    &nbsp;
+					<Link type={LinkType.NormalBlue} to={`${githubUrl}/${repository}`}> {repository} </Link>
+                    &nbsp;
 				</strong>
 				/
 				<strong>
-					<RepoLink href={`${githubUrl}/${repository}/${projectName}`}>
+                    &nbsp;
+					<Link type={LinkType.NormalBlue} to={`${githubUrl}/${repository}/${projectName}`}>
 						{projectName}
-					</RepoLink>
+					</Link>
+                    &nbsp;
 				</strong>
 				<RepoStateLabel>Public</RepoStateLabel>
 			</HeaderLinks>
 			<PagesLinks>
-				<LinkStyled to={'/'}>Issues</LinkStyled>
+				<Link type={LinkType.HeaderLink} to={'/'}>Issues</Link>
 			</PagesLinks>
 		</LinkContainer>
 	);

@@ -2,8 +2,8 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
-import { IssueDetailsComment } from '../../components/issueDetailsComment/IssueDetailsComment';
-import { IssueDetailsHeader } from '../../components/issueDetailsHeader/IssueDetailsHeader';
+import { IssueDetailsComment } from '../../components/organisms/issueDetailsComment/IssueDetailsComment';
+import { IssueDetailsHeader } from '../../components/organisms/issueDetailsHeader/IssueDetailsHeader';
 import { constants } from '../../constants';
 
 export const IssuePage = () => {
@@ -49,14 +49,15 @@ export const IssuePage = () => {
 					const comment = edge?.node;
 					const author = comment?.author;
 					if (!comment || !author) return null;
+					
 					return (
 						<IssueDetailsComment
 							key={`issue-comment-${idx}`}
 							authorUrl={author.url}
 							avatarUrl={author.avatarUrl}
 							authorName={author.login}
-							createdAt={comment.issue.createdAt}
-							bodyHTML={comment.issue.bodyHTML}
+							createdAt={comment.createdAt}
+							bodyHTML={comment.bodyHTML}
 						/>
 					);
 				})}

@@ -6,7 +6,7 @@ import {
 	OpenIssueIconStyled,
 	Button,
 } from './StateToggler.styled';
-import { StatusEnum } from '../../types/issues';
+import { StatusEnum } from '../../../types/issues';
 
 type StateTogglerProps = {
 	status: StatusEnum;

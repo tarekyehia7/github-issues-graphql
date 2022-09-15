@@ -2,8 +2,8 @@ import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 
-import { Header } from './components/header/Header';
-import { ReposHeader } from './components/reposHeader/ReposHeader';
+import { Header } from './components/organisms/header/Header';
+import { ReposHeader } from './components/organisms/reposHeader/ReposHeader';
 import { IssuePage } from './pages/Issue/Issue';
 import { IssuesPage } from './pages/Issues/Issues';
 

@@ -3,17 +3,16 @@ import React from 'react';
 
 import {
 	Box,
-	Ahref,
-	CommentsLink,
 	CommentsIconStyled,
 	Description,
 	Header,
 	OpenIssueIconStyled,
 	SkipIconStyled,
-	TitleLink,
+    CommentsSection,
 } from './IssueBox.styled';
-import { IssueState } from '../../graphql/generatedTypes/graphql';
-import { constants } from '../../constants';
+import { Link, LinkType } from '../../atoms/link/Link';
+import { IssueState } from '../../../graphql/generatedTypes/graphql';
+import { constants } from '../../../constants';
 
 type IssueBoxProps = {
 	state: IssueState;
@@ -38,23 +37,25 @@ export const IssueBox = ({
 	return (
 		<Box>
 			<Header>
-				<TitleLink to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
+				<Link type={LinkType.Title} to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
 					{state === IssueState.Open && <OpenIssueIconStyled />}
 					{state === IssueState.Closed && <SkipIconStyled />}
 					{title}
-				</TitleLink>
+				</Link>
 				{totalCount > 0 && (
-					<CommentsLink to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
-						<CommentsIconStyled />
-						{totalCount}
-					</CommentsLink>
+                    <CommentsSection>
+                        <CommentsIconStyled />
+                        <Link type={LinkType.Normal} to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}>
+                            {totalCount}
+                        </Link>
+                    </CommentsSection>
 				)}
 			</Header>
 			<Description>
 				<span>#{issueId} Opened </span>
 				{formatDistanceToNowStrict(new Date(createdAt))}
 				<span> ago by </span>
-				<Ahref href={authorUrl}>{authorName}</Ahref>
+				<Link type={LinkType.Normal} to={authorUrl}>{authorName}</Link>
 			</Description>
 		</Box>
 	);

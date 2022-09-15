@@ -2,9 +2,9 @@ import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 import React from 'react';
 
 import { BigTitle, Description, Status, TitleContainer } from './IssueDetailsHeader.styled';
-import { IssueState } from '../../graphql/generatedTypes/graphql';
-import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
-import { SkipIcon } from '../../icons/SkipIcon';
+import { IssueState } from '../../../graphql/generatedTypes/graphql';
+import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
+import { SkipIcon } from '../../../icons/SkipIcon';
 
 type IssueHeaderProps = {
 	title: string;

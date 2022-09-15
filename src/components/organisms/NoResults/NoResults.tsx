@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { Container } from './NoResults.styled';
-import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
+import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
 
 export const NoResults = () => {
 	return (

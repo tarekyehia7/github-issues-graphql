@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-import { CorrectIcon } from '../../icons/CorrectIcon';
-import { OpenIssueIcon } from '../../icons/OpenIssueIcon';
+import { CorrectIcon } from '../../../icons/CorrectIcon';
+import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
 
 export const ButtonsContainer = styled.div`
 	display: flex;

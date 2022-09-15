@@ -6,7 +6,7 @@ import {
 	CloseIconStyled,
 	SearchIconStyled,
 } from './FilterInput.styled';
-import { Input } from '../atoms/Input/Input';
+import { Input } from '../../atoms/Input/Input';
 
 type FilterInputProps = {
 	value: string;

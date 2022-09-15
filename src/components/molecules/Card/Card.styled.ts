@@ -33,16 +33,6 @@ export const Box = styled.div`
 	}
 `;
 
-export const Title = styled.div`
-	display: flex;
-	align-items: center;
-	padding: 1rem;
-	color: #57606a;
-	background-color: #f6f8fa;
-	border-top-left-radius: 6px;
-	border-top-right-radius: 6px;
-`;
-
 export const Body = styled.div`
 	padding: 16px;
 	font-size: 14px;

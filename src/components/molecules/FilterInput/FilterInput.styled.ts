@@ -1,6 +1,6 @@
 import styled from 'styled-components';
-import { CloseIcon } from '../../icons/CloseIcon';
-import { SearchIcon } from '../../icons/SearchIcon';
+import { CloseIcon } from '../../../icons/CloseIcon';
+import { SearchIcon } from '../../../icons/SearchIcon';
 
 export const FilterContainer = styled.div`
 	position: relative;
