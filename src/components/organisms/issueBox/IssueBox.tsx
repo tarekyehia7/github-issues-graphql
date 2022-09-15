@@ -9,6 +9,7 @@ import {
 	OpenIssueIconStyled,
 	SkipIconStyled,
 	CommentsSection,
+	LinkStyled,
 } from './IssueBox.styled';
 import { Link, LinkType } from '../../atoms/link/Link';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
@@ -46,13 +47,13 @@ export const IssueBox = ({
 				</Link>
 				{totalCount > 0 && (
 					<CommentsSection>
-						<Link
+						<LinkStyled
 							type={LinkType.Normal}
 							to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}
 						>
 							<CommentsIconStyled />
 							<span>{totalCount}</span>
-						</Link>
+						</LinkStyled>
 					</CommentsSection>
 				)}
 			</Header>

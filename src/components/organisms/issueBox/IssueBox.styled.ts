@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { CommentsIcon } from '../../../icons/CommentsIcon';
 import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
 import { SkipIcon } from '../../../icons/SkipIcon';
+import { Link } from '../../atoms/link/Link';
 
 export const Box = styled.div`
 	padding: 16px;
@@ -24,8 +25,6 @@ export const CommentsIconStyled = styled(CommentsIcon)`
 	margin-right: 0.2rem;
 	height: ${({ theme }) => theme.margins.margin4};
     width: ${({ theme }) => theme.margins.margin4};
-    position: absolute;
-    right: ${({ theme }) => theme.margins.margin6};
 `;
 
 export const CommentsSection = styled.div`
@@ -59,4 +58,9 @@ export const SkipIconStyled = styled(SkipIcon)`
 	min-height: ${({ theme }) => theme.margins.margin4};
 	min-width: ${({ theme }) => theme.margins.margin8};
 	margin-top: 0.07rem;
+`;
+
+export const LinkStyled = styled(Link)`
+	display: flex;
+    align-items: center;
 `;
