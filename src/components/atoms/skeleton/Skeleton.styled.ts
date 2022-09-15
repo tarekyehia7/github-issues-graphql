@@ -2,7 +2,7 @@ import styled, { keyframes } from 'styled-components';
 
 const shine = keyframes`
     to {
-    background-position: 100% 0, /* move highlight to right */ 0 0;
+    	background-position: 100% 0, /* move highlight to right */ 0 0;
     }
 `;
 
@@ -26,6 +26,6 @@ export const SkeletonLoader = styled.span`
 export const SkeletonContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	border: 1px solid #d8dee4;
+	border-bottom: 1px solid #d8dee4;
 	padding: 22px 10px;
 `;

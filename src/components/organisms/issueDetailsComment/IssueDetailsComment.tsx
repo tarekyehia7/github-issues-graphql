@@ -3,6 +3,7 @@ import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 
 import { Card, CardType } from '../../molecules/Card/Card';
 import { Link, LinkType } from '../../atoms/link/Link';
+import { BodyHTMLDiv } from './IssueDetailsComment.styled';
 
 type IssueCommentProps = {
 	authorUrl: string;
@@ -35,12 +36,12 @@ export const IssueDetailsComment = ({
 }: IssueCommentProps) => {
 	return (
         <Card
-            cardType={CardType.withAvatar}
+            type={CardType.withAvatar}
             title={<CardTitle authorName={authorName} authorUrl={authorUrl} createdAt={createdAt} />}
             authorUrl={authorUrl}
             avatarUrl={avatarUrl}
         >
-            <div
+            <BodyHTMLDiv
             dangerouslySetInnerHTML={{
                 __html: bodyHTML,
             }} />

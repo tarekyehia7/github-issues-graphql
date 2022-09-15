@@ -12,6 +12,7 @@ import styled from 'styled-components';
 import { IssueBox } from '../../components/organisms/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
 import { constants } from '../../constants';
+import { Card, CardType } from '../../components/molecules/Card/Card';
 
 export const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
 	repo: `${constants.repository}/${constants.projectName}`,
@@ -20,18 +21,6 @@ export const DEFAULT_GITHUB_QUERY_BUILDER: QueryType = {
 	in: constants.searchTerm,
 	input: '',
 };
-
-const Container = styled.div`
-	display: flex;
-	flex-direction: column;
-	margin-right: 0;
-	margin-left: 0;
-	border: 1px solid #d0d7de;
-	border-radius: 6px;
-	div:first-of-type {
-		border-top: none;
-	}
-`;
 
 export const IssuesPage = () => {
 	const [githubQuery, setGithubQuery] = useState(DEFAULT_GITHUB_QUERY_BUILDER);
@@ -64,7 +53,7 @@ export const IssuesPage = () => {
 				: 1;
 			setTotalPages(number);
 		}
-	}, [data]);
+	}, [loading]);
 
 	const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputText(e.target.value.replaceAll(':', ''));
@@ -127,43 +116,40 @@ export const IssuesPage = () => {
 				onClearSearchHistoryClick={clearSearchHistory}
 				showClearHistoryText={githubQuery.input.length > 0}
 			/>
-			<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />
-			{loading && (
-				<Container>
-					{[...Array(issuesPerPage)].map((_, idx) => (
-						<Skeleton key={`skeleton-${idx}`} />
-					))}
-				</Container>
-			)}
-			{hasData && (
-				<Container>
-					{issues &&
-						issues.map(edges => {
-							if (edges?.node?.__typename === 'Issue') {
-								const node = edges?.node;
+            <Card
+                type={CardType.Normal}
+                title={<StateToggler status={githubQuery.status} onStateClick={updateQueryStatus} />}
+            >
+                {loading && 
+                    [...Array(issuesPerPage)].map((_, idx) => (
+                        <Skeleton key={`skeleton-${idx}`} />
+                    )
+                )}
+                {hasData && issues &&
+                            issues.map(edges => {
+                                if (edges?.node?.__typename === 'Issue') {
+                                    const node = edges?.node;
 
-								return (
-									<IssueBox
-										key={`issue-box-${node.number}`}
-										state={node.state}
-										title={node.title}
-										totalCount={node.comments.totalCount}
-										issueId={node.number}
-										createdAt={node.createdAt}
-										authorName={node.author?.login ?? ''}
-										authorUrl={node.author?.url}
-									/>
-								);
-							}
-							return null;
-						})}
-				</Container>
-			)}
-			{(!hasData || error) && !loading && (
-				<Container>
-					<NoResults />
-				</Container>
-			)}
+                                    return (
+                                        <IssueBox
+                                            key={`issue-box-${node.number}`}
+                                            state={node.state}
+                                            title={node.title}
+                                            totalCount={node.comments.totalCount}
+                                            issueId={node.number}
+                                            createdAt={node.createdAt}
+                                            authorName={node.author?.login ?? ''}
+                                            authorUrl={node.author?.url}
+                                        />
+                                    );
+                                }
+                                return null;
+                            }
+                )}
+                {(!hasData || error) && !loading && (
+                    <NoResults />
+                )}
+            </Card>
 			<Cursors
 				loadPreviousData={loadPreviousData}
 				loadNextData={loadNextData}

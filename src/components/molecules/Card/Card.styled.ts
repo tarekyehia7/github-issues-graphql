@@ -1,13 +1,14 @@
 import styled from 'styled-components';
 
-export const Box = styled.div`
+export const Box = styled.div<{ withAvatar: boolean }>`
 	color: #24292f;
 	background-color: #ffffff;
 	border: 1px solid #d0d7de;
 	border-radius: 6px;
-	margin-bottom: 1rem;
 	position: relative;
-	margin: 4rem;
+	${({ withAvatar }) => withAvatar && 'margin: 4rem;'}
+    ${({ withAvatar }) => !withAvatar && 'margin-top: 1rem;'}
+	margin-bottom: 1rem;
 	margin-right: 0;
 	@media (max-width: 480px) {
 		& > a {
@@ -16,25 +17,26 @@ export const Box = styled.div`
 		margin: 0rem;
 		margin-top: 1rem;
 	}
-	@media (min-width: 480px) {
-		&:before {
-			position: absolute;
-			top: 11px;
-			right: 100%;
-			left: -8px;
-			display: block;
-			width: 8px;
-			height: 16px;
-			pointer-events: none;
-			content: ' ';
-			clip-path: polygon(0 50%, 100% 0, 100% 100%);
-			background-color: #d0d7de;
-		}
-	}
+    ${({ withAvatar }) => withAvatar && `
+        @media (min-width: 480px) {
+            &:before {
+                position: absolute;
+                top: 11px;
+                right: 100%;
+                left: -8px;
+                display: block;
+                width: 8px;
+                height: 16px;
+                pointer-events: none;
+                content: ' ';
+                clip-path: polygon(0 50%, 100% 0, 100% 100%);
+                background-color: #d0d7de;
+            }
+        }
+    `}
 `;
 
 export const Body = styled.div`
-	padding: 16px;
 	font-size: 14px;
 	color: black;
 	@media (max-width: 480px) {

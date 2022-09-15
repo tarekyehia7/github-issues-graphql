@@ -11,7 +11,7 @@ export enum CardType {
 
 type CardProps = {
     title: JSX.Element;
-    cardType: CardType;
+    type: CardType;
     authorUrl?: string
     avatarUrl?: string;
 };
@@ -19,13 +19,13 @@ type CardProps = {
 export const Card = ({
     title,
     children,
-    cardType,
+    type,
     avatarUrl,
     authorUrl
 }: CardProps & PropsWithChildren) => {
     return (
-        <Box>
-            {cardType === CardType.withAvatar &&
+        <Box withAvatar={type === CardType.withAvatar}>
+            {type === CardType.withAvatar &&
                 <Link type={LinkType.Normal} to={authorUrl}>
                     <AvatarImg alt="avatar url" src={avatarUrl} />
                 </Link>
