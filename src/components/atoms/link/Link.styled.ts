@@ -43,6 +43,7 @@ export const HeaderLinkStyled = styled(Link)`
 	border: 0;
 	border-radius: 6px;
 	align-items: center;
+    justify-content: center;
 	&:after {
 		position: absolute;
 		right: 50%;

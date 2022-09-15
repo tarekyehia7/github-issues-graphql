@@ -6,14 +6,14 @@ export enum ButtonType {
 	Cursor = 'cursor',
 }
 
-type CursorsProps = {
+export type ButtonProps = {
 	disabled: boolean;
 	onClick: () => void;
 	value: string;
 	type: ButtonType;
 };
 
-export const Button = ({ disabled, onClick, value }: CursorsProps) => {
+export const Button = ({ disabled, onClick, value }: ButtonProps) => {
 	return (
 		<ButtonStyled onClick={onClick} disabled={disabled}>
 			{value}

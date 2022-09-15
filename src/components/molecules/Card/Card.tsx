@@ -5,8 +5,8 @@ import { Title, TitleSizeTypes } from '../../atoms/Title/Title';
 import { AvatarImg, Body, Box } from './Card.styled';
 
 export enum CardType {
-	Normal,
-	withAvatar,
+	Normal = 'normal',
+	withAvatar = 'with avatar',
 }
 
 type CardProps = {

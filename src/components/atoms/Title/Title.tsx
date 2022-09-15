@@ -3,8 +3,8 @@ import React, { PropsWithChildren } from 'react';
 import { TitleSmallStyled, TitleBigStyled } from './Title.styled';
 
 export enum TitleSizeTypes {
-	Small,
-	Medium,
+	Small = 'small',
+	Medium = 'medium',
 }
 
 type TitleProps = {

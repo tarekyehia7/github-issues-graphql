@@ -3,10 +3,10 @@ import React, { PropsWithChildren } from 'react';
 import { TitleLink, LinkStyled, HeaderLinkStyled } from './Link.styled';
 
 export enum LinkType {
-	Title,
-	Normal,
-	NormalBlue,
-	HeaderLink,
+	Title = 'title',
+	Normal = 'normal',
+	NormalBlue = 'normal blue',
+	HeaderLink = 'header link',
 }
 
 type LinkProps = {
