@@ -1,9 +1,9 @@
 import React from 'react';
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 
 import { Card, CardType } from '../../molecules/Card/Card';
 import { Link, LinkType } from '../../atoms/link/Link';
 import { BodyHTMLDiv } from './IssueDetailsComment.styled';
+import { formatDate } from '../../../helpers/helpers';
 
 type IssueCommentProps = {
 	authorUrl: string;
@@ -25,7 +25,7 @@ const CardTitle = ({ authorName, authorUrl, createdAt }: TitleProps) => {
 			<Link type={LinkType.Normal} to={authorUrl}>
 				{authorName}
 			</Link>
-			<span>&nbsp;commented {formatDistanceToNowStrict(new Date(createdAt))} ago</span>
+			<span>&nbsp;commented {formatDate(createdAt)} ago</span>
 		</>
 	);
 };

@@ -5,6 +5,7 @@ import { BigTitle, Description, Status, TitleContainer } from './IssueDetailsHea
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
 import { SkipIcon } from '../../../icons/SkipIcon';
+import { formatDate } from '../../../helpers/helpers';
 
 type IssueHeaderProps = {
 	title: string;
@@ -30,7 +31,7 @@ export const IssueDetailsHeader = ({
 				{state === IssueState.Open ? <OpenIssueIcon /> : <SkipIcon />}
 				{state}
 			</Status>
-			{authorName} opened this issue {formatDistanceToNowStrict(new Date(createdAt))} ago
+			{authorName} opened this issue {formatDate(createdAt)} ago
 		</Description>
 	</TitleContainer>
 );

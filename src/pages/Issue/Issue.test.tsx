@@ -9,7 +9,6 @@ import renderer from 'react-test-renderer';
 import { IssuePage } from './Issue';
 import { theme } from '../../themes';
 import { issueGraphQlMock } from '../../graphql/queries/mocks/issue.mock';
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 
 jest.mock('react-router-dom', () => ({
 	...jest.requireActual('react-router-dom'),
@@ -59,8 +58,6 @@ describe('Jest Snapshot testing suite', () => {
 				'src',
 				repositoryEdges[0].node.author.avatarUrl,
 			);
-			// const title = `commented ${formatDistanceToNowStrict(new Date(repositoryIssue.createdAt))}`
-			// expect(screen.getByText(title)).toBeInTheDocument();
 		});
 	});
 });

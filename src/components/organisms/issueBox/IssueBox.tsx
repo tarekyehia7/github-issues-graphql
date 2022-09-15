@@ -1,4 +1,3 @@
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 import React from 'react';
 
 import {
@@ -14,6 +13,7 @@ import {
 import { Link, LinkType } from '../../atoms/link/Link';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 import { constants } from '../../../constants';
+import { formatDate } from '../../../helpers/helpers';
 
 type IssueBoxProps = {
 	state: IssueState;
@@ -59,7 +59,7 @@ export const IssueBox = ({
 			</Header>
 			<Description>
 				<span>#{issueId} Opened </span>
-				{formatDistanceToNowStrict(new Date(createdAt))}
+				{formatDate(createdAt)}
 				<span> ago by </span>
 				<Link type={LinkType.Normal} to={authorUrl}>
 					{authorName}
