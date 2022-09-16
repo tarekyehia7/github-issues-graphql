@@ -4,7 +4,7 @@ import { ButtonStyled } from './Button.styled';
 
 export enum ButtonType {
 	Cursor = 'cursor',
-    Text = 'Text'
+	Text = 'Text',
 }
 
 export type ButtonProps = {

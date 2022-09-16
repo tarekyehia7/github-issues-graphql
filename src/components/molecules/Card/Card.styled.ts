@@ -49,6 +49,6 @@ export const Body = styled.div`
 `;
 
 export const ImageStyled = styled(Image)`
-    position: absolute;
-    left: -53px;
+	position: absolute;
+	left: -53px;
 `;

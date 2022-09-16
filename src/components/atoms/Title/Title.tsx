@@ -5,8 +5,8 @@ import { TitleSmallStyled, TitleBigStyled, TitleMediumStyled } from './Title.sty
 export enum TitleSizeTypes {
 	Small = 'small',
 	Medium = 'medium',
-    Large = 'large',
-    Paragraph = 'paragraph'
+	Large = 'large',
+	Paragraph = 'paragraph',
 }
 
 type TitleProps = {
@@ -19,10 +19,10 @@ export const Title = ({ titleSize, children }: TitleProps & PropsWithChildren) =
 	} else if (titleSize === TitleSizeTypes.Medium) {
 		return <TitleMediumStyled>{children}</TitleMediumStyled>;
 	} else if (titleSize === TitleSizeTypes.Large) {
-        return <TitleBigStyled>{children}</TitleBigStyled>;
-    } else if (titleSize === TitleSizeTypes.Paragraph) {
-        return <p>{children}</p>
-    } else {
+		return <TitleBigStyled>{children}</TitleBigStyled>;
+	} else if (titleSize === TitleSizeTypes.Paragraph) {
+		return <p>{children}</p>;
+	} else {
 		return null;
 	}
 };

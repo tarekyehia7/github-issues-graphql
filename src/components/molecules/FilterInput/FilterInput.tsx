@@ -1,11 +1,6 @@
 import React from 'react';
 
-import {
-	FilterContainer,
-	ClearSearchContainer,
-	CloseIconStyled,
-	SearchIconStyled,
-} from './FilterInput.styled';
+import { FilterContainer, CloseIconStyled, SearchIconStyled } from './FilterInput.styled';
 import { Input } from '../../atoms/Input/Input';
 import { Button, ButtonType } from '../../atoms/button/Button';
 
@@ -36,11 +31,7 @@ export const FilterInput = ({
 				<SearchIconStyled />
 			</FilterContainer>
 			{showClearHistoryText && (
-				<Button
-					disabled={false}
-					type={ButtonType.Text}
-					onClick={onClearSearchHistoryClick}
-				>
+				<Button disabled={false} type={ButtonType.Text} onClick={onClearSearchHistoryClick}>
 					<CloseIconStyled /> Clear current search query, filters, and sorts
 				</Button>
 			)}

@@ -31,22 +31,3 @@ export const CloseIconStyled = styled(CloseIcon)`
 	background-color: #6e7781;
 	border-radius: 6px;
 `;
-
-export const ClearSearchContainer = styled.button`
-	display: flex;
-	flex-direction: row;
-	align-items: center;
-	cursor: pointer;
-	font-weight: 600;
-	color: ${({ theme }) => theme.colors.darkGray};
-	padding-top: 1rem;
-	background: transparent;
-	border: none;
-	&:hover {
-		color: ${({ theme }) => theme.colors.blue};
-		text-decoration: none;
-		${CloseIconStyled} {
-			background: ${({ theme }) => theme.colors.blue};
-		}
-	}
-`;

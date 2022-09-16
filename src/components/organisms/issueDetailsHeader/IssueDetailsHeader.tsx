@@ -22,13 +22,13 @@ export const IssueDetailsHeader = ({
 	createdAt,
 }: IssueHeaderProps) => {
 	const status = state === IssueState.Open ? StatusEnum.Open : StatusEnum.Closed;
-	return(
+	return (
 		<TitleContainer>
 			<Title titleSize={TitleSizeTypes.Large}>
 				<span>{title}</span> #{issueId}
 			</Title>
 			<Description>
-				<Status status={status}/>
+				<Status status={status} />
 				{authorName} opened this issue {formatDate(createdAt)} ago
 			</Description>
 		</TitleContainer>

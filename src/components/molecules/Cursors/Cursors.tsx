@@ -32,11 +32,7 @@ const Cursors = ({
 			<div>
 				Page {pageNumber} of {totalPages}
 			</div>
-			<Button
-				onClick={loadNextData}
-				disabled={nextButtonDisabled}
-				type={ButtonType.Cursor}
-			>
+			<Button onClick={loadNextData} disabled={nextButtonDisabled} type={ButtonType.Cursor}>
 				{`Next >`}
 			</Button>
 		</LinksContainer>

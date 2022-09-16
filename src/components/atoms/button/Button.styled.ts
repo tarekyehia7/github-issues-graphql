@@ -2,7 +2,7 @@ import styled, { css } from 'styled-components';
 import { ButtonType } from './Button';
 
 const baseStyle = css`
-    color: ${({ theme }) => theme.colors.blue};
+	color: ${({ theme }) => theme.colors.blue};
 	min-width: ${({ theme }) => theme.margins.margin8};
 	padding: 5px 10px;
 	font-style: normal;
@@ -31,8 +31,10 @@ const baseStyle = css`
 	}
 `;
 export const ButtonStyled = styled.button<{ buttonType: ButtonType }>`
-    ${baseStyle}
-    ${({ buttonType, theme }) => buttonType === ButtonType.Text ? `
+	${baseStyle}
+	${({ buttonType, theme }) =>
+		buttonType === ButtonType.Text
+			? `
         display: flex;
         flex-direction: row;
         align-items: center;
@@ -49,7 +51,8 @@ export const ButtonStyled = styled.button<{ buttonType: ButtonType }>`
                 background: ${theme.colors.blue};
             }
         }
-    ` : `
+    `
+			: `
         color: ${theme.colors.blue};
         min-width: ${theme.margins.margin8};
         padding: 5px 10px;

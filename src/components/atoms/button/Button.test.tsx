@@ -10,13 +10,9 @@ const mockClick = jest.fn();
 const ButtonWithTheme = () => {
 	return (
 		<PageWithTheme>
-			<Button
-				disabled={false}
-				type={ButtonType.Cursor}
-				onClick={mockClick}
-			>
-                NiceButton
-            </Button>
+			<Button disabled={false} type={ButtonType.Cursor} onClick={mockClick}>
+				NiceButton
+			</Button>
 		</PageWithTheme>
 	);
 };

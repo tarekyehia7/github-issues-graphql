@@ -62,7 +62,11 @@ export const IssuePage = () => {
 					<Card
 						type={CardType.withAvatar}
 						title={
-							<CardTitle authorName={issueData.author.login} authorUrl={issueData.author.url} createdAt={issueData.createdAt} />
+							<CardTitle
+								authorName={issueData.author.login}
+								authorUrl={issueData.author.url}
+								createdAt={issueData.createdAt}
+							/>
 						}
 						authorUrl={issueData.author.url}
 						avatarUrl={issueData.author.avatarUrl}
@@ -86,7 +90,11 @@ export const IssuePage = () => {
 							key={`issue-comment-${idx}`}
 							type={CardType.withAvatar}
 							title={
-								<CardTitle authorName={author.login} authorUrl={author.url} createdAt={comment.createdAt} />
+								<CardTitle
+									authorName={author.login}
+									authorUrl={author.url}
+									createdAt={comment.createdAt}
+								/>
 							}
 							authorUrl={author.url}
 							avatarUrl={author.avatarUrl}
