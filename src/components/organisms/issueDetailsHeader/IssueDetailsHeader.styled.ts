@@ -6,8 +6,6 @@ export const TitleContainer = styled.div`
 	border-bottom: 1px solid ${({ theme }) => theme.colors.lightGray};
 `;
 
-export const BigTitle = styled.h1``;
-
 export const Description = styled.div`
 	display: flex;
 	flex-direction: row;

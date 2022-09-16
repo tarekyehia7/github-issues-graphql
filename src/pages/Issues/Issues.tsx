@@ -3,7 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
 import { buildQuery } from '../../helpers/queryBuilder';
 import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
-import { NoResults } from '../../components/organisms/NoResults/NoResults';
+import { NoResults } from '../../components/molecules/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
 import Cursors from '../../components/molecules/Cursors/Cursors';
 import { FilterInput } from '../../components/molecules/FilterInput/FilterInput';

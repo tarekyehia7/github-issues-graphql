@@ -1,5 +1,7 @@
 import styled from 'styled-components';
 
+import { Image } from '../../atoms/Image/Image';
+
 export const Box = styled.div<{ withAvatar: boolean }>`
 	color: ${({ theme }) => theme.colors.lightBlack};
 	background-color: ${({ theme }) => theme.colors.white};
@@ -46,18 +48,7 @@ export const Body = styled.div`
 	}
 `;
 
-export const AvatarImg = styled.img`
-	position: absolute;
-	left: -53px;
-	display: inline-block;
-	overflow: hidden;
-	line-height: 1;
-	vertical-align: middle;
-	background-color: ${({ theme }) => theme.colors.white};
-	border-radius: 6px;
-	flex-shrink: 0;
-	box-shadow: 0 0 0 1px #1b1f2426;
-	border-radius: 50% !important;
-	width: 2.5rem;
-	height: 2.5rem;
+export const ImageStyled = styled(Image)`
+    position: absolute;
+    left: -53px;
 `;

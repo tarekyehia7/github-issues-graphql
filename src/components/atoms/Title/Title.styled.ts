@@ -12,3 +12,5 @@ export const TitleSmallStyled = styled.div`
 `;
 
 export const TitleBigStyled = styled.h1``;
+
+export const TitleMediumStyled = styled.h3``;

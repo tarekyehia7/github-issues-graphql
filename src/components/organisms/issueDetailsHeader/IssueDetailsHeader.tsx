@@ -1,11 +1,10 @@
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
 import React from 'react';
 
-import { BigTitle, Description, Status, TitleContainer } from './IssueDetailsHeader.styled';
+import { Description, TitleContainer } from './IssueDetailsHeader.styled';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
-import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
-import { SkipIcon } from '../../../icons/SkipIcon';
 import { formatDate } from '../../../helpers/helpers';
+import { Title, TitleSizeTypes } from '../../atoms/Title/Title';
+import { Status, StatusEnum } from '../../atoms/status/Status';
 
 type IssueHeaderProps = {
 	title: string;
@@ -21,17 +20,17 @@ export const IssueDetailsHeader = ({
 	state,
 	authorName,
 	createdAt,
-}: IssueHeaderProps) => (
-	<TitleContainer>
-		<BigTitle>
-			<span>{title}</span> #{issueId}
-		</BigTitle>
-		<Description>
-			<Status isOpenState={state === IssueState.Open}>
-				{state === IssueState.Open ? <OpenIssueIcon /> : <SkipIcon />}
-				{state}
-			</Status>
-			{authorName} opened this issue {formatDate(createdAt)} ago
-		</Description>
-	</TitleContainer>
-);
+}: IssueHeaderProps) => {
+	const status = state === IssueState.Open ? StatusEnum.Open : StatusEnum.Closed;
+	return(
+		<TitleContainer>
+			<Title titleSize={TitleSizeTypes.Large}>
+				<span>{title}</span> #{issueId}
+			</Title>
+			<Description>
+				<Status status={status}/>
+				{authorName} opened this issue {formatDate(createdAt)} ago
+			</Description>
+		</TitleContainer>
+	);
+};

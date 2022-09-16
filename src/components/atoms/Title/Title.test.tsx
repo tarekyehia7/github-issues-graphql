@@ -18,13 +18,13 @@ const TitleWithTheme = ({ type }: { type: TitleSizeTypes }) => {
 };
 
 describe('<Title />', () => {
-	it('Should render title correctly', async () => {
+	it('Should render small title correctly', async () => {
 		const { getByText } = render(<TitleWithTheme type={TitleSizeTypes.Small} />);
 
 		expect(getByText('Title test')).toBeInTheDocument();
 	});
 
-	it('Should render title correctly', async () => {
+	it('Should render Large title correctly', async () => {
 		const { getByText } = render(<TitleWithTheme type={TitleSizeTypes.Medium} />);
 
 		expect(getByText('Title test')).toBeInTheDocument();

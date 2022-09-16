@@ -2,7 +2,8 @@ import React, { PropsWithChildren } from 'react';
 
 import { Link, LinkType } from '../../atoms/link/Link';
 import { Title, TitleSizeTypes } from '../../atoms/Title/Title';
-import { AvatarImg, Body, Box } from './Card.styled';
+import { ImageShapeEnum } from '../../atoms/Image/Image';
+import { Body, Box, ImageStyled } from './Card.styled';
 
 export enum CardType {
 	Normal = 'normal',
@@ -27,7 +28,7 @@ export const Card = ({
 		<Box withAvatar={type === CardType.withAvatar}>
 			{type === CardType.withAvatar && (
 				<Link type={LinkType.Normal} to={authorUrl}>
-					<AvatarImg alt="avatar url" src={avatarUrl} />
+					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl ?? ''} />
 				</Link>
 			)}
 			<Title titleSize={TitleSizeTypes.Small}>{title}</Title>

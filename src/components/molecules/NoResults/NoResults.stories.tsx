@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { NoResults } from './NoResults';
 
 export default {
-  title: 'organisms/NoResults',
+  title: 'molecules/NoResults',
   component: NoResults,
 } as ComponentMeta<typeof NoResults>;
 

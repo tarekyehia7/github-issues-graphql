@@ -2,9 +2,33 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
-import { IssueDetailsComment } from '../../components/organisms/issueDetailsComment/IssueDetailsComment';
 import { IssueDetailsHeader } from '../../components/organisms/issueDetailsHeader/IssueDetailsHeader';
 import { constants } from '../../constants';
+import { Card, CardType } from '../../components/molecules/Card/Card';
+import { formatDate } from '../../helpers/helpers';
+import { Link, LinkType } from '../../components/atoms/link/Link';
+import styled from 'styled-components';
+
+const BodyHTMLDiv = styled.div`
+	padding: 16px;
+`;
+
+type TitleProps = {
+	authorName: string;
+	authorUrl: string;
+	createdAt: string;
+};
+
+const CardTitle = ({ authorName, authorUrl, createdAt }: TitleProps) => {
+	return (
+		<>
+			<Link type={LinkType.Normal} to={authorUrl}>
+				{authorName}
+			</Link>
+			<span>&nbsp;commented {formatDate(createdAt)} ago</span>
+		</>
+	);
+};
 
 export const IssuePage = () => {
 	const { issueId } = useParams();
@@ -35,13 +59,20 @@ export const IssuePage = () => {
 						authorName={issueData.author.login}
 						createdAt={issueData.createdAt}
 					/>
-					<IssueDetailsComment
+					<Card
+						type={CardType.withAvatar}
+						title={
+							<CardTitle authorName={issueData.author.login} authorUrl={issueData.author.url} createdAt={issueData.createdAt} />
+						}
 						authorUrl={issueData.author.url}
 						avatarUrl={issueData.author.avatarUrl}
-						authorName={issueData.author.login}
-						createdAt={issueData.createdAt}
-						bodyHTML={issueData.bodyHTML}
-					/>
+					>
+						<BodyHTMLDiv
+							dangerouslySetInnerHTML={{
+								__html: issueData.bodyHTML,
+							}}
+						/>
+					</Card>
 				</>
 			)}
 			{issueEdges &&
@@ -51,14 +82,21 @@ export const IssuePage = () => {
 					if (!comment || !author) return null;
 
 					return (
-						<IssueDetailsComment
+						<Card
 							key={`issue-comment-${idx}`}
+							type={CardType.withAvatar}
+							title={
+								<CardTitle authorName={author.login} authorUrl={author.url} createdAt={comment.createdAt} />
+							}
 							authorUrl={author.url}
 							avatarUrl={author.avatarUrl}
-							authorName={author.login}
-							createdAt={comment.createdAt}
-							bodyHTML={comment.bodyHTML}
-						/>
+						>
+							<BodyHTMLDiv
+								dangerouslySetInnerHTML={{
+									__html: comment.bodyHTML,
+								}}
+							/>
+						</Card>
 					);
 				})}
 		</>
