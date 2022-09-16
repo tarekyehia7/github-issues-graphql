@@ -1,7 +1,7 @@
-import React, { PropsWithChildren } from 'react';
+import React from 'react';
 
-import { HeaderStyled } from './Header.styled';
+import { HeaderStyled, GithubIco } from './Header.styled';
 
-export const Header = ({ children }: PropsWithChildren) => {
-	return <HeaderStyled>{children}</HeaderStyled>;
+export const Header = () => {
+	return <HeaderStyled><GithubIco /></HeaderStyled>;
 };

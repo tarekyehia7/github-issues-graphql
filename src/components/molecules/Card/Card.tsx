@@ -3,7 +3,7 @@ import React, { PropsWithChildren } from 'react';
 import { Link, LinkType } from '../../atoms/link/Link';
 import { Title, TitleSizeTypes } from '../../atoms/Title/Title';
 import { ImageShapeEnum } from '../../atoms/Image/Image';
-import { Body, Box, ImageStyled } from './Card.styled';
+import { Body, Box, ImageStyled, TitleStyled } from './Card.styled';
 
 export enum CardType {
 	Normal = 'normal',
@@ -31,7 +31,9 @@ export const Card = ({
 					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl ?? ''} />
 				</Link>
 			)}
-			<Title titleSize={TitleSizeTypes.Small}>{title}</Title>
+            <TitleStyled>
+			    <Title titleSize={TitleSizeTypes.Small}>{title}</Title>
+            </TitleStyled>
 			<Body>{children}</Body>
 		</Box>
 	);

@@ -5,6 +5,7 @@ import { Title, TitleSizeTypes } from './Title';
 
 export default {
 	title: 'atoms/Title',
+    description: 'Uses title from atoms',
 	component: Title,
 } as ComponentMeta<typeof Title>;
 

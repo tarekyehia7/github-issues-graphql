@@ -1,6 +1,7 @@
 import styled from 'styled-components';
 
 import { Image } from '../../atoms/Image/Image';
+import { Title } from '../../atoms/Title/Title';
 
 export const Box = styled.div<{ withAvatar: boolean }>`
 	color: ${({ theme }) => theme.colors.lightBlack};
@@ -51,4 +52,11 @@ export const Body = styled.div`
 export const ImageStyled = styled(Image)`
 	position: absolute;
 	left: -53px;
+`;
+
+export const TitleStyled = styled.div`
+    padding: ${({ theme }) => theme.margins.margin4};
+    background-color: #f6f8fa;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
 `;
