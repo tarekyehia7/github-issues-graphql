@@ -1,13 +1,10 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
 import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Button, ButtonType } from './Button';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const mockClick = jest.fn();
 const ButtonWithTheme = () => {
@@ -17,8 +14,9 @@ const ButtonWithTheme = () => {
 				disabled={false}
 				type={ButtonType.Cursor}
 				onClick={mockClick}
-				value="NiceButton"
-			/>
+			>
+                NiceButton
+            </Button>
 		</PageWithTheme>
 	);
 };

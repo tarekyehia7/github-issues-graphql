@@ -7,6 +7,7 @@ import {
 	SearchIconStyled,
 } from './FilterInput.styled';
 import { Input } from '../../atoms/Input/Input';
+import { Button, ButtonType } from '../../atoms/button/Button';
 
 type FilterInputProps = {
 	value: string;
@@ -35,9 +36,13 @@ export const FilterInput = ({
 				<SearchIconStyled />
 			</FilterContainer>
 			{showClearHistoryText && (
-				<ClearSearchContainer onClick={onClearSearchHistoryClick}>
+				<Button
+					disabled={false}
+					type={ButtonType.Text}
+					onClick={onClearSearchHistoryClick}
+				>
 					<CloseIconStyled /> Clear current search query, filters, and sorts
-				</ClearSearchContainer>
+				</Button>
 			)}
 		</>
 	);

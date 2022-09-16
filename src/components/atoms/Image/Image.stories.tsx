@@ -19,7 +19,9 @@ export default {
 export const Primary: ComponentStory<typeof Image> = (args) => {
 
     return (
-        <Image {...args} />
+        <div>
+            <Image {...args} />
+        </div>
     );
 };
 

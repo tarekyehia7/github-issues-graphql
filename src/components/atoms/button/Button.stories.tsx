@@ -20,10 +20,10 @@ export default {
 export const Primary: ComponentStory<typeof Button> = (args) => (
   <Button
     {...args}
-  />);
+  >{args.children}</Button>);
 
 Primary.args = {
     disabled: false,
-    value: 'test',
+    children: 'test',
     type: ButtonType.Cursor
 };

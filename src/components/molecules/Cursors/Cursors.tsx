@@ -23,20 +23,22 @@ const Cursors = ({
 	return (
 		<LinksContainer>
 			<Button
-				value={`< Previous`}
 				onClick={loadPreviousData}
 				disabled={previousButtonDisabled}
 				type={ButtonType.Cursor}
-			/>
+			>
+				{`< Previous`}
+			</Button>
 			<div>
 				Page {pageNumber} of {totalPages}
 			</div>
 			<Button
-				value={`Next >`}
 				onClick={loadNextData}
 				disabled={nextButtonDisabled}
 				type={ButtonType.Cursor}
-			/>
+			>
+				{`Next >`}
+			</Button>
 		</LinksContainer>
 	);
 };

@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Input } from './Input';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const onKeyUp = jest.fn();
 const onChange = jest.fn();

@@ -4,7 +4,7 @@ import '@testing-library/jest-dom';
 import 'jest-styled-components';
 
 import { Link, LinkType } from './Link';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const LinkWithTheme = ({ type }: { type: LinkType }) => {
 	return (

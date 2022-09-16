@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Title, TitleSizeTypes } from './Title';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const TitleWithTheme = ({ type }: { type: TitleSizeTypes }) => {
 	return (

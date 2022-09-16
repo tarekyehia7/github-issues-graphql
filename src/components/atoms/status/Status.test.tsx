@@ -5,7 +5,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Status, StatusEnum } from './Status';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const StatusWithTheme = ({ status }: { status: StatusEnum }) => {
 	return (

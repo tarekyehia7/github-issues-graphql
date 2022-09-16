@@ -7,7 +7,7 @@ import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Header } from './Header';
-import { PageWithTheme } from '../../testing/helpers';
+import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const HeaderWithTheme = () => {
 	return (
