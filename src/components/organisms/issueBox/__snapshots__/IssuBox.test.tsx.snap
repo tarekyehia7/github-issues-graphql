@@ -1,0 +1,185 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<IssueBox /> Should match snapshot 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: #24292f;
+  margin-top: 0;
+  cursor: pointer;
+  background: transparent;
+  margin: 1rem;
+  margin-top: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c2:hover {
+  color: #0969da;
+}
+
+.c5 {
+  color: #57606a;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c5:hover {
+  color: #0969da;
+}
+
+.c0 {
+  padding: 16px;
+  list-style-type: none;
+  border-top-color: #d8dee4;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.c0:hover {
+  background-color: #f6f8fa;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c8 {
+  margin-right: 0.2rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.c4:hover > a {
+  color: #0969da;
+}
+
+.c4:hover .c7 {
+  fill: #0969da;
+}
+
+.c9 {
+  color: #57606a;
+  margin-left: 1.7rem;
+  font-size: 13px;
+}
+
+.c3 {
+  min-height: 1rem;
+  min-width: 2rem;
+  margin-top: 0.07rem;
+  fill: #cf222e;
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <a
+      className="c2"
+      href="/facebook/react/issue/25276"
+      onClick={[Function]}
+    >
+      <svg
+        aria-hidden="true"
+        className="c3"
+        data-view-component="true"
+        height="16"
+        version="1.1"
+        viewBox="0 0 16 16"
+        width="16"
+      >
+        <path
+          d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+        />
+        <path
+          d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+        />
+      </svg>
+      Bug: &lt;img/&gt; renders twice in firefox with react 18
+    </a>
+    <div
+      className="c4"
+      data-testid="comments-section"
+    >
+      <a
+        className="c5 c6"
+        href="/facebook/react/issue/25276"
+      >
+        <svg
+          aria-hidden="true"
+          className="c7 c8"
+          data-view-component="true"
+          height="16"
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+          />
+        </svg>
+        <span>
+          10
+        </span>
+      </a>
+    </div>
+  </div>
+  <div
+    className="c9"
+  >
+    <span>
+      #
+      25276
+       Opened 
+    </span>
+    7 days
+    <span>
+       ago by 
+    </span>
+    <a
+      className="c5"
+      href="https://github.com/tarekyehia7"
+    >
+      tyehia
+    </a>
+  </div>
+</div>
+`;

@@ -31,9 +31,9 @@ export const Card = ({
 					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl ?? ''} />
 				</Link>
 			)}
-            <TitleStyled>
-			    <Title titleSize={TitleSizeTypes.Small}>{title}</Title>
-            </TitleStyled>
+			<TitleStyled>
+				<Title titleSize={TitleSizeTypes.Small}>{title}</Title>
+			</TitleStyled>
 			<Body>{children}</Body>
 		</Box>
 	);

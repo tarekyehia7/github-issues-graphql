@@ -15,7 +15,7 @@ import { IssueState } from '../../../graphql/generatedTypes/graphql';
 import { constants } from '../../../constants';
 import { formatDate } from '../../../helpers/helpers';
 
-type IssueBoxProps = {
+export type IssueBoxProps = {
 	state: IssueState;
 	title: string;
 	totalCount: number;
@@ -34,23 +34,18 @@ export const IssueBox = ({
 	authorName,
 	authorUrl,
 }: IssueBoxProps) => {
+	const link = `/${constants.repository}/${constants.projectName}/issue/${issueId}`;
 	return (
 		<Box>
 			<Header>
-				<Link
-					type={LinkType.Title}
-					to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}
-				>
+				<Link type={LinkType.Title} to={link}>
 					{state === IssueState.Open && <OpenIssueIconStyled />}
 					{state === IssueState.Closed && <SkipIconStyled />}
 					{title}
 				</Link>
 				{totalCount > 0 && (
-					<CommentsSection>
-						<LinkStyled
-							type={LinkType.Normal}
-							to={`/${constants.repository}/${constants.projectName}/issue/${issueId}`}
-						>
+					<CommentsSection data-testid="comments-section">
+						<LinkStyled type={LinkType.Normal} to={link}>
 							<CommentsIconStyled />
 							<span>{totalCount}</span>
 						</LinkStyled>

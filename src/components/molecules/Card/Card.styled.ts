@@ -55,8 +55,8 @@ export const ImageStyled = styled(Image)`
 `;
 
 export const TitleStyled = styled.div`
-    padding: ${({ theme }) => theme.margins.margin4};
-    background-color: #f6f8fa;
-    border-top-left-radius: 6px;
-    border-top-right-radius: 6px;
+	padding: ${({ theme }) => theme.margins.margin4};
+	background-color: #f6f8fa;
+	border-top-left-radius: 6px;
+	border-top-right-radius: 6px;
 `;

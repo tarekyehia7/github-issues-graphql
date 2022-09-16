@@ -8,6 +8,4 @@ export default {
 	component: Header,
 } as ComponentMeta<typeof Header>;
 
-export const Primary: ComponentStory<typeof Header> = () => (
-	<Header />
-);
+export const Primary: ComponentStory<typeof Header> = () => <Header />;

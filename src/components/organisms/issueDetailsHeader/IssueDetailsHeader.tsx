@@ -6,7 +6,7 @@ import { formatDate } from '../../../helpers/helpers';
 import { Title, TitleSizeTypes } from '../../atoms/Title/Title';
 import { Status, StatusEnum } from '../../atoms/status/Status';
 
-type IssueHeaderProps = {
+export type IssueHeaderProps = {
 	title: string;
 	issueId: string;
 	state: IssueState;

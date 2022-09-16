@@ -12,7 +12,6 @@ export const formatDate = (date: string) => {
 		return myFormattedDate;
 	} catch (e) {
 		console.error(e);
-	} finally {
 		return '';
 	}
 };
