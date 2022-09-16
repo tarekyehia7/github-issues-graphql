@@ -10,7 +10,7 @@ export enum CardType {
 	withAvatar = 'with avatar',
 }
 
-type CardProps = {
+export type CardProps = {
 	title: JSX.Element;
 	type: CardType;
 	authorUrl?: string;

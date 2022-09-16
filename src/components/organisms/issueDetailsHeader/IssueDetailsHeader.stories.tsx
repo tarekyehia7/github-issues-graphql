@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { IssueDetailsHeader } from './IssueDetailsHeader';
+import { IssueDetailsHeader, IssueHeaderProps } from './IssueDetailsHeader';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 
 export default {
@@ -12,9 +12,7 @@ export default {
 	},
 } as ComponentMeta<typeof IssueDetailsHeader>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof IssueDetailsHeader> = args => (
+export const Primary: ComponentStory<typeof IssueDetailsHeader> = (args: IssueHeaderProps) => (
 	<IssueDetailsHeader {...args} />
 );
 

@@ -1,9 +1,6 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import { fireEvent, render } from '@testing-library/react';
+import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Title, TitleSizeTypes } from './Title';

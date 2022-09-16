@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Button, ButtonType } from './Button';
+import { Button, ButtonProps, ButtonType } from './Button';
 
 export default {
 	title: 'atoms/Button',
@@ -15,9 +15,7 @@ export default {
 	},
 } as ComponentMeta<typeof Button>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Button> = args => (
+export const Primary: ComponentStory<typeof Button> = (args: ButtonProps & PropsWithChildren) => (
 	<Button {...args}>{args.children}</Button>
 );
 

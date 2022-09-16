@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Image, ImageShapeEnum } from './Image';
+import { Image, ImageProps, ImageShapeEnum } from './Image';
 
 export default {
 	title: 'atoms/Image',
@@ -14,9 +14,7 @@ export default {
 	},
 } as ComponentMeta<typeof Image>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Image> = args => {
+export const Primary: ComponentStory<typeof Image> = (args: ImageProps) => {
 	return (
 		<div>
 			<Image {...args} />

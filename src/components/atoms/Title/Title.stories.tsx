@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Title, TitleSizeTypes } from './Title';
+import { Title, TitleProps, TitleSizeTypes } from './Title';
 
 export default {
 	title: 'atoms/Title',
@@ -9,9 +9,7 @@ export default {
 	component: Title,
 } as ComponentMeta<typeof Title>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Title> = args => {
+export const Primary: ComponentStory<typeof Title> = (args: TitleProps & PropsWithChildren) => {
 	return <Title {...args}>{args.children}</Title>;
 };
 

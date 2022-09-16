@@ -9,7 +9,7 @@ export enum LinkType {
 	HeaderLink = 'header link',
 }
 
-type LinkProps = {
+export type LinkProps = {
 	to: string | undefined;
 	type: LinkType;
 	className?: string;

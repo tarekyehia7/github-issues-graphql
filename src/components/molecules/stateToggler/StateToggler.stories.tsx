@@ -1,7 +1,7 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { StateToggler } from './StateToggler';
+import { StateToggler, StateTogglerProps } from './StateToggler';
 import { StatusEnum } from '../../../types/issues';
 
 export default {
@@ -12,9 +12,7 @@ export default {
 	},
 } as ComponentMeta<typeof StateToggler>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof StateToggler> = args => <StateToggler {...args} />;
+export const Primary: ComponentStory<typeof StateToggler> = (args: StateTogglerProps) => <StateToggler {...args} />;
 
 Primary.args = {
 	status: StatusEnum.open,

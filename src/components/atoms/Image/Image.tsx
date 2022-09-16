@@ -1,6 +1,4 @@
 import React from 'react';
-import { OpenIssueIcon } from '../../../icons/OpenIssueIcon';
-import { SkipIcon } from '../../../icons/SkipIcon';
 
 import { AvatarImg } from './Image.styled';
 

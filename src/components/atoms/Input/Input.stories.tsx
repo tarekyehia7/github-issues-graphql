@@ -1,16 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Input } from './Input';
+import { Input, InputProps } from './Input';
 
 export default {
 	title: 'atoms/Input',
 	component: Input,
 } as ComponentMeta<typeof Input>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Input> = args => {
+export const Primary: ComponentStory<typeof Input> = (args: InputProps) => {
 	const [localValue, setValue] = useState<string>(args.value);
 
 	useEffect(() => {

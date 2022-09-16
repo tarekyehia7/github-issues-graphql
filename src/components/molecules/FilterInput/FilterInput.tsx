@@ -4,7 +4,7 @@ import { FilterContainer, CloseIconStyled, SearchIconStyled } from './FilterInpu
 import { Input } from '../../atoms/Input/Input';
 import { Button, ButtonType } from '../../atoms/button/Button';
 
-type FilterInputProps = {
+export type FilterInputProps = {
 	value: string;
 	showClearHistoryText: boolean;
 	onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;

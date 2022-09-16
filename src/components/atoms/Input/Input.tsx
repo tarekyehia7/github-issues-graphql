@@ -2,7 +2,7 @@ import React from 'react';
 
 import { InputStyled } from './Input.styled';
 
-type InputProps = {
+export type InputProps = {
 	value: string;
 	placeholder: string;
 	onKeyUp: (e: React.KeyboardEvent<HTMLInputElement>) => void;

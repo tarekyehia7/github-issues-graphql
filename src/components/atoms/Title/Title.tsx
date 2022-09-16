@@ -9,7 +9,7 @@ export enum TitleSizeTypes {
 	Paragraph = 'paragraph',
 }
 
-type TitleProps = {
+export type TitleProps = {
 	titleSize: TitleSizeTypes;
 };
 

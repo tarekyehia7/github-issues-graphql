@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Cursors from './Cursors';
+import Cursors, { CursorsProps } from './Cursors';
 
 export default {
 	title: 'molecules/Cursors',
@@ -12,9 +12,7 @@ export default {
 	},
 } as ComponentMeta<typeof Cursors>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Cursors> = args => {
+export const Primary: ComponentStory<typeof Cursors> = (args: CursorsProps) => {
 	const [pageNumber, setPageNumber] = useState(args.pageNumber);
 
 	useEffect(() => {

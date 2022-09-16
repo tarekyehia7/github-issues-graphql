@@ -1,7 +1,6 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { fireEvent, render } from '@testing-library/react';
 import '@testing-library/jest-dom';
-import renderer from 'react-test-renderer';
 import 'jest-styled-components';
 
 import { Input } from './Input';

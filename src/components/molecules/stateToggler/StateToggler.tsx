@@ -8,7 +8,7 @@ import {
 } from './StateToggler.styled';
 import { StatusEnum } from '../../../types/issues';
 
-type StateTogglerProps = {
+export type StateTogglerProps = {
 	status: StatusEnum;
 	onStateClick: (status: StatusEnum) => void;
 };

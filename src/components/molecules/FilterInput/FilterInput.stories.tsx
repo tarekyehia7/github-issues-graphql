@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { FilterInput } from './FilterInput';
+import { FilterInput, FilterInputProps } from './FilterInput';
 
 export default {
 	title: 'molecules/FilterInput',
@@ -13,9 +13,7 @@ export default {
 	},
 } as ComponentMeta<typeof FilterInput>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof FilterInput> = args => {
+export const Primary: ComponentStory<typeof FilterInput> = (args: FilterInputProps) => {
 	const [localValue, setValue] = useState<string>(args.value);
 	const [localShowClearHistorytext, setLocalShowClearHistoryText] = useState(
 		args.showClearHistoryText,

@@ -2,7 +2,7 @@ import React from 'react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { IssueBox } from './IssueBox';
+import { IssueBox, IssueBoxProps } from './IssueBox';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 
 export default {
@@ -14,9 +14,7 @@ export default {
 	},
 } as ComponentMeta<typeof IssueBox>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof IssueBox> = args => <IssueBox {...args} />;
+export const Primary: ComponentStory<typeof IssueBox> = (args: IssueBoxProps) => <IssueBox {...args} />;
 
 Primary.args = {
 	state: IssueState.Open,

@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 
 import { Image } from '../../atoms/Image/Image';
-import { Title } from '../../atoms/Title/Title';
 
 export const Box = styled.div<{ withAvatar: boolean }>`
 	color: ${({ theme }) => theme.colors.lightBlack};

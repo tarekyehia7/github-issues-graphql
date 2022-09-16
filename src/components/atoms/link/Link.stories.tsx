@@ -1,8 +1,8 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { withRouter } from 'storybook-addon-react-router-v6';
 
-import { Link, LinkType } from './Link';
+import { Link, LinkType, LinkProps } from './Link';
 
 export default {
 	title: 'atoms/Link',
@@ -16,9 +16,7 @@ export default {
 	},
 } as ComponentMeta<typeof Link>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Link> = (args: any) => {
+export const Primary: ComponentStory<typeof Link> = (args: LinkProps & PropsWithChildren) => {
 	return <Link {...args}>{args.children}</Link>;
 };
 

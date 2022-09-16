@@ -1,16 +1,14 @@
-import React from 'react';
+import React, { PropsWithChildren } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Card, CardType } from './Card';
+import { Card, CardProps, CardType } from './Card';
 
 export default {
 	title: 'molecules/Card',
 	component: Card,
 } as ComponentMeta<typeof Card>;
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-export const Primary: ComponentStory<typeof Card> = args => {
+export const Primary: ComponentStory<typeof Card> = (args: CardProps & PropsWithChildren) => {
 	return <Card {...args}>{args.children}</Card>;
 };
 
