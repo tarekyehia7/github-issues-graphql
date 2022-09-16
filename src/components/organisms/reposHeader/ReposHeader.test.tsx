@@ -23,14 +23,13 @@ describe('<IssueDetailsHeader />', () => {
 	});
 
 	it('Should have correct links', async () => {
-        const { githubUrl, repository, projectName } = constants;
+		const { githubUrl, repository, projectName } = constants;
 		const { getAllByRole } = render(<ReposHeaderWithTheme />);
-        const links = getAllByRole('link');
+		const links = getAllByRole('link');
 
 		expect(links).toHaveLength(3);
-        expect(links[0]).toHaveAttribute('href', `${githubUrl}/${repository}`);
-        expect(links[1]).toHaveAttribute('href', `${githubUrl}/${repository}/${projectName}`);
-        expect(links[2]).toHaveAttribute('href', `/`);
-
+		expect(links[0]).toHaveAttribute('href', `${githubUrl}/${repository}`);
+		expect(links[1]).toHaveAttribute('href', `${githubUrl}/${repository}/${projectName}`);
+		expect(links[2]).toHaveAttribute('href', `/`);
 	});
 });
