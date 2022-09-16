@@ -4,7 +4,6 @@ import { ThemeProvider } from 'styled-components';
 import { render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MockedProvider } from '@apollo/client/testing';
-import renderer from 'react-test-renderer';
 
 import { IssuePage } from './Issue';
 import { theme } from '../../themes';
@@ -46,8 +45,8 @@ beforeEach(() => renderPage());
 
 describe('Jest Snapshot testing suite', () => {
 	it('Matches DOM Snapshot', async () => {
-		const domTree = await renderer.create(page).toJSON();
-		expect(domTree).toMatchSnapshot();
+        const { container } = render(page);
+		expect(container).toMatchSnapshot();
 	});
 
 	it('should render Issue Page', async () => {

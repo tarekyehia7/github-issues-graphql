@@ -53,45 +53,47 @@ exports[`<IssueDetailsHeader /> Should match snapshot 1`] = `
   fill: #ffffff;
 }
 
-<div
-  className="c0"
->
-  <h1
-    className=""
-  >
-    <span>
-      Bug: &lt;img/&gt; renders twice in firefox with react 18
-    </span>
-     #
-    25276
-  </h1>
+<div>
   <div
-    className="c1"
+    class="c0"
   >
-    <span
-      className="c2"
+    <h1
+      class=""
     >
-      <svg
-        aria-hidden="true"
-        data-view-component="true"
-        height="16"
-        version="1.1"
-        viewBox="0 0 16 16"
-        width="16"
+      <span>
+        Bug: &lt;img/&gt; renders twice in firefox with react 18
+      </span>
+       #
+      25276
+    </h1>
+    <div
+      class="c1"
+    >
+      <span
+        class="c2"
       >
-        <path
-          d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
-        />
-        <path
-          d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
-        />
-      </svg>
-      open
-    </span>
-    tyehia
-     opened this issue 
-    7 days
-     ago
+        <svg
+          aria-hidden="true"
+          data-view-component="true"
+          height="16"
+          version="1.1"
+          viewBox="0 0 16 16"
+          width="16"
+        >
+          <path
+            d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+          />
+          <path
+            d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+          />
+        </svg>
+        open
+      </span>
+      tyehia
+       opened this issue 
+      7 days
+       ago
+    </div>
   </div>
 </div>
 `;

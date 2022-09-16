@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 
 import { IssueBox, IssueBoxProps } from './IssueBox';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
@@ -29,8 +28,9 @@ const IssueBoxWithTheme = () => {
 
 describe('<IssueBox />', () => {
 	it('Should match snapshot', async () => {
-		const domTree = await renderer.create(<IssueBoxWithTheme />).toJSON();
-		expect(domTree).toMatchSnapshot();
+		// const domTree = await renderer.create(<IssueBoxWithTheme />).toJSON();
+        const { container } = render(<IssueBoxWithTheme />);
+		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct Title', async () => {

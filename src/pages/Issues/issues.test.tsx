@@ -3,6 +3,7 @@ import { BrowserRouter } from 'react-router-dom';
 import { ThemeProvider } from 'styled-components';
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
+import 'jest-styled-components';
 import { MockedProvider } from '@apollo/client/testing';
 
 import { IssuesPage } from './Issues';
@@ -56,4 +57,18 @@ it('should contain clear search if input changes', async () => {
 			screen.getByText('Clear current search query, filters, and sorts'),
 		).toBeInTheDocument();
 	});
+});
+
+it('Should match snapshot', async () => {
+    const { container } = render(
+        <BrowserRouter>
+            <ThemeProvider theme={theme}>
+                <MockedProvider mocks={[issuesGraphQlMock]} addTypename={true}>
+                    <IssuesPage />
+                </MockedProvider>
+            </ThemeProvider>
+        </BrowserRouter>
+      );
+      await waitFor(() => new Promise((res) => setTimeout(res, 100)));
+      expect(container).toMatchSnapshot();
 });

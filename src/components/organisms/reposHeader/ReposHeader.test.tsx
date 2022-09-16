@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 
 import { ReposHeader } from './ReposHeader';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
@@ -18,8 +17,8 @@ const ReposHeaderWithTheme = () => {
 
 describe('<IssueDetailsHeader />', () => {
 	it('Should match snapshot', async () => {
-		const domTree = await renderer.create(<ReposHeaderWithTheme />).toJSON();
-		expect(domTree).toMatchSnapshot();
+        const { container } = render(<ReposHeaderWithTheme />);
+		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct links', async () => {

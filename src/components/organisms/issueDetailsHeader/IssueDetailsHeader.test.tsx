@@ -2,7 +2,6 @@ import React from 'react';
 import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
-import renderer from 'react-test-renderer';
 
 import { IssueDetailsHeader, IssueHeaderProps } from './IssueDetailsHeader';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
@@ -27,8 +26,8 @@ const IssueHeaderWithTheme = () => {
 
 describe('<IssueDetailsHeader />', () => {
 	it('Should match snapshot', async () => {
-		const domTree = await renderer.create(<IssueHeaderWithTheme />).toJSON();
-		expect(domTree).toMatchSnapshot();
+        const { container } = render(<IssueHeaderWithTheme />);
+		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct Title', async () => {
