@@ -95,7 +95,8 @@
 	"lint-staged": {
 		"**/*": [
 			"prettier --write --ignore-unknown",
-			"eslint \"src/**/*.{ts,tsx}\" --fix"
+			"eslint \"src/**/*.{ts,tsx}\" --fix",
+			"react-scripts test --bail --watchAll=false --findRelatedTests --passWithNoTests"
 		]
 	}
 }
