@@ -261,3 +261,8 @@ export const issueGraphQlMock = {
 		},
 	},
 };
+
+export const issueGraphQlErrorMock = {
+	...issueGraphQlMock,
+	error: new Error('Oops something went wrong...'),
+};
