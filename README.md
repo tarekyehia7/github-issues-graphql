@@ -29,18 +29,6 @@ Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `yarn lint`
-
-Run this command to check the project linting
-
-### `yarn lint:fix`
-
-Run this command to fix linting in the project
-
-### `yarn format`
-
-Run this command to format all files according to prettier configurations
-
 ### `yarn generate:graphql:types`
 
 Run this command to generate types for your graphql queries
