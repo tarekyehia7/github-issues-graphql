@@ -77,7 +77,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -224,7 +224,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -371,7 +371,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -541,7 +541,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -597,7 +597,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -706,7 +706,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -804,7 +804,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -851,7 +851,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -908,7 +908,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -985,7 +985,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1046,7 +1046,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1106,7 +1106,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1197,7 +1197,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1279,7 +1279,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1402,7 +1402,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
       </div>
     </div>
     <div
-      class="sc-kDDrLX cuJvSL"
+      class="sc-kDDrLX bwsbNW"
     >
       <div
         class="sc-evZas fkhGIo"
