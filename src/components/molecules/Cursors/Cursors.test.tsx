@@ -13,45 +13,40 @@ const props: CursorsProps = {
 	totalPages: 100,
 	previousButtonDisabled: false,
 	nextButtonDisabled: false,
-    loadNextData: mockNextClick,
-    loadPreviousData: mockPreviousClick
+	loadNextData: mockNextClick,
+	loadPreviousData: mockPreviousClick,
 };
 
 const renderPage = () => {
-	const {
-        container,
-        getByText,
-    } = render(
+	const { container, getByText } = render(
 		<PageWithTheme>
-            <Cursors {...props} />
-        </PageWithTheme>
+			<Cursors {...props} />
+		</PageWithTheme>,
 	);
 
-    return {
-        container,
-        getByText,
-    };
+	return {
+		container,
+		getByText,
+	};
 };
 
 describe('<Cursors />', () => {
-
 	it('Should matches snapshot', async () => {
-        const { container } = renderPage();
+		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
 	it('Should click previous button', async () => {
-        const { getByText } = renderPage();
+		const { getByText } = renderPage();
 
-        fireEvent.click(getByText('< Previous'));
+		fireEvent.click(getByText('< Previous'));
 		expect(mockPreviousClick.mock.calls.length).toBe(1);
 	});
 
 	it('Should click next button', async () => {
-        const { getByText } = renderPage();
+		const { getByText } = renderPage();
 
-        fireEvent.click(getByText('Next >'));
+		fireEvent.click(getByText('Next >'));
 		expect(mockNextClick.mock.calls.length).toBe(1);
 	});
-
 });

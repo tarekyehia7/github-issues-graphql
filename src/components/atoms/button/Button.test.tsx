@@ -6,19 +6,17 @@ import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const mockClick = jest.fn();
 const renderPage = () => {
-	const {
-        getByText
-    } = render(
+	const { getByText } = render(
 		<PageWithTheme>
 			<Button disabled={false} type={ButtonType.Cursor} onClick={mockClick}>
 				NiceButton
 			</Button>
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
 
-    return {
-        getByText
-    };
+	return {
+		getByText,
+	};
 };
 
 describe('<Button />', () => {

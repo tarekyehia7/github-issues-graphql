@@ -17,7 +17,7 @@ const ReposHeaderWithTheme = () => {
 
 describe('<IssueDetailsHeader />', () => {
 	it('Should match snapshot', async () => {
-        const { container } = render(<ReposHeaderWithTheme />);
+		const { container } = render(<ReposHeaderWithTheme />);
 		expect(container).toMatchSnapshot();
 	});
 

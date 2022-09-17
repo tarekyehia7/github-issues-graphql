@@ -5,16 +5,14 @@ import { Status, StatusEnum } from './Status';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const renderPage = (status: StatusEnum) => {
-	const {
-        getByText
-    } = render(
+	const { getByText } = render(
 		<PageWithTheme>
 			<Status status={status} />
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
-    return {
-        getByText
-    };
+	return {
+		getByText,
+	};
 };
 
 describe('<Status />', () => {

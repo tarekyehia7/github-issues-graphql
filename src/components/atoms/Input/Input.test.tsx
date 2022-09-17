@@ -8,16 +8,14 @@ const onKeyUp = jest.fn();
 const onChange = jest.fn();
 
 const renderPage = () => {
-	const {
-        getByPlaceholderText
-    } = render(
+	const { getByPlaceholderText } = render(
 		<PageWithTheme>
 			<Input value={''} placeholder={'type here...'} onKeyUp={onKeyUp} onChange={onChange} />
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
-    return {
-        getByPlaceholderText
-    };
+	return {
+		getByPlaceholderText,
+	};
 };
 
 describe('<Input />', () => {

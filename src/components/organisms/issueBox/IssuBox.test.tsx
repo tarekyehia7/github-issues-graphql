@@ -20,26 +20,22 @@ const props: IssueBoxProps = {
 };
 
 const renderPage = () => {
-	const {
-        container,
-        getByText,
-        getByTestId
-    } = render(
+	const { container, getByText, getByTestId } = render(
 		<PageWithTheme>
 			<IssueBox {...props} />
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
 
-    return {
-        container,
-        getByText,
-        getByTestId
-    };
+	return {
+		container,
+		getByText,
+		getByTestId,
+	};
 };
 
 describe('<IssueBox />', () => {
 	it('Should match snapshot', async () => {
-        const { container } = renderPage();
+		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 

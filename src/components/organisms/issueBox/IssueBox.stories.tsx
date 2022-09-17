@@ -14,7 +14,9 @@ export default {
 	},
 } as ComponentMeta<typeof IssueBox>;
 
-export const Primary: ComponentStory<typeof IssueBox> = (args: IssueBoxProps) => <IssueBox {...args} />;
+export const Primary: ComponentStory<typeof IssueBox> = (args: IssueBoxProps) => (
+	<IssueBox {...args} />
+);
 
 Primary.args = {
 	state: IssueState.Open,

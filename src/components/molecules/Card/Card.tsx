@@ -17,13 +17,7 @@ export type CardProps = {
 	avatarUrl?: string;
 } & PropsWithChildren;
 
-export const Card = ({
-	title,
-	children,
-	type,
-	avatarUrl,
-	authorUrl,
-}: CardProps) => {
+export const Card = ({ title, children, type, avatarUrl, authorUrl }: CardProps) => {
 	return (
 		<Box data-testid="card" withAvatar={type === CardType.withAvatar}>
 			{type === CardType.withAvatar && (

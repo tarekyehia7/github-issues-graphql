@@ -4,17 +4,15 @@ import { render } from '@testing-library/react';
 import { Title, TitleSizeTypes } from './Title';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
-const renderPage = (type: TitleSizeTypes ) => {
-	const {
-        getByText
-    } = render(
+const renderPage = (type: TitleSizeTypes) => {
+	const { getByText } = render(
 		<PageWithTheme>
 			<Title titleSize={type}>Title test</Title>
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
-    return {
-        getByText
-    };
+	return {
+		getByText,
+	};
 };
 
 describe('<Title />', () => {

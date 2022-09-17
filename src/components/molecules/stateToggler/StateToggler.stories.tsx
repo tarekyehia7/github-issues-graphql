@@ -12,7 +12,9 @@ export default {
 	},
 } as ComponentMeta<typeof StateToggler>;
 
-export const Primary: ComponentStory<typeof StateToggler> = (args: StateTogglerProps) => <StateToggler {...args} />;
+export const Primary: ComponentStory<typeof StateToggler> = (args: StateTogglerProps) => (
+	<StateToggler {...args} />
+);
 
 Primary.args = {
 	status: StatusEnum.open,

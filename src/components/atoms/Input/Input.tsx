@@ -11,7 +11,7 @@ export type InputProps = {
 export const Input = ({ value, placeholder, onKeyUp, onChange }: InputProps) => {
 	return (
 		<InputStyled
-            data-testid="Input"
+			data-testid="Input"
 			value={value}
 			placeholder={placeholder}
 			onKeyUp={onKeyUp}

@@ -5,18 +5,16 @@ import { Link, LinkType } from './Link';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const renderPage = (type: LinkType) => {
-	const {
-        getByText
-    } = render(
+	const { getByText } = render(
 		<PageWithTheme>
 			<Link to={'http://github.com'} type={type}>
 				Test Link
 			</Link>
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
-    return {
-        getByText
-    };
+	return {
+		getByText,
+	};
 };
 
 describe('<Link />', () => {

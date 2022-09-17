@@ -17,24 +17,21 @@ const props: IssueHeaderProps = {
 };
 
 const renderPage = () => {
-	const {
-        container,
-        getByText,
-    } = render(
+	const { container, getByText } = render(
 		<PageWithTheme>
 			<IssueDetailsHeader {...props} />
-		</PageWithTheme>
+		</PageWithTheme>,
 	);
 
-    return {
-        container,
-        getByText
-    };
+	return {
+		container,
+		getByText,
+	};
 };
 
 describe('<IssueDetailsHeader />', () => {
 	it('Should match snapshot', async () => {
-        const { container } = renderPage();
+		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
