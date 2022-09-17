@@ -36,7 +36,7 @@ export const IssueBox = ({
 }: IssueBoxProps) => {
 	const link = `/${constants.repository}/${constants.projectName}/issue/${issueId}`;
 	return (
-		<Box>
+		<Box data-testid={`issue-box-${issueId}`}>
 			<Header>
 				<Link type={LinkType.Title} to={link}>
 					{state === IssueState.Open && <OpenIssueIconStyled />}

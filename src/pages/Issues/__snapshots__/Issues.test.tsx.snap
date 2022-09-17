@@ -450,6 +450,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
     >
       <div
         class="c12"
+        data-testid="issue-box-25276"
       >
         <div
           class="c13"
@@ -474,7 +475,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
                 d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
               />
             </svg>
-            Bug: 
+            Bug: 3
           </a>
         </div>
         <div
@@ -499,6 +500,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25274"
       >
         <div
           class="c13"
@@ -548,6 +550,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25273"
       >
         <div
           class="c13"
@@ -597,6 +600,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25269"
       >
         <div
           class="c13"
@@ -621,7 +625,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
                 d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
               />
             </svg>
-            Bug: 
+            Bug: 2
           </a>
           <div
             class="c18"
@@ -672,6 +676,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25264"
       >
         <div
           class="c13"
@@ -721,6 +726,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25262"
       >
         <div
           class="c13"
@@ -796,6 +802,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25256"
       >
         <div
           class="c13"
@@ -871,6 +878,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25236"
       >
         <div
           class="c13"
@@ -895,7 +903,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
                 d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
               />
             </svg>
-            Feature request: Add a key property to custom hooks to reset state 
+            Feature request: Add a key property to custom hooks to reset state 2
           </a>
           <div
             class="c18"
@@ -946,6 +954,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25218"
       >
         <div
           class="c13"
@@ -1021,6 +1030,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
       </div>
       <div
         class="c12"
+        data-testid="issue-box-25212"
       >
         <div
           class="c13"

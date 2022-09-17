@@ -8,7 +8,7 @@ const edges = [
 		node: {
 			createdAt: '2022-09-15T14:28:38Z',
 			number: 25276,
-			title: 'Bug: ',
+			title: 'Bug: 3',
 			state: 'OPEN',
 			author: {
 				login: 'bogdanoliinyk',
@@ -68,7 +68,7 @@ const edges = [
 		node: {
 			createdAt: '2022-09-15T00:14:43Z',
 			number: 25269,
-			title: 'Bug: ',
+			title: 'Bug: 2',
 			state: 'OPEN',
 			author: {
 				login: 'Shashamura',
@@ -148,7 +148,7 @@ const edges = [
 		node: {
 			createdAt: '2022-09-11T18:38:28Z',
 			number: 25236,
-			title: 'Feature request: Add a key property to custom hooks to reset state ',
+			title: 'Feature request: Add a key property to custom hooks to reset state 2',
 			state: 'OPEN',
 			author: {
 				login: 'gmoniava',

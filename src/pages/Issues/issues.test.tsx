@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, waitFor } from '@testing-library/react';
+import { fireEvent, getByTestId, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import { MockedProvider, MockedResponse } from '@apollo/client/testing';
@@ -13,6 +13,7 @@ const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
 	const {
 		container,
 		getAllByTestId,
+		getByTestId,
 		findByText,
 		findByPlaceholderText,
 		getByPlaceholderText,
@@ -28,6 +29,7 @@ const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
 	return {
 		container,
 		getAllByTestId,
+		getByTestId,
 		findByText,
 		findByPlaceholderText,
 		getByPlaceholderText,
@@ -37,12 +39,12 @@ const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
 };
 
 describe('<Issues />', () => {
-	it('should render Issues Page', async () => {
+	it('should render Issues Page with skeleton and cursors', async () => {
 		const { getAllByTestId, findByText, findByPlaceholderText } = renderPage([
 			issuesGraphQlMock,
 		]);
 
-		expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage - 1);
+		expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage);
 		expect(getAllByTestId('skeleton')[0]).toBeInTheDocument();
 
 		expect(await findByText('< Previous')).toBeInTheDocument();
@@ -50,13 +52,35 @@ describe('<Issues />', () => {
 	});
 
 	it('should list all issues', async () => {
-		const { getAllByText } = renderPage([issuesGraphQlMock]);
+		const { getAllByText, getByText, getAllByTestId, getByTestId } = renderPage([
+			issuesGraphQlMock,
+		]);
 		const firstNode = issuesGraphQlMock.result.data.search.edges[0].node;
 		const lastNode = issuesGraphQlMock.result.data.search.edges[9].node;
+		const edges = issuesGraphQlMock.result.data.search.edges;
 
 		await waitFor(() => {
 			expect(getAllByText(firstNode.title.trim())[0]).toBeInTheDocument();
 			expect(getAllByText(firstNode.author.login)[0]).toBeInTheDocument();
+
+			expect(getAllByTestId('issue-box-', { exact: false })).toHaveLength(
+				constants.issuesPerPage,
+			);
+
+			edges.forEach(edge => {
+				expect(getByTestId(`issue-box-${edge.node.number}`)).toBeInTheDocument();
+				expect(getByText(edge.node.title)).toBeInTheDocument();
+				if (edge.node.comments.totalCount > 0) {
+					expect(
+						getByTestId(`issue-box-${edge.node.number}`).firstChild?.lastChild,
+					).toHaveAttribute('data-testid', 'comments-section');
+				} else {
+					expect(
+						getByTestId(`issue-box-${edge.node.number}`).firstChild?.lastChild,
+					).not.toHaveAttribute('data-testid', 'comments-section');
+				}
+				expect(getByText(`#${edge.node.number} Opened`)).toBeInTheDocument();
+			});
 
 			expect(getAllByText(lastNode.title)[0]).toBeInTheDocument();
 			expect(getAllByText(lastNode.author.login)[0]).toBeInTheDocument();
@@ -64,13 +88,14 @@ describe('<Issues />', () => {
 	});
 
 	it('should contain clear search if input changes', async () => {
-		const { getByPlaceholderText, getByText } = renderPage([issuesGraphQlMock]);
+		const { getAllByTestId, getByPlaceholderText, getByText } = renderPage([issuesGraphQlMock]);
 		await waitFor(() => {
 			const input = getByPlaceholderText('type here...');
 
 			fireEvent.change(input, { target: { value: 'no results found 1234567890123' } });
 			fireEvent.keyUp(input, { key: 'Enter' });
 
+			expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage);
 			expect(getByText('Clear current search query, filters, and sorts')).toBeInTheDocument();
 		});
 	});
