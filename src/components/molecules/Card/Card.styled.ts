@@ -42,6 +42,7 @@ export const Box = styled.div<{ withAvatar: boolean }>`
 
 export const Body = styled.div`
 	font-size: 14px;
+    overflow: auto;
 	color: ${({ theme }) => theme.colors.black};
 	@media (max-width: 480px) {
 		overflow: auto;
