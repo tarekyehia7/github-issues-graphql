@@ -4,7 +4,7 @@ import { BookIcon } from '../../../icons/BookIcon';
 export const LinkContainer = styled.div`
 	display: flex;
 	flex-direction: column;
-	height: 3rem;
+	height: 4rem;
 	justify-content: flex-start;
 	padding: ${({ theme }) => theme.margins.margin4};
 	background-color: ${({ theme }) => theme.colors.lightBlue};
@@ -14,6 +14,7 @@ export const HeaderLinks = styled.div`
 	display: flex;
 	flex-direction: row;
 	align-items: center;
+	padding-bottom: 1rem;
 `;
 
 export const BookIconStyled = styled(BookIcon)`
@@ -24,7 +25,7 @@ export const BookIconStyled = styled(BookIcon)`
 
 export const PagesLinks = styled.div`
 	display: flex;
-	justify-content: center;
+	justify-content: flex-start;
 `;
 
 export const RepoStateLabel = styled.label`
