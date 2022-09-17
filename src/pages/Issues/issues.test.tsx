@@ -2,14 +2,14 @@ import React from 'react';
 import { fireEvent, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
-import { MockedProvider } from '@apollo/client/testing';
+import { MockedProvider, MockedResponse } from '@apollo/client/testing';
 
 import { IssuesPage } from './Issues';
-import { issuesGraphQlMock } from '../../graphql/queries/mocks/issues.mock';
+import { issuesGraphQlMock, issuesGraphQlErrorMock } from '../../graphql/queries/mocks/issues.mock';
 import { constants } from '../../constants';
 import { PageWithTheme } from '../../helpers/testing/helpers';
 
-const renderPage = (withMock = true) => {
+const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
 	const {
 		container,
 		getAllByTestId,
@@ -20,7 +20,7 @@ const renderPage = (withMock = true) => {
 		getByText,
 	} = render(
 		<PageWithTheme>
-			<MockedProvider mocks={withMock ? [issuesGraphQlMock] : []} addTypename={true}>
+			<MockedProvider mocks={mocks} addTypename={true}>
 				<IssuesPage />
 			</MockedProvider>
 		</PageWithTheme>,
@@ -38,7 +38,9 @@ const renderPage = (withMock = true) => {
 
 describe('<Issues />', () => {
 	it('should render Issues Page', async () => {
-		const { getAllByTestId, findByText, findByPlaceholderText } = renderPage();
+		const { getAllByTestId, findByText, findByPlaceholderText } = renderPage([
+			issuesGraphQlMock,
+		]);
 
 		expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage - 1);
 		expect(getAllByTestId('skeleton')[0]).toBeInTheDocument();
@@ -48,7 +50,7 @@ describe('<Issues />', () => {
 	});
 
 	it('should list all issues', async () => {
-		const { getAllByText } = renderPage();
+		const { getAllByText } = renderPage([issuesGraphQlMock]);
 		const firstNode = issuesGraphQlMock.result.data.search.edges[0].node;
 		const lastNode = issuesGraphQlMock.result.data.search.edges[9].node;
 
@@ -62,7 +64,7 @@ describe('<Issues />', () => {
 	});
 
 	it('should contain clear search if input changes', async () => {
-		const { getByPlaceholderText, getByText } = renderPage();
+		const { getByPlaceholderText, getByText } = renderPage([issuesGraphQlMock]);
 		await waitFor(() => {
 			const input = getByPlaceholderText('type here...');
 
@@ -74,14 +76,22 @@ describe('<Issues />', () => {
 	});
 
 	it('Should match snapshot', async () => {
-		const { container } = renderPage();
+		const { container } = renderPage([issuesGraphQlMock]);
 
 		await waitFor(() => new Promise(res => setTimeout(res, 500)));
 		expect(container).toMatchSnapshot();
 	});
 
 	it('Should render no results', async () => {
-		const { getByText } = renderPage(false);
+		const { getByText } = renderPage([]);
+
+		await waitFor(() => {
+			expect(getByText('No results matched your search.')).toBeInTheDocument();
+		});
+	});
+
+	it('Should render no results in case of error', async () => {
+		const { getByText } = renderPage([issuesGraphQlErrorMock]);
 
 		await waitFor(() => {
 			expect(getByText('No results matched your search.')).toBeInTheDocument();
