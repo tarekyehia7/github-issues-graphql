@@ -34,25 +34,25 @@ const renderPage = () => {
 };
 
 describe('<IssueBox />', () => {
-	it('Should match snapshot', async () => {
+	it('Should match snapshot', () => {
 		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should have correct Title', async () => {
+	it('Should have correct Title', () => {
 		const { getByText } = renderPage();
 
 		expect(getByText(props.title)).toBeInTheDocument();
 	});
 
-	it('Should have correct description', async () => {
+	it('Should have correct description', () => {
 		const { getByText } = renderPage();
 
 		expect(getByText(`#${props.issueId} Opened`)).toBeInTheDocument();
 		expect(getByText(formatDate(props.createdAt))).toBeInTheDocument();
 	});
 
-	it('Should have comments section', async () => {
+	it('Should have comments section', () => {
 		const { repository, projectName } = constants;
 		const { getByTestId } = renderPage();
 

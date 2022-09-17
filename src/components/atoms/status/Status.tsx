@@ -16,7 +16,11 @@ export type StatusProps = {
 export const Status = ({ status }: StatusProps) => {
 	return (
 		<StatusStyled isOpenState={status === StatusEnum.Open}>
-			{status === StatusEnum.Open ? <OpenIssueIcon /> : <SkipIcon />}
+			{status === StatusEnum.Open ? (
+				<OpenIssueIcon data-testid="open-issue-icon" />
+			) : (
+				<SkipIcon data-testid="skip-icon" />
+			)}
 			{status}
 		</StatusStyled>
 	);

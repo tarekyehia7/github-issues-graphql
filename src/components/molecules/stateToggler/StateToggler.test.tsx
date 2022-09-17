@@ -28,12 +28,12 @@ const renderPage = (status?: StatusEnum) => {
 };
 
 describe('<StateToggler />', () => {
-	it('Should matches snapshot', async () => {
+	it('Should matches snapshot', () => {
 		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should trigger Open button on click', async () => {
+	it('Should trigger Open button on click', () => {
 		const { getByText } = renderPage();
 
 		fireEvent.click(getByText('Open'));
@@ -41,7 +41,7 @@ describe('<StateToggler />', () => {
 		expect(mockOnClick).toHaveBeenCalledWith(StatusEnum.open);
 	});
 
-	it('Should trigger Closed button on click', async () => {
+	it('Should trigger Closed button on click', () => {
 		const { getByText } = renderPage();
 
 		fireEvent.click(getByText('Closed'));
@@ -49,13 +49,13 @@ describe('<StateToggler />', () => {
 		expect(mockOnClick).toHaveBeenCalledWith(StatusEnum.closed);
 	});
 
-	it('Should have correct color for Open button', async () => {
+	it('Should have correct color for Open button', () => {
 		const { getByText } = renderPage(StatusEnum.open);
 
 		expect(getByText('Open')).toHaveStyleRule(`color`, theme.colors.lightBlack);
 	});
 
-	it('Should have correct color for Closed button', async () => {
+	it('Should have correct color for Closed button', () => {
 		const { getByText } = renderPage(StatusEnum.open);
 
 		expect(getByText('Closed')).toHaveStyleRule(`color`, theme.colors.darkGray);

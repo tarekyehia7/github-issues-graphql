@@ -8,35 +8,35 @@ const onKeyUp = jest.fn();
 const onChange = jest.fn();
 
 const renderPage = () => {
-	const { getByPlaceholderText } = render(
+	const { getByTestId } = render(
 		<PageWithTheme>
 			<Input value={''} placeholder={'type here...'} onKeyUp={onKeyUp} onChange={onChange} />
 		</PageWithTheme>,
 	);
 	return {
-		getByPlaceholderText,
+		getByTestId,
 	};
 };
 
 describe('<Input />', () => {
-	it('Should have placeholder when empty', async () => {
-		const { getByPlaceholderText } = renderPage();
+	it('Should have placeholder when empty', () => {
+		const { getByTestId } = renderPage();
 
-		expect(getByPlaceholderText('type here...')).toBeInTheDocument();
+		expect(getByTestId('Input')).toHaveAttribute('placeholder', 'type here...');
 	});
 
-	it('Should have correct input text', async () => {
-		const { getByPlaceholderText } = renderPage();
-		const input = getByPlaceholderText('type here...');
+	it('Should have correct input text', () => {
+		const { getByTestId } = renderPage();
+		const input = getByTestId('Input');
 
 		fireEvent.change(input, { target: { value: 'new text' } });
 
 		expect(onChange.mock.calls.length).toBe(1);
 	});
 
-	it('Should fire enter event', async () => {
-		const { getByPlaceholderText } = renderPage();
-		const input = getByPlaceholderText('type here...');
+	it('Should fire enter event', () => {
+		const { getByTestId } = renderPage();
+		const input = getByTestId('Input');
 
 		fireEvent.keyUp(input, { key: 'Enter' });
 

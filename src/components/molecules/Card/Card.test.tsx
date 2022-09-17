@@ -31,27 +31,32 @@ const renderPage = (cardType: CardType) => {
 };
 
 describe('<Card />', () => {
-	it('Should matches snapshot', async () => {
+	it('Should matches snapshot', () => {
 		const { container } = renderPage(CardType.Normal);
 		expect(container).toMatchSnapshot();
 	});
 
-	it('should not have avatar', async () => {
+	it('Should not have avatar', () => {
 		const { getByTestId } = renderPage(CardType.Normal);
 
 		expect(getByTestId('card').firstChild).not.toHaveProperty('href');
 	});
 
-	it('should not have avatar', async () => {
+	it('Should have avatar with correct url', () => {
 		const { getByTestId } = renderPage(CardType.withAvatar);
 
-		expect(getByTestId('card').firstChild).toHaveProperty('href');
 		expect(getByTestId('card').firstChild).toHaveProperty('href', props.authorUrl);
 	});
 
-	it('should have correct title', async () => {
+	it('Should have correct title', () => {
 		const { getByText } = renderPage(CardType.withAvatar);
 
 		expect(getByText(title)).toBeInTheDocument();
+	});
+
+	it('Should have correct body', () => {
+		const { getByText } = renderPage(CardType.Normal);
+
+		expect(getByText('This is card body')).toBeInTheDocument();
 	});
 });

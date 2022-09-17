@@ -30,19 +30,19 @@ const renderPage = () => {
 };
 
 describe('<IssueDetailsHeader />', () => {
-	it('Should match snapshot', async () => {
+	it('Should match snapshot', () => {
 		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should have correct Title', async () => {
+	it('Should have correct Title', () => {
 		const { getByText } = renderPage();
 
 		expect(getByText(props.title)).toBeInTheDocument();
 		expect(getByText(`#${props.issueId}`)).toBeInTheDocument();
 	});
 
-	it('Should have correct description', async () => {
+	it('Should have correct description', () => {
 		const { getByText } = renderPage();
 
 		expect(

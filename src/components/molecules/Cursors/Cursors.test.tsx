@@ -31,19 +31,19 @@ const renderPage = () => {
 };
 
 describe('<Cursors />', () => {
-	it('Should matches snapshot', async () => {
+	it('Should matches snapshot', () => {
 		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should click previous button', async () => {
+	it('Should click previous button', () => {
 		const { getByText } = renderPage();
 
 		fireEvent.click(getByText('< Previous'));
 		expect(mockPreviousClick.mock.calls.length).toBe(1);
 	});
 
-	it('Should click next button', async () => {
+	it('Should click next button', () => {
 		const { getByText } = renderPage();
 
 		fireEvent.click(getByText('Next >'));

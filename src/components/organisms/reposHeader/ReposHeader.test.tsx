@@ -16,12 +16,12 @@ const ReposHeaderWithTheme = () => {
 };
 
 describe('<IssueDetailsHeader />', () => {
-	it('Should match snapshot', async () => {
+	it('Should match snapshot', () => {
 		const { container } = render(<ReposHeaderWithTheme />);
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should have correct links', async () => {
+	it('Should have correct links', () => {
 		const { githubUrl, repository, projectName } = constants;
 		const { getAllByRole } = render(<ReposHeaderWithTheme />);
 		const links = getAllByRole('link');

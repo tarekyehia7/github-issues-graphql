@@ -32,26 +32,26 @@ const renderPage = () => {
 };
 
 describe('<FilterInput />', () => {
-	it('Should matches snapshot', async () => {
+	it('Should matches snapshot', () => {
 		const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should trigger onChange', async () => {
+	it('Should trigger onChange', () => {
 		const { getByTestId } = renderPage();
 
 		fireEvent.change(getByTestId('Input'), { target: { value: '23' } });
 		expect(mockOnChange.mock.calls.length).toBe(1);
 	});
 
-	it('Should trigger onKeyUp', async () => {
+	it('Should trigger onKeyUp', () => {
 		const { getByTestId } = renderPage();
 
 		fireEvent.keyUp(getByTestId('Input'));
 		expect(mockOnKeyUp.mock.calls.length).toBe(1);
 	});
 
-	it('Should trigger click event on clicking clear history', async () => {
+	it('Should trigger click event on clicking clear history', () => {
 		const { getByText } = renderPage();
 
 		fireEvent.click(getByText('Clear current search query, filters, and sorts'));
