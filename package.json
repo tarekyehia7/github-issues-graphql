@@ -97,7 +97,9 @@
 		"webpack": "^5.74.0"
 	},
 	"lint-staged": {
-		"*.ts": "eslint \"src/**/*.{ts,tsx}\" --cache --fix",
-		"*.prettierrc": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
+		"**/*": [
+			"eslint --fix",
+			"prettier --write --ignore-unknown"
+		]
 	}
 }
