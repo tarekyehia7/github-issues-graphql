@@ -46,3 +46,11 @@ Run this command to format all files according to prettier configurations
 Run this command to generate types for your graphql queries
 
 **Note: This command must run each time the queries change!**
+
+### `yarn build-storybook`
+
+Run this command to build storybook
+
+### `yarn storybook`
+
+Run this command to run storybook on port 6006
