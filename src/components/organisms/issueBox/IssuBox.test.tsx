@@ -18,29 +18,39 @@ const props: IssueBoxProps = {
 	authorName: 'tyehia',
 	authorUrl: 'https://github.com/tarekyehia7',
 };
-const IssueBoxWithTheme = () => {
-	return (
+
+const renderPage = () => {
+	const {
+        container,
+        getByText,
+        getByTestId
+    } = render(
 		<PageWithTheme>
 			<IssueBox {...props} />
 		</PageWithTheme>
 	);
+
+    return {
+        container,
+        getByText,
+        getByTestId
+    };
 };
 
 describe('<IssueBox />', () => {
 	it('Should match snapshot', async () => {
-		// const domTree = await renderer.create(<IssueBoxWithTheme />).toJSON();
-        const { container } = render(<IssueBoxWithTheme />);
+        const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct Title', async () => {
-		const { getByText } = render(<IssueBoxWithTheme />);
+		const { getByText } = renderPage();
 
 		expect(getByText(props.title)).toBeInTheDocument();
 	});
 
 	it('Should have correct description', async () => {
-		const { getByText } = render(<IssueBoxWithTheme />);
+		const { getByText } = renderPage();
 
 		expect(getByText(`#${props.issueId} Opened`)).toBeInTheDocument();
 		expect(getByText(formatDate(props.createdAt))).toBeInTheDocument();
@@ -48,7 +58,7 @@ describe('<IssueBox />', () => {
 
 	it('Should have comments section', async () => {
 		const { repository, projectName } = constants;
-		const { getByTestId } = render(<IssueBoxWithTheme />);
+		const { getByTestId } = renderPage();
 
 		expect(getByTestId('comments-section')).toBeInTheDocument();
 		expect(getByTestId('comments-section').firstChild?.lastChild).toHaveTextContent(

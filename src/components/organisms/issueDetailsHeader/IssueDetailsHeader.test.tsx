@@ -16,29 +16,37 @@ const props: IssueHeaderProps = {
 	authorName: 'tyehia',
 };
 
-const IssueHeaderWithTheme = () => {
-	return (
+const renderPage = () => {
+	const {
+        container,
+        getByText,
+    } = render(
 		<PageWithTheme>
 			<IssueDetailsHeader {...props} />
 		</PageWithTheme>
 	);
+
+    return {
+        container,
+        getByText
+    };
 };
 
 describe('<IssueDetailsHeader />', () => {
 	it('Should match snapshot', async () => {
-        const { container } = render(<IssueHeaderWithTheme />);
+        const { container } = renderPage();
 		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct Title', async () => {
-		const { getByText } = render(<IssueHeaderWithTheme />);
+		const { getByText } = renderPage();
 
 		expect(getByText(props.title)).toBeInTheDocument();
 		expect(getByText(`#${props.issueId}`)).toBeInTheDocument();
 	});
 
 	it('Should have correct description', async () => {
-		const { getByText } = render(<IssueHeaderWithTheme />);
+		const { getByText } = renderPage();
 
 		expect(
 			getByText(`${props.authorName} opened this issue ${formatDate(props.createdAt)} ago`),

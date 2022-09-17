@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import Cursors, { CursorsProps } from './Cursors';
+import { Cursors, CursorsProps } from './Cursors';
 
 export default {
 	title: 'molecules/Cursors',

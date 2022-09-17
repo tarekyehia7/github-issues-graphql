@@ -1,13 +1,12 @@
 import React from 'react';
-import { BrowserRouter } from 'react-router-dom';
-import { ThemeProvider } from 'styled-components';
-import { render, screen, waitFor } from '@testing-library/react';
+import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MockedProvider } from '@apollo/client/testing';
 
 import { IssuePage } from './Issue';
-import { theme } from '../../themes';
 import { issueGraphQlMock } from '../../graphql/queries/mocks/issue.mock';
+import { PageWithTheme } from '../../helpers/testing/helpers';
+import { formatDate } from '../../helpers/helpers';
 
 jest.mock('react-router-dom', () => ({
 	...jest.requireActual('react-router-dom'),
@@ -20,43 +19,68 @@ const repositoryIssue = issueGraphQlMock.result.data.repository.issue;
 const repositoryEdges = issueGraphQlMock.result.data.repository.issue.comments.edges;
 
 const renderPage = () => {
-	return render(
-		<BrowserRouter>
-			<ThemeProvider theme={theme}>
-				<MockedProvider mocks={[issueGraphQlMock]} addTypename={true}>
-					<IssuePage />
-				</MockedProvider>
-			</ThemeProvider>
-		</BrowserRouter>,
+	const {
+        container,
+        getByText,
+        getAllByText,
+        getAllByTestId,
+        getAllByAltText,
+    } = render(
+		<PageWithTheme>
+            <MockedProvider mocks={[issueGraphQlMock]} addTypename={true}>
+                <IssuePage />
+            </MockedProvider>
+        </PageWithTheme>,
 	);
+
+    return {
+        container,
+        getByText,
+        getAllByText,
+        getAllByTestId,
+        getAllByAltText
+    };
 };
 
-const page = (
-	<BrowserRouter>
-		<ThemeProvider theme={theme}>
-			<MockedProvider mocks={[issueGraphQlMock]} addTypename={true}>
-				<IssuePage />
-			</MockedProvider>
-		</ThemeProvider>
-	</BrowserRouter>
-);
+describe('<Issue />', () => {
 
-beforeEach(() => renderPage());
+	it('Should matches snapshot', async () => {
+        const { container } = renderPage();
 
-describe('Jest Snapshot testing suite', () => {
-	it('Matches DOM Snapshot', async () => {
-        const { container } = render(page);
+        await waitFor(() => new Promise((res) => setTimeout(res, 100)));
 		expect(container).toMatchSnapshot();
 	});
 
-	it('should render Issue Page', async () => {
+	it('should have avatar', async () => {
+        const { getByText, getAllByAltText } = renderPage();
 		await waitFor(() => {
-			expect(screen.getByText(repositoryIssue.title.trim())).toBeInTheDocument();
+			expect(getByText(repositoryIssue.title.trim())).toBeInTheDocument();
 
-			expect(screen.getAllByAltText('avatar url')[1]).toHaveAttribute(
+			expect(getAllByAltText('avatar url')[1]).toHaveAttribute(
 				'src',
 				repositoryEdges[0].node.author.avatarUrl,
 			);
 		});
 	});
+
+    it('Should have correct title - author comment', async () => {
+        const { getAllByText } = renderPage();
+        const cardTitle = `commented ${formatDate(repositoryIssue.createdAt)} ago`;
+
+        await waitFor(() => {
+			expect(getAllByText(cardTitle.trim())[0]).toBeInTheDocument();
+		});
+    });
+    
+    it('Should have correct number of cards', async () => {
+        const { getAllByTestId } = renderPage();
+
+        // increment by one because of first card is not represented as an edge
+        const cardsLength = repositoryEdges.length + 1;
+
+        await waitFor(() => {
+            expect(getAllByTestId('card')).toHaveLength(cardsLength);
+        });
+    });
+
 });

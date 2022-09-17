@@ -12,7 +12,7 @@ export type CursorsProps = {
 	loadPreviousData: () => void;
 };
 
-const Cursors = ({
+export const Cursors = ({
 	loadNextData,
 	previousButtonDisabled,
 	nextButtonDisabled,
@@ -38,5 +38,3 @@ const Cursors = ({
 		</LinksContainer>
 	);
 };
-
-export default Cursors;

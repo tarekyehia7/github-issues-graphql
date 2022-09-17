@@ -1,24 +1,27 @@
 import React from 'react';
 import { fireEvent, render } from '@testing-library/react';
-import '@testing-library/jest-dom';
-import 'jest-styled-components';
 
 import { Link, LinkType } from './Link';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
-const LinkWithTheme = ({ type }: { type: LinkType }) => {
-	return (
+const renderPage = (type: LinkType) => {
+	const {
+        getByText
+    } = render(
 		<PageWithTheme>
 			<Link to={'http://github.com'} type={type}>
 				Test Link
 			</Link>
 		</PageWithTheme>
 	);
+    return {
+        getByText
+    };
 };
 
 describe('<Link />', () => {
 	it('Should render title link type', async () => {
-		const { getByText } = render(<LinkWithTheme type={LinkType.Title} />);
+		const { getByText } = renderPage(LinkType.Title);
 
 		fireEvent.click(getByText('Test Link'));
 
@@ -26,7 +29,7 @@ describe('<Link />', () => {
 	});
 
 	it('Should render header link type', async () => {
-		const { getByText } = render(<LinkWithTheme type={LinkType.HeaderLink} />);
+		const { getByText } = renderPage(LinkType.HeaderLink);
 
 		fireEvent.click(getByText('Test Link'));
 
@@ -34,7 +37,7 @@ describe('<Link />', () => {
 	});
 
 	it('Should render normal link type', async () => {
-		const { getByText } = render(<LinkWithTheme type={LinkType.Normal} />);
+		const { getByText } = renderPage(LinkType.Normal);
 
 		fireEvent.click(getByText('Test Link'));
 
@@ -42,7 +45,7 @@ describe('<Link />', () => {
 	});
 
 	it('Should render normal blue link type', async () => {
-		const { getByText } = render(<LinkWithTheme type={LinkType.NormalBlue} />);
+		const { getByText } = renderPage(LinkType.NormalBlue);
 
 		fireEvent.click(getByText('Test Link'));
 

@@ -1,0 +1,79 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Card /> Should matches snapshot 1`] = `
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.c0 {
+  color: #24292f;
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+
+.c3 {
+  font-size: 14px;
+  color: #000000;
+}
+
+.c1 {
+  padding: 1rem;
+  background-color: #f6f8fa;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+@media (max-width:480px) {
+  .c0 {
+    margin: 0rem;
+    margin-top: 1rem;
+  }
+
+  .c0 > a {
+    display: none;
+  }
+}
+
+@media (max-width:480px) {
+  .c3 {
+    overflow: auto;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+    data-testid="card"
+  >
+    <div
+      class="c1"
+    >
+      <div
+        class="c2"
+      >
+        This is card title
+      </div>
+    </div>
+    <div
+      class="c3"
+    >
+      <h4>
+        This is card body
+      </h4>
+    </div>
+  </div>
+</div>
+`;

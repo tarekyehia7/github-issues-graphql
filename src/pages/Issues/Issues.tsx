@@ -5,7 +5,7 @@ import { buildQuery } from '../../helpers/queryBuilder';
 import { Skeleton } from '../../components/atoms/skeleton/Skeleton';
 import { NoResults } from '../../components/molecules/NoResults/NoResults';
 import { getPagesNumber } from '../../helpers/helpers';
-import Cursors from '../../components/molecules/Cursors/Cursors';
+import { Cursors } from '../../components/molecules/Cursors/Cursors';
 import { FilterInput } from '../../components/molecules/FilterInput/FilterInput';
 import { StateToggler } from '../../components/molecules/stateToggler/StateToggler';
 import { IssueBox } from '../../components/organisms/issueBox/IssueBox';

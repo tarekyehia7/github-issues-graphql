@@ -15,7 +15,7 @@ export type CardProps = {
 	type: CardType;
 	authorUrl?: string;
 	avatarUrl?: string;
-};
+} & PropsWithChildren;
 
 export const Card = ({
 	title,
@@ -23,9 +23,9 @@ export const Card = ({
 	type,
 	avatarUrl,
 	authorUrl,
-}: CardProps & PropsWithChildren) => {
+}: CardProps) => {
 	return (
-		<Box withAvatar={type === CardType.withAvatar}>
+		<Box data-testid="card" withAvatar={type === CardType.withAvatar}>
 			{type === CardType.withAvatar && (
 				<Link type={LinkType.Normal} to={authorUrl}>
 					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl ?? ''} />

@@ -1,0 +1,119 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Cursors /> Should matches snapshot 1`] = `
+.c1 {
+  color: #0969da;
+  min-width: 2rem;
+  padding: 5px 10px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  background-color: transparent;
+  color: #0969da;
+  min-width: 2rem;
+  padding: 5px 10px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  background-color: transparent;
+}
+
+.c1:disabled {
+  color: #8c959f;
+  cursor: default;
+  border-color: transparent;
+}
+
+.c1:disabled:hover {
+  border-color: transparent;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #d0d7de;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.c1:disabled {
+  color: #8c959f;
+  cursor: default;
+  border-color: transparent;
+}
+
+.c1:disabled:hover {
+  border-color: transparent;
+}
+
+.c1:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #d0d7de;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <button
+      class="c1"
+      type="button"
+    >
+      &lt; Previous
+    </button>
+    <div>
+      Page 
+      1
+       of 
+      100
+    </div>
+    <button
+      class="c1"
+      type="button"
+    >
+      Next &gt;
+    </button>
+  </div>
+</div>
+`;
