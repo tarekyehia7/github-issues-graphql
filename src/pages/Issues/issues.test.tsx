@@ -76,7 +76,7 @@ describe('<Issues />', () => {
 	it('Should match snapshot', async () => {
 		const { container } = renderPage();
 
-		await waitFor(() => new Promise(res => setTimeout(res, 100)));
+		await waitFor(() => new Promise(res => setTimeout(res, 500)));
 		expect(container).toMatchSnapshot();
 	});
 
