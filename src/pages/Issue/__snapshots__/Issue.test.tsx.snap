@@ -1,12 +1,170 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Issue /> Should matches snapshot 1`] = `
+.c0 {
+  font-weight: 400;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid #d0d7de;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  width: 4rem;
+  border: 1px solid transparent;
+  color: #ffffff;
+  padding: 5px 12px;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  border-radius: 2em;
+  background-color: #fa4549;
+  margin-right: 0.7rem;
+  width: 3rem;
+}
+
+.c2 svg {
+  fill: #ffffff;
+}
+
+.c4 {
+  color: #57606a;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c4:hover {
+  color: #0969da;
+}
+
+.c5 {
+  display: inline-block;
+  overflow: hidden;
+  line-height: 1;
+  vertical-align: middle;
+  background-color: #ffffff;
+  border-radius: 6px;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  box-shadow: 0 0 0 1px #1b1f2426;
+  border-radius: 50% !important;
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.c3 {
+  color: #24292f;
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  position: relative;
+  margin: 4rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+
+.c9 {
+  font-size: 14px;
+  overflow: auto;
+  color: #000000;
+}
+
+.c6 {
+  position: absolute;
+  left: -53px;
+}
+
+.c7 {
+  padding: 1rem;
+  background-color: #f6f8fa;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.c10 {
+  padding: 16px;
+}
+
+@media (max-width:480px) {
+  .c3 {
+    margin: 0rem;
+    margin-top: 1rem;
+  }
+
+  .c3 > a {
+    display: none;
+  }
+}
+
+@media (min-width:480px) {
+  .c3:before {
+    position: absolute;
+    top: 11px;
+    right: 100%;
+    left: -8px;
+    display: block;
+    width: 8px;
+    height: 16px;
+    pointer-events: none;
+    content: ' ';
+    -webkit-clip-path: polygon(0 50%,100% 0,100% 100%);
+    clip-path: polygon(0 50%,100% 0,100% 100%);
+    background-color: #d0d7de;
+  }
+}
+
+@media (max-width:480px) {
+  .c9 {
+    overflow: auto;
+  }
+}
+
 <div>
   <div
-    class="sc-bczRLJ hNoBki"
+    class="c0"
   >
     <h1
-      class="sc-hKMtZM"
+      class=""
     >
       <span>
         Bug: &lt;img/&gt; renders twice in firefox with react 18
@@ -15,10 +173,10 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       25264
     </h1>
     <div
-      class="sc-gsnTZi cZkHAJ"
+      class="c1"
     >
       <span
-        class="sc-jSMfEi pDLoo"
+        class="c2"
       >
         <svg
           aria-hidden="true"
@@ -45,27 +203,27 @@ exports[`<Issue /> Should matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/kapibaara"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/41840872?v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/kapibaara"
         >
           kapibaara
@@ -78,10 +236,10 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         
 
@@ -192,27 +350,27 @@ exports[`<Issue /> Should matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/MiguelMachado-dev"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/MiguelMachado-dev"
         >
           MiguelMachado-dev
@@ -225,10 +383,10 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -339,43 +497,43 @@ exports[`<Issue /> Should matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/kapibaara"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/41840872?v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/kapibaara"
         >
           kapibaara
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <blockquote>
           
@@ -509,27 +667,27 @@ exports[`<Issue /> Should matches snapshot 1`] = `
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/MiguelMachado-dev"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/MiguelMachado-dev"
         >
           MiguelMachado-dev
@@ -542,10 +700,10 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -565,27 +723,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sigorilla"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/1208639?u=c531dee3f3f7cdb9657a78c54bbea4081f327158&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sigorilla"
         >
           sigorilla
@@ -598,10 +756,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -674,27 +832,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/MiguelMachado-dev"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/MiguelMachado-dev"
         >
           MiguelMachado-dev
@@ -707,10 +865,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -772,27 +930,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/arpitj007"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/60127884?v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/arpitj007"
         >
           arpitj007
@@ -805,10 +963,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -819,27 +977,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/arpitj007"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/60127884?v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/arpitj007"
         >
           arpitj007
@@ -852,10 +1010,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -876,27 +1034,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/MiguelMachado-dev"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/29252011?u=ababd38859887c5e1854f1c48dfc94787ae91724&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/MiguelMachado-dev"
         >
           MiguelMachado-dev
@@ -909,10 +1067,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <blockquote>
           
@@ -953,43 +1111,43 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sult4novars"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sult4novars"
         >
           sult4novars
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -1014,43 +1172,43 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sigorilla"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/1208639?u=c531dee3f3f7cdb9657a78c54bbea4081f327158&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sigorilla"
         >
           sigorilla
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"
@@ -1074,43 +1232,43 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sult4novars"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sult4novars"
         >
           sult4novars
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <blockquote>
           
@@ -1165,27 +1323,27 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sult4novars"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sult4novars"
         >
           sult4novars
@@ -1198,10 +1356,10 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <blockquote>
           
@@ -1247,27 +1405,27 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/sult4novars"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/98759712?u=5b07346681e52b12ce7007d3a35806f102305ea8&v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/sult4novars"
         >
           sult4novars
@@ -1280,10 +1438,10 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <blockquote>
           
@@ -1370,27 +1528,27 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
     </div>
   </div>
   <div
-    class="sc-jqUVSM dlDNbx"
+    class="c3"
     data-testid="card"
   >
     <a
-      class="sc-iBkjds dyfvRb"
+      class="c4"
       href="https://github.com/kapibaara"
     >
       <img
         alt="avatar url"
-        class="sc-papXJ duTIVK sc-iqcoie iXolMx"
+        class="c5 c6"
         src="https://avatars.githubusercontent.com/u/41840872?v=4"
       />
     </a>
     <div
-      class="sc-crXcEl kMFxKK"
+      class="c7"
     >
       <div
-        class="sc-dkzDqf hNRMbQ"
+        class="c8"
       >
         <a
-          class="sc-iBkjds dyfvRb"
+          class="c4"
           href="https://github.com/kapibaara"
         >
           kapibaara
@@ -1403,10 +1561,10 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
       </div>
     </div>
     <div
-      class="sc-kDDrLX bwsbNW"
+      class="c9"
     >
       <div
-        class="sc-evZas fkhGIo"
+        class="c10"
       >
         <p
           dir="auto"

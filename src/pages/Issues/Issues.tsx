@@ -103,7 +103,6 @@ export const IssuesPage = () => {
 		setInputText('');
 		setGithubQuery({ ...githubQuery, input: '' });
 	};
-
 	return (
 		<>
 			<FilterInput

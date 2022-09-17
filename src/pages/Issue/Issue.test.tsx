@@ -2,6 +2,7 @@ import React from 'react';
 import { render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import { MockedProvider, MockedResponse } from '@apollo/client/testing';
+import 'jest-styled-components';
 
 import { IssuePage } from './Issue';
 import { issueGraphQlErrorMock, issueGraphQlMock } from '../../graphql/queries/mocks/issue.mock';
