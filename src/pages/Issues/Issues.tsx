@@ -50,7 +50,7 @@ export const IssuesPage = () => {
 				: 1;
 			setTotalPages(number);
 		}
-	}, [loading]);
+	}, [data]);
 
 	const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
 		setInputText(e.target.value.replaceAll(':', ''));
