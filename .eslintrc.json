@@ -16,8 +16,7 @@
 	},
 	"plugins": ["react", "@typescript-eslint"],
 	"rules": {
-		"no-use-before-define": "off",
-		"prettier/prettier": 1
+		"no-use-before-define": "off"
 	},
 	"settings": {
 		"react": {
