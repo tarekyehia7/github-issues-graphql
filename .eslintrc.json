@@ -17,7 +17,7 @@
 	"plugins": ["react", "@typescript-eslint"],
 	"rules": {
 		"no-use-before-define": "off",
-		"@typescript-eslint/no-unused-vars": "error",
+		"@typescript-eslint/no-unused-vars": "Warn",
 		"prettier/prettier": 1
 	},
 	"settings": {

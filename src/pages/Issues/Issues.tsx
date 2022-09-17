@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useCallback } from 'react';
 
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
 import { buildQuery } from '../../helpers/queryBuilder';
