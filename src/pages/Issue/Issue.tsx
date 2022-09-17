@@ -38,8 +38,7 @@ export const IssuePage = () => {
 			issueId: issueId ? parseInt(issueId) : 0,
 			owner: constants.repository,
 			projectName: constants.projectName,
-		},
-		fetchPolicy: 'cache-and-network',
+		}
 	});
 
 	const issueData = data?.repository?.issue;

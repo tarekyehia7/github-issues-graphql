@@ -26,6 +26,7 @@ exports[`<Card /> Should matches snapshot 1`] = `
 
 .c3 {
   font-size: 14px;
+  overflow: auto;
   color: #000000;
 }
 

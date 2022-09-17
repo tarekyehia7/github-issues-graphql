@@ -338,6 +338,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
 
 .c11 {
   font-size: 14px;
+  overflow: auto;
   color: #000000;
 }
 
@@ -484,7 +485,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25276
              Opened 
           </span>
-          1 day
+          2 days
           <span>
              ago by 
           </span>
@@ -533,7 +534,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25274
              Opened 
           </span>
-          1 day
+          2 days
           <span>
              ago by 
           </span>
@@ -856,7 +857,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25256
              Opened 
           </span>
-          3 days
+          4 days
           <span>
              ago by 
           </span>
@@ -931,7 +932,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25236
              Opened 
           </span>
-          5 days
+          6 days
           <span>
              ago by 
           </span>
@@ -1006,7 +1007,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25218
              Opened 
           </span>
-          7 days
+          8 days
           <span>
              ago by 
           </span>
@@ -1081,7 +1082,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25212
              Opened 
           </span>
-          8 days
+          9 days
           <span>
              ago by 
           </span>

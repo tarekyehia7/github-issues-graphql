@@ -39,7 +39,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </span>
       kapibaara
        opened this issue 
-      7 days
+      8 days
        ago
     </div>
   </div>
@@ -71,13 +71,13 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          7 days
+          8 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -224,7 +224,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -371,7 +371,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -541,7 +541,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -597,7 +597,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -706,7 +706,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -798,13 +798,13 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -845,13 +845,13 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -902,13 +902,13 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -985,7 +985,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1046,7 +1046,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1106,7 +1106,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1197,7 +1197,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1279,7 +1279,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"
@@ -1396,13 +1396,13 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
         </a>
         <span>
            commented 
-          3 days
+          4 days
            ago
         </span>
       </div>
     </div>
     <div
-      class="sc-kDDrLX ioUFSD"
+      class="sc-kDDrLX cuJvSL"
     >
       <div
         class="sc-evZas fkhGIo"

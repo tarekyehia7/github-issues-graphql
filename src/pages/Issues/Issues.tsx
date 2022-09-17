@@ -26,9 +26,7 @@ export const IssuesPage = () => {
 	const [totalPages, setTotalPages] = useState(1);
 	const [pageNumber, setPageNumber] = useState(1);
 	const [inputText, setInputText] = useState('');
-	const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery({
-		fetchPolicy: 'cache-and-network',
-	});
+	const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery();
 
 	const { issuesPerPage } = constants;
 	const hasData = data?.search?.edges && data?.search?.edges.length > 0;
