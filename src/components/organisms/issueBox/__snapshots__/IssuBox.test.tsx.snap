@@ -22,14 +22,14 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
   color: #0969da;
 }
 
-.c5 {
+.c9 {
   color: #57606a;
   cursor: pointer;
   -webkit-text-decoration: none;
   text-decoration: none;
 }
 
-.c5:hover {
+.c9:hover {
   color: #0969da;
 }
 
@@ -56,7 +56,7 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
   justify-content: space-between;
 }
 
-.c8 {
+.c7 {
   margin-right: 0.2rem;
   height: 1rem;
   width: 1rem;
@@ -78,11 +78,11 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
   color: #0969da;
 }
 
-.c4:hover .c7 {
+.c4:hover .c6 {
   fill: #0969da;
 }
 
-.c9 {
+.c8 {
   color: #57606a;
   margin-left: 1.7rem;
   font-size: 13px;
@@ -95,7 +95,7 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
   fill: #cf222e;
 }
 
-.c6 {
+.c5 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -140,12 +140,12 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
         data-testid="comments-section"
       >
         <a
-          class="c5 c6"
+          class="c2 c5"
           href="/facebook/react/issue/25276"
         >
           <svg
             aria-hidden="true"
-            class="c7 c8"
+            class="c6 c7"
             data-view-component="true"
             height="16"
             version="1.1"
@@ -163,7 +163,7 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
       </div>
     </div>
     <div
-      class="c9"
+      class="c8"
     >
       <span>
         #
@@ -175,7 +175,7 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
          ago by 
       </span>
       <a
-        class="c5"
+        class="c9"
         href="https://github.com/tarekyehia7"
       >
         tyehia

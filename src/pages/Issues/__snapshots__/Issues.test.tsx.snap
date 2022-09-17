@@ -628,7 +628,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25269"
             >
               <svg
@@ -752,7 +752,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25262"
             >
               <svg
@@ -827,7 +827,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25256"
             >
               <svg
@@ -902,7 +902,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25236"
             >
               <svg
@@ -977,7 +977,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25218"
             >
               <svg
@@ -1052,7 +1052,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             data-testid="comments-section"
           >
             <a
-              class="c17 c19"
+              class="c14 c19"
               href="/facebook/react/issue/25212"
             >
               <svg

@@ -45,7 +45,7 @@ export const IssueBox = ({
 				</Link>
 				{totalCount > 0 && (
 					<CommentsSection data-testid="comments-section">
-						<LinkStyled type={LinkType.Normal} to={link}>
+						<LinkStyled type={LinkType.Title} to={link}>
 							<CommentsIconStyled />
 							<span>{totalCount}</span>
 						</LinkStyled>
