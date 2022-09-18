@@ -3,10 +3,12 @@ import { buildQuery } from '../../../helpers/queryBuilder';
 import { DEFAULT_GITHUB_QUERY_BUILDER } from '../../../pages/Issues/Issues';
 import { GET_ISSUES } from '../issues.graphql';
 
+const todayDate = new Date().toDateString();
+
 const edges = [
 	{
 		node: {
-			createdAt: '2022-09-15T14:28:38Z',
+			createdAt: todayDate,
 			number: 25276,
 			title: 'Bug: 3',
 			state: 'OPEN',
@@ -26,7 +28,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-15T14:11:12Z',
+			createdAt: todayDate,
 			number: 25274,
 			title: 'Idea: Add a console.log hint why components get remounted in StrictMode',
 			state: 'OPEN',
@@ -46,7 +48,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-15T12:54:43Z',
+			createdAt: todayDate,
 			number: 25273,
 			title: 'Bug: inconsistent auto batching',
 			state: 'OPEN',
@@ -66,7 +68,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-15T00:14:43Z',
+			createdAt: todayDate,
 			number: 25269,
 			title: 'Bug: 2',
 			state: 'OPEN',
@@ -86,7 +88,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-14T10:27:41Z',
+			createdAt: todayDate,
 			number: 25264,
 			title: 'Add "Support Armenia" banner on reactjs.org',
 			state: 'OPEN',
@@ -106,7 +108,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-14T07:38:20Z',
+			createdAt: todayDate,
 			number: 25262,
 			title: '[DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)',
 			state: 'OPEN',
@@ -126,7 +128,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-13T21:03:54Z',
+			createdAt: todayDate,
 			number: 25256,
 			title: 'Feature Request: className as object or array (vue-alike)',
 			state: 'OPEN',
@@ -146,7 +148,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-11T18:38:28Z',
+			createdAt: todayDate,
 			number: 25236,
 			title: 'Feature request: Add a key property to custom hooks to reset state 2',
 			state: 'OPEN',
@@ -166,7 +168,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-09T13:25:28Z',
+			createdAt: todayDate,
 			number: 25218,
 			title: 'Bug: <img/> renders twice in firefox with react 18',
 			state: 'OPEN',
@@ -186,7 +188,7 @@ const edges = [
 	},
 	{
 		node: {
-			createdAt: '2022-09-08T16:56:26Z',
+			createdAt: todayDate,
 			number: 25212,
 			title: 'Feature Request: Event Modifiers support',
 			state: 'OPEN',

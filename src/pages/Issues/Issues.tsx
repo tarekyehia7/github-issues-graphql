@@ -125,7 +125,6 @@ export const IssuesPage = () => {
 					issues.map(edges => {
 						if (edges?.node?.__typename === 'Issue') {
 							const node = edges?.node;
-
 							return (
 								<IssueBox
 									key={`issue-box-${node.number}`}
