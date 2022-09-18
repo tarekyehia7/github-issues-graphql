@@ -2,13 +2,7 @@ import React from 'react';
 
 import { constants } from '../../../constants';
 import { Link, LinkType } from '../../atoms/link/Link';
-import {
-	HeaderLinks,
-	LinkContainer,
-	BookIconStyled,
-	PagesLinks,
-	RepoStateLabel,
-} from './ReposHeaderLinks.styled';
+import { HeaderLinks, BookIconStyled, RepoStateLabel } from './ReposHeaderLinks.styled';
 
 export const ReposHeaderLinks = () => {
 	const { githubUrl, repository, projectName } = constants;
