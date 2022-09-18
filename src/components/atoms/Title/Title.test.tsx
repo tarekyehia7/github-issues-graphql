@@ -5,13 +5,14 @@ import { Title, TitleSizeTypes } from './Title';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
 const renderPage = (type: TitleSizeTypes) => {
-	const { getByText } = render(
+	const { getByText, container } = render(
 		<PageWithTheme>
 			<Title titleSize={type}>Title test</Title>
 		</PageWithTheme>,
 	);
 	return {
 		getByText,
+		container,
 	};
 };
 
@@ -38,5 +39,11 @@ describe('<Title />', () => {
 		const { getByText } = renderPage(TitleSizeTypes.Paragraph);
 
 		expect(getByText('Title test')).toBeInTheDocument();
+	});
+
+	it('Should return null in case of sending wrong title size', () => {
+		const { container } = renderPage('nothing' as TitleSizeTypes);
+
+		expect(container.firstChild).toBeNull();
 	});
 });

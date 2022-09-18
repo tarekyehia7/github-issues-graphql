@@ -22,7 +22,7 @@ export const Card = ({ title, children, type, avatarUrl, authorUrl }: CardProps)
 		<Box data-testid="card" withAvatar={type === CardType.withAvatar}>
 			{type === CardType.withAvatar && (
 				<Link type={LinkType.Normal} to={authorUrl}>
-					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl ?? ''} />
+					<ImageStyled shape={ImageShapeEnum.Circle} avatarUrl={avatarUrl} />
 				</Link>
 			)}
 			<TitleStyled>

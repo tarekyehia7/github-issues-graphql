@@ -16,16 +16,17 @@ const props: IssueHeaderProps = {
 	authorName: 'tyehia',
 };
 
-const renderPage = () => {
-	const { container, getByText } = render(
+const renderPage = (state = props.state) => {
+	const { container, getByText, getByTestId } = render(
 		<PageWithTheme>
-			<IssueDetailsHeader {...props} />
+			<IssueDetailsHeader {...props} state={state} />
 		</PageWithTheme>,
 	);
 
 	return {
 		container,
 		getByText,
+		getByTestId,
 	};
 };
 
@@ -48,5 +49,17 @@ describe('<IssueDetailsHeader />', () => {
 		expect(
 			getByText(`${props.authorName} opened this issue ${formatDate(props.createdAt)}`),
 		).toBeInTheDocument();
+	});
+
+	it('Should have correct open issue image', () => {
+		const { getByTestId } = renderPage(IssueState.Open);
+
+		expect(getByTestId('open-issue-icon')).toBeInTheDocument();
+	});
+
+	it('Should have correct skip issue image', () => {
+		const { getByTestId } = renderPage(IssueState.Closed);
+
+		expect(getByTestId('skip-icon')).toBeInTheDocument();
 	});
 });

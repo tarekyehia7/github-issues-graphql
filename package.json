@@ -44,6 +44,26 @@
 		"build-storybook": "build-storybook -s public",
 		"format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc"
 	},
+	"jest": {
+		"collectCoverageFrom": [
+			"src/**/*.tsx",
+			"!<rootDir>/node_modules/",
+			"!src/graphql",
+			"!src/**/**.stories.tsx",
+			"!<rootDir>/src/*.tsx"
+		],
+		"coverageThreshold": {
+			"global": {
+				"branches": 90,
+				"functions": 90,
+				"lines": 90,
+				"statements": 90
+			}
+		},
+		"coverageReporters": [
+			"text"
+		]
+	},
 	"eslintConfig": {
 		"extends": [
 			"react-app",

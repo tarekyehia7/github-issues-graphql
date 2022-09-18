@@ -8,7 +8,7 @@ export enum ImageShapeEnum {
 
 export type ImageProps = {
 	shape: ImageShapeEnum;
-	avatarUrl: string;
+	avatarUrl: string | undefined;
 	className?: string;
 };
 

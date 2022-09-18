@@ -121,6 +121,7 @@ exports[`<IssueBox /> Should match snapshot 1`] = `
         <svg
           aria-hidden="true"
           class="c3"
+          data-testid="open-issue-icon"
           data-view-component="true"
           height="16"
           version="1.1"

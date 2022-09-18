@@ -18,7 +18,7 @@ export type LinkProps = {
 export const Link = ({ className, to, type, children }: LinkProps & PropsWithChildren) => {
 	if (type == LinkType.Title) {
 		return (
-			<TitleLink className={className} to={to ?? '#'}>
+			<TitleLink className={className} to={to ?? '/'}>
 				{children}
 			</TitleLink>
 		);

@@ -15,7 +15,7 @@ const props: CardProps = {
 };
 
 const renderPage = (cardType: CardType) => {
-	const { container, getByText, getByTestId } = render(
+	const { container, getByText, getByTestId, getByRole } = render(
 		<PageWithTheme>
 			<Card {...props} type={cardType}>
 				{props.children}
@@ -27,6 +27,7 @@ const renderPage = (cardType: CardType) => {
 		container,
 		getByText,
 		getByTestId,
+		getByRole,
 	};
 };
 
@@ -43,9 +44,11 @@ describe('<Card />', () => {
 	});
 
 	it('Should have avatar with correct url', () => {
-		const { getByTestId } = renderPage(CardType.withAvatar);
+		const { getByTestId, getByRole } = renderPage(CardType.withAvatar);
 
 		expect(getByTestId('card').firstChild).toHaveProperty('href', props.authorUrl);
+		expect(getByRole('img')).toHaveAttribute('src', props.avatarUrl);
+		expect(getByRole('img')).toHaveAttribute('alt', 'avatar url');
 	});
 
 	it('Should have correct title', () => {

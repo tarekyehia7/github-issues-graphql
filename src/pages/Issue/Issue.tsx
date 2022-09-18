@@ -14,7 +14,7 @@ const BodyHTMLDiv = styled.div`
 `;
 
 type TitleProps = {
-	authorName: string;
+	authorName?: string;
 	authorUrl: string;
 	createdAt: string;
 };
@@ -33,9 +33,10 @@ const CardTitle = ({ authorName, authorUrl, createdAt }: TitleProps) => {
 export const IssuePage = () => {
 	const { issueId } = useParams();
 	const navigate = useNavigate();
+	if (!issueId || issueId === '') navigate('/');
 	const { data, error, loading } = useGetIssueQuery({
 		variables: {
-			issueId: issueId ? parseInt(issueId) : 0,
+			issueId: parseInt(issueId as string),
 			owner: constants.repository,
 			projectName: constants.projectName,
 		},
@@ -54,7 +55,7 @@ export const IssuePage = () => {
 					<IssueDetailsHeader
 						title={issueData.title}
 						state={issueData.state}
-						issueId={issueId ?? ''}
+						issueId={issueId as string}
 						authorName={issueData.author.login}
 						createdAt={issueData.createdAt}
 					/>
@@ -82,7 +83,6 @@ export const IssuePage = () => {
 				issueEdges.map((edge, idx) => {
 					const comment = edge?.node;
 					const author = comment?.author;
-					if (!comment || !author) return null;
 
 					return (
 						<Card
@@ -90,17 +90,17 @@ export const IssuePage = () => {
 							type={CardType.withAvatar}
 							title={
 								<CardTitle
-									authorName={author.login}
-									authorUrl={author.url}
-									createdAt={comment.createdAt}
+									authorName={author?.login}
+									authorUrl={author?.url}
+									createdAt={comment?.createdAt}
 								/>
 							}
-							authorUrl={author.url}
-							avatarUrl={author.avatarUrl}
+							authorUrl={author?.url}
+							avatarUrl={author?.avatarUrl}
 						>
 							<BodyHTMLDiv
 								dangerouslySetInnerHTML={{
-									__html: comment.bodyHTML,
+									__html: comment?.bodyHTML,
 								}}
 							/>
 						</Card>

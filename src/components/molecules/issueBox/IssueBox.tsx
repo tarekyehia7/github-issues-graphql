@@ -39,8 +39,12 @@ export const IssueBox = ({
 		<Box data-testid={`issue-box-${issueId}`}>
 			<Header>
 				<Link type={LinkType.Title} to={link}>
-					{state === IssueState.Open && <OpenIssueIconStyled />}
-					{state === IssueState.Closed && <SkipIconStyled />}
+					{state === IssueState.Open && (
+						<OpenIssueIconStyled data-testid="open-issue-icon" />
+					)}
+					{state === IssueState.Closed && (
+						<SkipIconStyled data-testid="skip-issue-icon" />
+					)}
 					{title}
 				</Link>
 				{totalCount > 0 && (

@@ -19,10 +19,10 @@ const props: IssueBoxProps = {
 	authorUrl: 'https://github.com/tarekyehia7',
 };
 
-const renderPage = () => {
+const renderPage = (state = props.state) => {
 	const { container, getByText, getByTestId } = render(
 		<PageWithTheme>
-			<IssueBox {...props} />
+			<IssueBox {...props} state={state} />
 		</PageWithTheme>,
 	);
 
@@ -50,6 +50,18 @@ describe('<IssueBox />', () => {
 
 		expect(getByText(`#${props.issueId} Opened`)).toBeInTheDocument();
 		expect(getByText(formatDate(props.createdAt))).toBeInTheDocument();
+	});
+
+	it('Should have correct open issue image', () => {
+		const { getByTestId } = renderPage(IssueState.Open);
+
+		expect(getByTestId('open-issue-icon')).toBeInTheDocument();
+	});
+
+	it('Should have correct skip issue image', () => {
+		const { getByTestId } = renderPage(IssueState.Closed);
+
+		expect(getByTestId('skip-issue-icon')).toBeInTheDocument();
 	});
 
 	it('Should have comments section', () => {
