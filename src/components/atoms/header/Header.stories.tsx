@@ -1,11 +1,11 @@
 import React from 'react';
 import { ComponentStory, ComponentMeta } from '@storybook/react';
 
-import { Header } from './Header';
+import { HeaderStyled } from './Header.styled';
 
 export default {
 	title: 'atoms/Header',
-	component: Header,
-} as ComponentMeta<typeof Header>;
+	component: HeaderStyled,
+} as ComponentMeta<typeof HeaderStyled>;
 
-export const Primary: ComponentStory<typeof Header> = () => <Header />;
+export const Primary: ComponentStory<typeof HeaderStyled> = () => <HeaderStyled />;

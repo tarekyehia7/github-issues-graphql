@@ -3,27 +3,27 @@ import { render } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
 
-import { ReposHeader } from './ReposHeader';
+import { Header } from './Header';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 import { constants } from '../../../constants';
 
-const ReposHeaderWithTheme = () => {
+const HeaderWithTheme = () => {
 	return (
 		<PageWithTheme>
-			<ReposHeader />
+			<Header />
 		</PageWithTheme>
 	);
 };
 
-describe('<IssueDetailsHeader />', () => {
+describe('<Header />', () => {
 	it('Should match snapshot', () => {
-		const { container } = render(<ReposHeaderWithTheme />);
+		const { container } = render(<HeaderWithTheme />);
 		expect(container).toMatchSnapshot();
 	});
 
 	it('Should have correct links', () => {
 		const { githubUrl, repository, projectName } = constants;
-		const { getAllByRole } = render(<ReposHeaderWithTheme />);
+		const { getAllByRole } = render(<HeaderWithTheme />);
 		const links = getAllByRole('link');
 
 		expect(links).toHaveLength(3);
