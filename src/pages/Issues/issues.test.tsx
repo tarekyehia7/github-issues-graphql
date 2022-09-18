@@ -8,8 +8,9 @@ import { IssuesPage } from './Issues';
 import { issuesGraphQlMock, issuesGraphQlErrorMock } from '../../graphql/queries/mocks/issues.mock';
 import { constants } from '../../constants';
 import { PageWithTheme } from '../../helpers/testing/helpers';
+import { getPagesNumber } from '../../helpers/helpers';
 
-const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
+const renderPage = (mocks: MockedResponse<Record<string, unknown>>[]) => {
 	const {
 		container,
 		getAllByTestId,
@@ -39,7 +40,7 @@ const renderPage = (mocks: MockedResponse<Record<string, any>>[]) => {
 };
 
 describe('<Issues />', () => {
-	it('should render Issues Page with skeleton and cursors', async () => {
+	it('Should render Issues Page with skeleton and cursors', async () => {
 		const { getAllByTestId, findByText, findByPlaceholderText } = renderPage([
 			issuesGraphQlMock,
 		]);
@@ -51,7 +52,7 @@ describe('<Issues />', () => {
 		expect(await findByPlaceholderText('type here...')).toBeInTheDocument();
 	});
 
-	it('should list all issues', async () => {
+	it('Should list all issues', async () => {
 		const { getAllByText, getByText, getAllByTestId, getByTestId } = renderPage([
 			issuesGraphQlMock,
 		]);
@@ -87,7 +88,7 @@ describe('<Issues />', () => {
 		});
 	});
 
-	it('should contain clear search if input changes', async () => {
+	it('Should contain clear search if input changes', async () => {
 		const { getAllByTestId, getByPlaceholderText, getByText } = renderPage([issuesGraphQlMock]);
 		await waitFor(() => {
 			const input = getByPlaceholderText('type here...');
@@ -95,9 +96,57 @@ describe('<Issues />', () => {
 			fireEvent.change(input, { target: { value: 'no results found 1234567890123' } });
 			fireEvent.keyUp(input, { key: 'Enter' });
 
+			// expect(mockUseState).toBeCalled();
 			expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage);
 			expect(getByText('Clear current search query, filters, and sorts')).toBeInTheDocument();
 		});
+	});
+
+	it('Should remove clear search and empty input after click', async () => {
+		const { getByPlaceholderText, getByText } = renderPage([issuesGraphQlMock]);
+		await waitFor(() => {
+			const input = getByPlaceholderText('type here...');
+
+			fireEvent.change(input, { target: { value: 'no results found 1234567890123' } });
+			fireEvent.keyUp(input, { key: 'Enter' });
+
+			const clearCurrentSearchButton = getByText(
+				'Clear current search query, filters, and sorts',
+			);
+
+			fireEvent.click(clearCurrentSearchButton);
+			expect(input).toHaveValue('');
+		});
+	});
+
+	it('Should set page number + 1 after next > button click', async () => {
+		const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
+		const nextButton = getByText('Next >');
+		const totalPages = getPagesNumber(
+			issuesGraphQlMock.result.data.search.issueCount,
+			constants.issuesPerPage,
+		);
+
+		await waitFor(() => new Promise(res => setTimeout(res, 500)));
+		fireEvent.click(nextButton);
+		expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
+	});
+
+	it('Should set page number 1 1 after Previous > button click', async () => {
+		const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
+		const nextButton = getByText('Next >');
+		const previousButton = getByText('< Previous');
+		const totalPages = getPagesNumber(
+			issuesGraphQlMock.result.data.search.issueCount,
+			constants.issuesPerPage,
+		);
+
+		await waitFor(() => new Promise(res => setTimeout(res, 500)));
+		fireEvent.click(nextButton);
+		fireEvent.click(nextButton);
+
+		fireEvent.click(previousButton);
+		expect(getByTestId('pages-info').textContent).toBe(`Page 1 of ${totalPages}`);
 	});
 
 	it('Should match snapshot', async () => {

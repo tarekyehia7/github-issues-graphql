@@ -102,7 +102,9 @@ exports[`<Cursors /> Should matches snapshot 1`] = `
     >
       &lt; Previous
     </button>
-    <div>
+    <div
+      data-testid="pages-info"
+    >
       Page 
       1
        of 

@@ -226,7 +226,7 @@ export const issuesGraphQlMock = {
 					startCursor: 'Y3Vyc29yOjE=',
 					endCursor: 'Y3Vyc29yOjEw',
 					hasNextPage: true,
-					hasPreviousPage: false,
+					hasPreviousPage: true,
 					__typename: 'PageInfo',
 				},
 				issueCount: 787,

@@ -138,7 +138,6 @@ export const IssuesPage = () => {
 								/>
 							);
 						}
-						return null;
 					})}
 				{(!hasData || error) && !loading && <NoResults />}
 			</Card>

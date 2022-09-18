@@ -1121,12 +1121,13 @@ exports[`<Issues /> Should match snapshot 1`] = `
   >
     <button
       class="c23"
-      disabled=""
       type="button"
     >
       &lt; Previous
     </button>
-    <div>
+    <div
+      data-testid="pages-info"
+    >
       Page 
       1
        of 

@@ -29,7 +29,7 @@ export const Cursors = ({
 			>
 				{`< Previous`}
 			</Button>
-			<div>
+			<div data-testid="pages-info">
 				Page {pageNumber} of {totalPages}
 			</div>
 			<Button onClick={loadNextData} disabled={nextButtonDisabled} type={ButtonType.Cursor}>
