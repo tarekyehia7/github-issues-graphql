@@ -6,7 +6,7 @@ import { IssueBox, IssueBoxProps } from './IssueBox';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 
 export default {
-	title: 'organisms/IssueBox',
+	title: 'molecules/IssueBox',
 	component: IssueBox,
 	decorators: [withRouter],
 	argTypes: {

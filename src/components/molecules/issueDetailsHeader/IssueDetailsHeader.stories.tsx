@@ -5,7 +5,7 @@ import { IssueDetailsHeader, IssueHeaderProps } from './IssueDetailsHeader';
 import { IssueState } from '../../../graphql/generatedTypes/graphql';
 
 export default {
-	title: 'organisms/IssueDetailsHeader',
+	title: 'molecules/IssueDetailsHeader',
 	component: IssueDetailsHeader,
 	argTypes: {
 		createdAt: { table: { disable: true } },

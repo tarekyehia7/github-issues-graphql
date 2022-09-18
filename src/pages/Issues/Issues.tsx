@@ -8,7 +8,7 @@ import { getPagesNumber } from '../../helpers/helpers';
 import { Cursors } from '../../components/molecules/Cursors/Cursors';
 import { FilterInput } from '../../components/molecules/FilterInput/FilterInput';
 import { StateToggler } from '../../components/molecules/stateToggler/StateToggler';
-import { IssueBox } from '../../components/organisms/issueBox/IssueBox';
+import { IssueBox } from '../../components/molecules/issueBox/IssueBox';
 import { QueryType, StatusEnum } from '../../types/issues';
 import { constants } from '../../constants';
 import { Card, CardType } from '../../components/molecules/Card/Card';

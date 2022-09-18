@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate, useParams } from 'react-router-dom';
 
 import { useGetIssueQuery } from '../../graphql/generatedTypes/graphql';
-import { IssueDetailsHeader } from '../../components/organisms/issueDetailsHeader/IssueDetailsHeader';
+import { IssueDetailsHeader } from '../../components/molecules/issueDetailsHeader/IssueDetailsHeader';
 import { constants } from '../../constants';
 import { Card, CardType } from '../../components/molecules/Card/Card';
 import { formatDate } from '../../helpers/helpers';
