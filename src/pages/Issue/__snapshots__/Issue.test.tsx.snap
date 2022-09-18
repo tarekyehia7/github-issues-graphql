@@ -198,7 +198,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </span>
       kapibaara
        opened this issue 
-      8 days
+      9 days
        ago
     </div>
   </div>
@@ -230,7 +230,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          8 days
+          9 days
            ago
         </span>
       </div>
@@ -694,7 +694,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -750,7 +750,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -859,7 +859,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -957,7 +957,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -1004,7 +1004,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -1061,7 +1061,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          5 days
+          6 days
            ago
         </span>
       </div>
@@ -1350,7 +1350,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
@@ -1432,7 +1432,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>
@@ -1555,7 +1555,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
         </a>
         <span>
            commented 
-          4 days
+          5 days
            ago
         </span>
       </div>

@@ -486,7 +486,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25276
              Opened 
           </span>
-          2 days
+          3 days
           <span>
              ago by 
           </span>
@@ -536,7 +536,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25274
              Opened 
           </span>
-          2 days
+          3 days
           <span>
              ago by 
           </span>
@@ -586,7 +586,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25273
              Opened 
           </span>
-          2 days
+          3 days
           <span>
              ago by 
           </span>
@@ -864,7 +864,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25256
              Opened 
           </span>
-          4 days
+          5 days
           <span>
              ago by 
           </span>
@@ -940,7 +940,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25236
              Opened 
           </span>
-          6 days
+          7 days
           <span>
              ago by 
           </span>
@@ -1016,7 +1016,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25218
              Opened 
           </span>
-          8 days
+          9 days
           <span>
              ago by 
           </span>
@@ -1092,7 +1092,7 @@ exports[`<Issues /> Should match snapshot 1`] = `
             25212
              Opened 
           </span>
-          9 days
+          10 days
           <span>
              ago by 
           </span>
