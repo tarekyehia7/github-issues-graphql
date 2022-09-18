@@ -198,7 +198,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
       </span>
       kapibaara
        opened this issue 
-      1 hour ago
+      about 1 hour ago
     </div>
   </div>
   <div
@@ -229,7 +229,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -375,7 +375,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -521,7 +521,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -690,7 +690,7 @@ exports[`<Issue /> Should matches snapshot 1`] = `
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -745,7 +745,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -853,7 +853,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -950,7 +950,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -996,7 +996,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1052,7 +1052,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1128,7 +1128,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1188,7 +1188,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1247,7 +1247,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1337,7 +1337,7 @@ On Edge and Firefox I still getting 2 requests, disabling strict-mode it stops.
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1418,7 +1418,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>
@@ -1540,7 +1540,7 @@ but i check status and see NS_BINDING_ABORTED and search this status, and what I
         </a>
         <span>
            commented 
-          1 hour ago
+          about 1 hour ago
         </span>
       </div>
     </div>

@@ -1,4 +1,4 @@
-import formatDistanceToNowStrict from 'date-fns/formatDistanceToNowStrict';
+import formatDistance from 'date-fns/formatDistance';
 
 export const getPagesNumber = (totalIssuesCount: number, issuesPerPage: number): number => {
 	const totalPages = Math.ceil(totalIssuesCount / issuesPerPage);
@@ -8,7 +8,7 @@ export const getPagesNumber = (totalIssuesCount: number, issuesPerPage: number):
 export const formatDate = (date: string) => {
 	try {
 		const myDate = new Date(date);
-		const myFormattedDate = formatDistanceToNowStrict(myDate, { addSuffix: true });
+		const myFormattedDate = formatDistance(myDate, new Date(), { addSuffix: true });
 		return myFormattedDate;
 	} catch (e) {
 		console.error(e);
