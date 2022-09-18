@@ -22,6 +22,7 @@ export const IssueDetailsHeader = ({
 	createdAt,
 }: IssueHeaderProps) => {
 	const status = state === IssueState.Open ? StatusEnum.Open : StatusEnum.Closed;
+
 	return (
 		<TitleContainer>
 			<Title titleSize={TitleSizeTypes.Large}>
