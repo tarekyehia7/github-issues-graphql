@@ -4,7 +4,7 @@ import { ComponentStory, ComponentMeta } from '@storybook/react';
 import { HeaderStyled } from './Header.styled';
 
 export default {
-	title: 'atoms/Header',
+	title: 'atoms/HeaderStyled',
 	component: HeaderStyled,
 } as ComponentMeta<typeof HeaderStyled>;
 

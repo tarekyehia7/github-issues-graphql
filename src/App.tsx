@@ -3,6 +3,7 @@ import { Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header } from './components/organisms/Header/Header';
+import { Topbar } from './components/organisms/Topbar/Topbar';
 import { IssuePage } from './pages/Issue/Issue';
 import { IssuesPage } from './pages/Issues/Issues';
 
@@ -14,6 +15,7 @@ function App() {
 	return (
 		<>
 			<Header />
+			<Topbar />
 			<AppContainer>
 				<Routes>
 					<Route path="/" element={<IssuesPage />} />
