@@ -146,7 +146,7 @@ describe('<Issues />', () => {
 		fireEvent.click(nextButton);
 
 		fireEvent.click(previousButton);
-		expect(getByTestId('pages-info').textContent).toBe(`Page 1 of ${totalPages}`);
+		expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
 	});
 
 	it('Should match snapshot', async () => {
