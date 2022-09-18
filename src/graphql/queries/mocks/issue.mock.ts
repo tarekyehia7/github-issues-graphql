@@ -1,6 +1,8 @@
 import { GET_ISSUE } from '../issue.graphql';
 
-const todayDate = new Date().toDateString();
+let todayDate: Date | string = new Date();
+todayDate.setHours(todayDate.getHours() - 1);
+todayDate = todayDate.toISOString();
 
 export const issueGraphQlMock = {
 	request: {

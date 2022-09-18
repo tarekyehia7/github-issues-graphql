@@ -62,7 +62,7 @@ describe('<Issue />', () => {
 
 	it('Should have correct title - author comment', async () => {
 		const { getAllByText } = renderPage([issueGraphQlMock]);
-		const cardTitle = `commented ${formatDate(repositoryIssue.createdAt)} ago`;
+		const cardTitle = `commented ${formatDate(repositoryIssue.createdAt)}`;
 
 		await waitFor(() => {
 			expect(getAllByText(cardTitle.trim())[0]).toBeInTheDocument();

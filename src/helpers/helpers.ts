@@ -8,7 +8,7 @@ export const getPagesNumber = (totalIssuesCount: number, issuesPerPage: number):
 export const formatDate = (date: string) => {
 	try {
 		const myDate = new Date(date);
-		const myFormattedDate = formatDistanceToNowStrict(myDate);
+		const myFormattedDate = formatDistanceToNowStrict(myDate, { addSuffix: true });
 		return myFormattedDate;
 	} catch (e) {
 		console.error(e);

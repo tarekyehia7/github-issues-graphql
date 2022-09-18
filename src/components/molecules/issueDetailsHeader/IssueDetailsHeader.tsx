@@ -30,7 +30,7 @@ export const IssueDetailsHeader = ({
 			</Title>
 			<Description>
 				<Status status={status} />
-				{authorName} opened this issue {formatDate(createdAt)} ago
+				{authorName} opened this issue {formatDate(createdAt)}
 			</Description>
 		</TitleContainer>
 	);

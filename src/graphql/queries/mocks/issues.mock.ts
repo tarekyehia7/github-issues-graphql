@@ -3,7 +3,9 @@ import { buildQuery } from '../../../helpers/queryBuilder';
 import { DEFAULT_GITHUB_QUERY_BUILDER } from '../../../pages/Issues/Issues';
 import { GET_ISSUES } from '../issues.graphql';
 
-const todayDate = new Date().toDateString();
+let todayDate: Date | string = new Date();
+todayDate.setHours(todayDate.getHours() - 1);
+todayDate = todayDate.toISOString();
 
 const edges = [
 	{

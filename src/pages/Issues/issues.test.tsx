@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, getByTestId, render, waitFor } from '@testing-library/react';
+import { fireEvent, render, waitFor } from '@testing-library/react';
 import '@testing-library/jest-dom';
 import 'jest-styled-components';
 import { MockedProvider, MockedResponse } from '@apollo/client/testing';

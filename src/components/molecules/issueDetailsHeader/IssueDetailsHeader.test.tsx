@@ -46,7 +46,7 @@ describe('<IssueDetailsHeader />', () => {
 		const { getByText } = renderPage();
 
 		expect(
-			getByText(`${props.authorName} opened this issue ${formatDate(props.createdAt)} ago`),
+			getByText(`${props.authorName} opened this issue ${formatDate(props.createdAt)}`),
 		).toBeInTheDocument();
 	});
 });

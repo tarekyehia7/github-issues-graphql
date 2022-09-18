@@ -25,7 +25,7 @@ const CardTitle = ({ authorName, authorUrl, createdAt }: TitleProps) => {
 			<Link type={LinkType.Normal} to={authorUrl}>
 				{authorName}
 			</Link>
-			<span>&nbsp;commented {formatDate(createdAt)} ago</span>
+			<span>&nbsp;commented {formatDate(createdAt)}</span>
 		</>
 	);
 };

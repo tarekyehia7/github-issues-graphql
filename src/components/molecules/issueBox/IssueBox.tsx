@@ -55,7 +55,7 @@ export const IssueBox = ({
 			<Description>
 				<span>#{issueId} Opened </span>
 				{formatDate(createdAt)}
-				<span> ago by </span>
+				<span> by </span>
 				<Link type={LinkType.Normal} to={authorUrl}>
 					{authorName}
 				</Link>
