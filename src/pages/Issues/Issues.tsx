@@ -92,7 +92,7 @@ export const IssuesPage = () => {
 
 	const setGithubQueryInputText = useCallback(
 		(inputText: string, setPageNum: boolean) => {
-			setGithubQuery({ ...githubQuery, input: inputText });
+			setGithubQuery(prev => ({ ...prev, input: inputText }));
 			if (setPageNum) {
 				setPageNumber(1);
 			}

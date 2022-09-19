@@ -96,7 +96,6 @@ describe('<Issues />', () => {
 			fireEvent.change(input, { target: { value: 'no results found 1234567890123' } });
 			fireEvent.keyUp(input, { key: 'Enter' });
 
-			// expect(mockUseState).toBeCalled();
 			expect(getAllByTestId('skeleton')).toHaveLength(constants.issuesPerPage);
 			expect(getByText('Clear current search query, filters, and sorts')).toBeInTheDocument();
 		});
@@ -127,27 +126,42 @@ describe('<Issues />', () => {
 			constants.issuesPerPage,
 		);
 
-		await waitFor(() => new Promise(res => setTimeout(res, 500)));
-		fireEvent.click(nextButton);
-		expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
+		await waitFor(() => {
+			expect(nextButton).not.toBeDisabled();
+			fireEvent.click(nextButton);
+			expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
+		});
 	});
 
-	// it('Should set page number 1 1 after Previous > button click', async () => {
-	// 	const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
-	// 	const nextButton = getByText('Next >');
-	// 	const previousButton = getByText('< Previous');
-	// 	const totalPages = getPagesNumber(
-	// 		issuesGraphQlMock.result.data.search.issueCount,
-	// 		constants.issuesPerPage,
-	// 	);
+	it('Should set page number - 1 after < Previous button click', async () => {
+		const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
 
-	// 	await waitFor(() => new Promise(res => setTimeout(res, 500)));
+		const totalPages = getPagesNumber(
+			issuesGraphQlMock.result.data.search.issueCount,
+			constants.issuesPerPage,
+		);
 
-	// 	await waitFor(() => new Promise(res => setTimeout(res, 0)));
-	// 	fireEvent.click(previousButton);
+		const previousButton = getByText('< Previous');
+		await waitFor(() => {
+			fireEvent.click(previousButton);
+			expect(getByTestId('pages-info').textContent).toBe(`Page 0 of ${totalPages}`);
+		});
+	});
 
-	// 	expect(getByTestId('pages-info').textContent).toBe(`Page 1 of ${totalPages}`);
-	// });
+	it('Should toggle to open status', () => {
+		const { getByText } = renderPage([issuesGraphQlMock]);
+		const openStatusButton = getByText('Open');
+
+		fireEvent.click(openStatusButton);
+		expect(openStatusButton).toHaveStyle(`font-weight: bold`);
+	});
+	it('Should toggle top closed status', () => {
+		const { getByText } = renderPage([issuesGraphQlMock]);
+		const closedStatusButton = getByText('Closed');
+
+		fireEvent.click(closedStatusButton);
+		expect(closedStatusButton).toHaveStyle(`font-weight: bold`);
+	});
 
 	it('Should match snapshot', async () => {
 		const { container } = renderPage([issuesGraphQlMock]);
