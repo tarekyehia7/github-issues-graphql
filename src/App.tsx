@@ -1,5 +1,5 @@
 import React from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter, Navigate, Route, Routes } from 'react-router-dom';
 import styled from 'styled-components';
 
 import { Header } from './components/organisms/Header/Header';
@@ -15,13 +15,16 @@ function App() {
 	return (
 		<>
 			<Header />
-			<Topbar />
-			<AppContainer>
-				<Routes>
-					<Route path="/" element={<IssuesPage />} />
-					<Route path=":repo/:name/issue/:issueId" element={<IssuePage />} />
-				</Routes>
-			</AppContainer>
+			<BrowserRouter>
+				<Topbar />
+				<AppContainer>
+					<Routes>
+						<Route path="*" element={<Navigate to="/" />} />
+						<Route path="/" element={<IssuesPage />} />
+						<Route path=":repo/:name/issue/:issueId" element={<IssuePage />} />
+					</Routes>
+				</AppContainer>
+			</BrowserRouter>
 		</>
 	);
 }
