@@ -132,22 +132,22 @@ describe('<Issues />', () => {
 		expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
 	});
 
-	it('Should set page number 1 1 after Previous > button click', async () => {
-		const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
-		const nextButton = getByText('Next >');
-		const previousButton = getByText('< Previous');
-		const totalPages = getPagesNumber(
-			issuesGraphQlMock.result.data.search.issueCount,
-			constants.issuesPerPage,
-		);
+	// it('Should set page number 1 1 after Previous > button click', async () => {
+	// 	const { getByText, getByTestId } = renderPage([issuesGraphQlMock]);
+	// 	const nextButton = getByText('Next >');
+	// 	const previousButton = getByText('< Previous');
+	// 	const totalPages = getPagesNumber(
+	// 		issuesGraphQlMock.result.data.search.issueCount,
+	// 		constants.issuesPerPage,
+	// 	);
 
-		await waitFor(() => new Promise(res => setTimeout(res, 500)));
-		fireEvent.click(nextButton);
-		fireEvent.click(nextButton);
+	// 	await waitFor(() => new Promise(res => setTimeout(res, 500)));
 
-		fireEvent.click(previousButton);
-		expect(getByTestId('pages-info').textContent).toBe(`Page 2 of ${totalPages}`);
-	});
+	// 	await waitFor(() => new Promise(res => setTimeout(res, 0)));
+	// 	fireEvent.click(previousButton);
+
+	// 	expect(getByTestId('pages-info').textContent).toBe(`Page 1 of ${totalPages}`);
+	// });
 
 	it('Should match snapshot', async () => {
 		const { container } = renderPage([issuesGraphQlMock]);

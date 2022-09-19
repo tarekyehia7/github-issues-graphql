@@ -5,20 +5,14 @@ import 'jest-styled-components';
 import { FilterInput, FilterInputProps } from './FilterInput';
 import { PageWithTheme } from '../../../helpers/testing/helpers';
 
-const mockOnChange = jest.fn();
-const mockOnKeyUp = jest.fn();
-const mockOnClearSearchHistoryClick = jest.fn();
+const mockSetGithubQuery = jest.fn();
 
 const props: FilterInputProps = {
-	value: 'this is my input',
-	showClearHistoryText: true,
-	onChange: mockOnChange,
-	onKeyUp: mockOnKeyUp,
-	onClearSearchHistoryClick: mockOnClearSearchHistoryClick,
+	setGithubQuery: mockSetGithubQuery,
 };
 
 const renderPage = () => {
-	const { container, getByText, getByTestId } = render(
+	const { container, getByText, getByTestId, findByText } = render(
 		<PageWithTheme>
 			<FilterInput {...props} />
 		</PageWithTheme>,
@@ -28,6 +22,7 @@ const renderPage = () => {
 		container,
 		getByText,
 		getByTestId,
+		findByText,
 	};
 };
 
@@ -37,24 +32,53 @@ describe('<FilterInput />', () => {
 		expect(container).toMatchSnapshot();
 	});
 
-	it('Should trigger onChange', () => {
+	it('Should trigger onChange and change text', () => {
 		const { getByTestId } = renderPage();
+		const input = getByTestId('Input');
 
-		fireEvent.change(getByTestId('Input'), { target: { value: '23' } });
-		expect(mockOnChange.mock.calls.length).toBe(1);
+		fireEvent.change(input, { target: { value: '23' } });
+		expect(input).toHaveValue('23');
 	});
 
 	it('Should trigger onKeyUp', () => {
 		const { getByTestId } = renderPage();
 
-		fireEvent.keyUp(getByTestId('Input'));
-		expect(mockOnKeyUp.mock.calls.length).toBe(1);
+		const input = getByTestId('Input');
+
+		fireEvent.change(input, { target: { value: '23' } });
+		fireEvent.keyUp(input, { key: 'Enter' });
+		expect(mockSetGithubQuery.mock.calls.length).toBe(1);
+		expect(mockSetGithubQuery).toBeCalledWith('23', false);
 	});
 
 	it('Should trigger click event on clicking clear history', () => {
-		const { getByText } = renderPage();
+		const { getByTestId, getByText } = renderPage();
 
+		const input = getByTestId('Input');
+		fireEvent.change(input, { target: { value: '23' } });
+		fireEvent.keyUp(input, { key: 'Enter' });
 		fireEvent.click(getByText('Clear current search query, filters, and sorts'));
-		expect(mockOnClearSearchHistoryClick.mock.calls.length).toBe(1);
+		expect(mockSetGithubQuery.mock.calls.length).toBe(2);
+		expect(mockSetGithubQuery).toBeCalledWith('', true);
+	});
+
+	it('Should not update query in case of empty input', () => {
+		const { getByTestId } = renderPage();
+
+		const input = getByTestId('Input');
+		fireEvent.change(input, { target: { value: '' } });
+		fireEvent.keyUp(input, { key: 'Enter' });
+		expect(mockSetGithubQuery.mock.calls.length).toBe(0);
+	});
+
+	it('Should hide clear Search History button', () => {
+		const { getByTestId, getByText, container } = renderPage();
+
+		const input = getByTestId('Input');
+		fireEvent.change(input, { target: { value: '23' } });
+		fireEvent.keyUp(input, { key: 'Enter' });
+		fireEvent.click(getByText('Clear current search query, filters, and sorts'));
+
+		expect(container.children).toHaveLength(1);
 	});
 });

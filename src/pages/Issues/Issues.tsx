@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useState } from 'react';
 
 import { useGetIssuesLazyQuery } from '../../graphql/generatedTypes/graphql';
 import { buildQuery } from '../../helpers/queryBuilder';
@@ -25,7 +25,6 @@ export const IssuesPage = () => {
 	const [githubQuery, setGithubQuery] = useState(DEFAULT_GITHUB_QUERY_BUILDER);
 	const [totalPages, setTotalPages] = useState(1);
 	const [pageNumber, setPageNumber] = useState(1);
-	const [inputText, setInputText] = useState('');
 	const [getIssues, { data, error, loading }] = useGetIssuesLazyQuery();
 
 	const { issuesPerPage } = constants;
@@ -51,17 +50,6 @@ export const IssuesPage = () => {
 			setTotalPages(number);
 		}
 	}, [data]);
-
-	const inputOnChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-		setInputText(e.target.value.replaceAll(':', ''));
-	};
-
-	const inputOnKeyUp = (e: React.KeyboardEvent<HTMLInputElement>) => {
-		if (e.key === 'Enter') {
-			setGithubQuery({ ...githubQuery, input: inputText });
-			setPageNumber(1);
-		}
-	};
 
 	const updateQueryStatus = (status: StatusEnum) => {
 		if (githubQuery.status !== status) {
@@ -99,19 +87,19 @@ export const IssuesPage = () => {
 		});
 	};
 
-	const clearSearchHistory = () => {
-		setInputText('');
-		setGithubQuery({ ...githubQuery, input: '' });
-	};
+	const setGithubQueryInputText = useCallback(
+		(inputText: string, setPageNum: boolean) => {
+			setGithubQuery({ ...githubQuery, input: inputText });
+			if (setPageNum) {
+				setPageNumber(1);
+			}
+		},
+		[githubQuery.input],
+	);
+
 	return (
 		<>
-			<FilterInput
-				value={inputText}
-				onKeyUp={inputOnKeyUp}
-				onChange={inputOnChange}
-				onClearSearchHistoryClick={clearSearchHistory}
-				showClearHistoryText={githubQuery.input.length > 0}
-			/>
+			<FilterInput setGithubQuery={setGithubQueryInputText} />
 			<Card
 				type={CardType.Normal}
 				title={
