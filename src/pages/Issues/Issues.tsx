@@ -51,12 +51,15 @@ export const IssuesPage = () => {
 		}
 	}, [data]);
 
-	const updateQueryStatus = (status: StatusEnum) => {
-		if (githubQuery.status !== status) {
-			setPageNumber(1);
-			setGithubQuery({ ...githubQuery, status });
-		}
-	};
+	const updateQueryStatus = useCallback(
+		(status: StatusEnum) => {
+			if (githubQuery.status !== status) {
+				setPageNumber(1);
+				setGithubQuery(prev => ({ ...prev, status: status }));
+			}
+		},
+		[githubQuery.status],
+	);
 
 	const loadPreviousData = () => {
 		const query = buildQuery(githubQuery);

@@ -13,7 +13,7 @@ export type StateTogglerProps = {
 	onStateClick: (status: StatusEnum) => void;
 };
 
-export const StateToggler = ({ status, onStateClick }: StateTogglerProps) => {
+export const StateTogglerComponent = ({ status, onStateClick }: StateTogglerProps) => {
 	return (
 		<ButtonsContainer>
 			<Button
@@ -33,3 +33,5 @@ export const StateToggler = ({ status, onStateClick }: StateTogglerProps) => {
 		</ButtonsContainer>
 	);
 };
+
+export const StateToggler = React.memo(StateTogglerComponent);
