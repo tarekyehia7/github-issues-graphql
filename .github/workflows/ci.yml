@@ -1,11 +1,13 @@
 name: CI
 on: push
 jobs:
-  build:
+  Linting:
     runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v2
     - name: Install modules
       run: yarn
+    - name: Run Prettier
+      run: yarn prettier-check
     - name: Run ESLint
       run: yarn lint
