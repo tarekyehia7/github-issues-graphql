@@ -1,6 +1,7 @@
-name: PR Lint
+name: PR Lint title
 on:
   pull_request:
+    branches: [ main ]
     # "opened", "synchronize", "reopened" are the pull_request default events (like
     # in ci.yml). Additionally we need "edited".
     types: [opened, synchronize, reopened, edited]
