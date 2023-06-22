@@ -11,3 +11,19 @@ jobs:
       run: yarn prettier-check
     - name: Run ESLint
       run: yarn lint
+  RunTests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Run Unit testing
+        run: yarn test
+  TestStorybookBuild:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Install modules
+        run: yarn
+      - name: Build Storybook
+        run: yarn build-storybook
