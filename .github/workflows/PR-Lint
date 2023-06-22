@@ -1,3 +1,4 @@
+name: PR Lint title
 - uses: henrygriffiths/pr_lint@v3
   with:
     # Required
