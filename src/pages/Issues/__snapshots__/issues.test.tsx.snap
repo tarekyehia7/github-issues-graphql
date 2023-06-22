@@ -1,0 +1,1144 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Issues /> Should match snapshot 1`] = `
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  font-size: 1rem;
+}
+
+.c23 {
+  color: #0969da;
+  min-width: 2rem;
+  padding: 5px 10px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  background-color: transparent;
+  color: #0969da;
+  min-width: 2rem;
+  padding: 5px 10px;
+  font-style: normal;
+  line-height: 20px;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  -webkit-transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  transition: border-color 0.2s cubic-bezier(0.3,0,0.5,1);
+  background-color: transparent;
+}
+
+.c23:disabled {
+  color: #8c959f;
+  cursor: default;
+  border-color: transparent;
+}
+
+.c23:disabled:hover {
+  border-color: transparent;
+}
+
+.c23:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #d0d7de;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.c23:disabled {
+  color: #8c959f;
+  cursor: default;
+  border-color: transparent;
+}
+
+.c23:disabled:hover {
+  border-color: transparent;
+}
+
+.c23:hover {
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-color: #d0d7de;
+  -webkit-transition-duration: 0.1s;
+  transition-duration: 0.1s;
+}
+
+.c22 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  -webkit-box-pack: space-evenly;
+  -webkit-justify-content: space-evenly;
+  -ms-flex-pack: space-evenly;
+  justify-content: space-evenly;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c0 {
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c2 {
+  position: absolute;
+  display: block;
+  color: #57606a;
+  text-align: center;
+  pointer-events: none;
+  fill: #ffffff;
+  stroke-width: 0.1rem;
+  stroke: #57606a;
+  margin-left: 0.3rem;
+}
+
+.c1 {
+  padding: 5px 26px;
+  font-size: 14px;
+  line-height: 20px;
+  vertical-align: middle;
+  background-repeat: no-repeat;
+  background-position: right 8px center;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  outline: none;
+  width: 100%;
+  background-color: #f6f8fa;
+  box-shadow: inset 0 1px 0 rgba(208,215,222,0.2);
+}
+
+.c6 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  padding: 1rem;
+}
+
+.c7 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5rem;
+  font-size: inherit;
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #24292f;
+  font-weight: bold;
+}
+
+.c9 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding: 0.5rem;
+  font-size: inherit;
+  color: #000000;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  white-space: nowrap;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  background-color: transparent;
+  border: 0;
+  -webkit-appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  color: #57606a;
+}
+
+.c8 {
+  fill: #24292f;
+  margin-right: 0.5rem;
+}
+
+.c10 {
+  fill: #57606a;
+  margin-right: 0.5rem;
+}
+
+.c14 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  color: #24292f;
+  margin-top: 0;
+  cursor: pointer;
+  background: transparent;
+  margin: 1rem;
+  margin-top: 0;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c14:hover {
+  color: #0969da;
+}
+
+.c17 {
+  color: #57606a;
+  cursor: pointer;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+}
+
+.c17:hover {
+  color: #0969da;
+}
+
+.c12 {
+  padding: 16px;
+  list-style-type: none;
+  border-top-color: #d8dee4;
+  border-top-style: solid;
+  border-top-width: 1px;
+}
+
+.c12:hover {
+  background-color: #f6f8fa;
+}
+
+.c13 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+}
+
+.c21 {
+  margin-right: 0.2rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+.c18 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: flex-start;
+  -webkit-box-align: flex-start;
+  -ms-flex-align: flex-start;
+  align-items: flex-start;
+  cursor: pointer;
+}
+
+.c18:hover > a {
+  color: #0969da;
+}
+
+.c18:hover .c20 {
+  fill: #0969da;
+}
+
+.c16 {
+  color: #57606a;
+  margin-left: 1.7rem;
+  font-size: 13px;
+}
+
+.c15 {
+  min-height: 1rem;
+  min-width: 2rem;
+  margin-top: 0.07rem;
+  fill: #cf222e;
+}
+
+.c19 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c3 {
+  color: #24292f;
+  background-color: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 6px;
+  position: relative;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  margin-right: 0;
+}
+
+.c11 {
+  font-size: 14px;
+  overflow: auto;
+  color: #000000;
+}
+
+.c4 {
+  padding: 1rem;
+  background-color: #f6f8fa;
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+@media (max-width:480px) {
+  .c3 {
+    margin: 0rem;
+    margin-top: 1rem;
+  }
+
+  .c3 > a {
+    display: none;
+  }
+}
+
+@media (max-width:480px) {
+  .c11 {
+    overflow: auto;
+  }
+}
+
+<div>
+  <div
+    class="c0"
+  >
+    <input
+      class="c1"
+      data-testid="Input"
+      placeholder="type here..."
+      value=""
+    />
+    <svg
+      aria-hidden="true"
+      class="c2"
+      data-view-component="true"
+      height="16"
+      version="1.1"
+      viewBox="0 0 16 16"
+      width="16"
+    >
+      <path
+        d="M11.5 7a4.499 4.499 0 11-8.998 0A4.499 4.499 0 0111.5 7zm-.82 4.74a6 6 0 111.06-1.06l3.04 3.04a.75.75 0 11-1.06 1.06l-3.04-3.04z"
+      />
+    </svg>
+  </div>
+  <div
+    class="c3"
+    data-testid="card"
+  >
+    <div
+      class="c4"
+    >
+      <div
+        class="c5"
+      >
+        <div
+          class="c6"
+        >
+          <button
+            class="c7"
+          >
+            <svg
+              aria-hidden="true"
+              class="c8"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Open
+          </button>
+          <button
+            class="c9"
+          >
+            <svg
+              aria-hidden="true"
+              class="c10"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+              />
+            </svg>
+            Closed
+          </button>
+        </div>
+      </div>
+    </div>
+    <div
+      class="c11"
+    >
+      <div
+        class="c12"
+        data-testid="issue-box-25276"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25276"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Bug: 3
+          </a>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25276
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/bogdanoliinyk"
+          >
+            bogdanoliinyk
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25274"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25274"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Idea: Add a console.log hint why components get remounted in StrictMode
+          </a>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25274
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/nikgraf"
+          >
+            nikgraf
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25273"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25273"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Bug: inconsistent auto batching
+          </a>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25273
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/amirqasemi74"
+          >
+            amirqasemi74
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25269"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25269"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Bug: 2
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25269"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                1
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25269
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/Shashamura"
+          >
+            Shashamura
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25264"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25264"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Add "Support Armenia" banner on reactjs.org
+          </a>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25264
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/edgarkhanzadyan"
+          >
+            edgarkhanzadyan
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25262"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25262"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            [DevTools Bug]: Labels are cut off on Firefox on Linux (Fedora 36)
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25262"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                2
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25262
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/sparkbuzz"
+          >
+            sparkbuzz
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25256"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25256"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Feature Request: className as object or array (vue-alike)
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25256"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                1
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25256
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/rentalhost"
+          >
+            rentalhost
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25236"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25236"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Feature request: Add a key property to custom hooks to reset state 2
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25236"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                2
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25236
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/gmoniava"
+          >
+            gmoniava
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25218"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25218"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Bug: &lt;img/&gt; renders twice in firefox with react 18
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25218"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                14
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25218
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/kapibaara"
+          >
+            kapibaara
+          </a>
+        </div>
+      </div>
+      <div
+        class="c12"
+        data-testid="issue-box-25212"
+      >
+        <div
+          class="c13"
+        >
+          <a
+            class="c14"
+            href="/facebook/react/issue/25212"
+          >
+            <svg
+              aria-hidden="true"
+              class="c15"
+              data-testid="open-issue-icon"
+              data-view-component="true"
+              height="16"
+              version="1.1"
+              viewBox="0 0 16 16"
+              width="16"
+            >
+              <path
+                d="M8 9.5a1.5 1.5 0 100-3 1.5 1.5 0 000 3z"
+              />
+              <path
+                d="M8 0a8 8 0 100 16A8 8 0 008 0zM1.5 8a6.5 6.5 0 1113 0 6.5 6.5 0 01-13 0z"
+              />
+            </svg>
+            Feature Request: Event Modifiers support
+          </a>
+          <div
+            class="c18"
+            data-testid="comments-section"
+          >
+            <a
+              class="c14 c19"
+              href="/facebook/react/issue/25212"
+            >
+              <svg
+                aria-hidden="true"
+                class="c20 c21"
+                data-view-component="true"
+                height="16"
+                version="1.1"
+                viewBox="0 0 16 16"
+                width="16"
+              >
+                <path
+                  d="M2.75 2.5a.25.25 0 00-.25.25v7.5c0 .138.112.25.25.25h2a.75.75 0 01.75.75v2.19l2.72-2.72a.75.75 0 01.53-.22h4.5a.25.25 0 00.25-.25v-7.5a.25.25 0 00-.25-.25H2.75zM1 2.75C1 1.784 1.784 1 2.75 1h10.5c.966 0 1.75.784 1.75 1.75v7.5A1.75 1.75 0 0113.25 12H9.06l-2.573 2.573A1.457 1.457 0 014 13.543V12H2.75A1.75 1.75 0 011 10.25v-7.5z"
+                />
+              </svg>
+              <span>
+                5
+              </span>
+            </a>
+          </div>
+        </div>
+        <div
+          class="c16"
+        >
+          <span>
+            #
+            25212
+             Opened 
+          </span>
+          about 1 hour ago
+          <span>
+             by 
+          </span>
+          <a
+            class="c17"
+            href="https://github.com/rentalhost"
+          >
+            rentalhost
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div
+    class="c22"
+  >
+    <button
+      class="c23"
+      type="button"
+    >
+      &lt; Previous
+    </button>
+    <div
+      data-testid="pages-info"
+    >
+      Page 
+      1
+       of 
+      79
+    </div>
+    <button
+      class="c23"
+      type="button"
+    >
+      Next &gt;
+    </button>
+  </div>
+</div>
+`;
