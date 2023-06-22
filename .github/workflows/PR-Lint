@@ -1,5 +1,9 @@
 name: PR Lint
-on: [pull_request]
+on:
+  pull_request:
+    # "opened", "synchronize", "reopened" are the pull_request default events (like
+    # in ci.yml). Additionally we need "edited".
+    types: [opened, synchronize, reopened, edited]
 jobs:
   pr_lint:
     runs-on: ubuntu-latest
