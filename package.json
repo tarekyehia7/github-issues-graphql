@@ -5,7 +5,7 @@
 	"dependencies": {
 		"@apollo/client": "^3.6.9",
 		"@storybook/addon-actions": "^6.5.12",
-		"@storybook/addon-essentials": "^6.5.12",
+		"@storybook/addon-essentials": "^7.0.0",
 		"@storybook/addon-interactions": "^6.5.12",
 		"@storybook/addon-links": "^6.5.12",
 		"@storybook/builder-webpack5": "^6.5.12",
